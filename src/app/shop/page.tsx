@@ -22,6 +22,7 @@ export default function ShopPage() {
         heading="The Collection"
         subheading="Hand-crafted chocolates and truffles, built around one philosophy: indulgence is everything."
         image="/images/shopify-cdn/pwgartrangeone121_large.jpg"
+        video={{ src: "/video/flavour-reveal.mp4" }}
       />
 
       <ProductSection title="Chocolate Art Collection" products={artCollection} />
@@ -56,6 +57,7 @@ function ProductSection({
                     src={product.image}
                     alt={product.name}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>

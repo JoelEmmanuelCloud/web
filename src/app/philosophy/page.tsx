@@ -51,6 +51,7 @@ export default function PhilosophyPage() {
                 src="/images/shopify-cdn/pwgtrufflesmatugga2_large.jpg"
                 alt="Paul Wayne Gregory truffle collection"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -102,6 +103,7 @@ export default function PhilosophyPage() {
                     src="/images/shopify-cdn/ArtRangeTwo24.04.jpg"
                     alt="Art Range collection"
                     fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -125,6 +127,7 @@ export default function PhilosophyPage() {
                     src="/images/shopify-cdn/ChampagneTruffles.02.jpg"
                     alt="Classic truffle collection"
                     fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>

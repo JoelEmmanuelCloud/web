@@ -32,7 +32,14 @@ export function PageHero({
           controls={false}
         />
       ) : (
-        <Image src={image} alt="" fill priority className="object-cover" />
+        <Image
+          src={image}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
       )}
 
       <div

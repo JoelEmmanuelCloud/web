@@ -50,6 +50,7 @@ export function LiveSummary({
                 alt="Your logo"
                 fill
                 unoptimized
+                sizes="160px"
                 className="object-contain"
                 style={{
                   filter:

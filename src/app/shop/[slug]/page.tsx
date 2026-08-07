@@ -51,6 +51,7 @@ export default async function ProductPage({
                 alt={product.name}
                 fill
                 priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -61,7 +62,13 @@ export default async function ProductPage({
                     key={src}
                     className="relative aspect-square overflow-hidden bg-paper/5"
                   >
-                    <Image src={src} alt="" fill className="object-cover" />
+                    <Image
+                      src={src}
+                      alt=""
+                      fill
+                      sizes="(max-width: 1024px) 33vw, 16vw"
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
