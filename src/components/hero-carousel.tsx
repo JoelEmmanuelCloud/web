@@ -44,13 +44,17 @@ export function HeroCarousel({ chapters }: { chapters: HeroChapter[] }) {
     return () => observer.disconnect();
   }, []);
 
+  function goToChapter(index: number) {
+    const target = chapters[(index + chapters.length) % chapters.length];
+    document
+      .getElementById(target.id)
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   function handleVideoEnded(chapterId: string) {
     if (activeIdRef.current !== chapterId) return;
     const index = chapters.findIndex((c) => c.id === chapterId);
-    const next = chapters[(index + 1) % chapters.length];
-    document
-      .getElementById(next.id)
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    goToChapter(index + 1);
   }
 
   const activeIndex = chapters.findIndex((c) => c.id === activeId);
@@ -159,6 +163,46 @@ export function HeroCarousel({ chapters }: { chapters: HeroChapter[] }) {
           />
         ))}
       </div>
+
+      <div className="absolute right-6 top-1/2 z-20 hidden -translate-y-1/2 flex-col gap-3 sm:flex">
+        <button
+          type="button"
+          onClick={() => goToChapter(activeIndex - 1)}
+          aria-label="Previous chapter"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-paper/40 text-paper transition-colors hover:border-paper hover:bg-paper/10"
+        >
+          <ChevronIcon direction="up" />
+        </button>
+        <button
+          type="button"
+          onClick={() => goToChapter(activeIndex + 1)}
+          aria-label="Next chapter"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-paper/40 text-paper transition-colors hover:border-paper hover:bg-paper/10"
+        >
+          <ChevronIcon direction="down" />
+        </button>
+      </div>
     </div>
+  );
+}
+
+function ChevronIcon({ direction }: { direction: "up" | "down" }) {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      aria-hidden
+      className={direction === "up" ? "rotate-180" : undefined}
+    >
+      <path
+        d="M2 4.5L7 9.5L12 4.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
