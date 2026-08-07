@@ -18,9 +18,17 @@ export function HeroCarousel({ chapters }: { chapters: HeroChapter[] }) {
   const [activeId, setActiveId] = useState(chapters[0]?.id);
   const activeIdRef = useRef(activeId);
   const containerRef = useRef<HTMLDivElement>(null);
+  const videoRefs = useRef<Record<string, HTMLVideoElement | null>>({});
 
   useEffect(() => {
     activeIdRef.current = activeId;
+  }, [activeId]);
+
+  useEffect(() => {
+    const video = videoRefs.current[activeId ?? ""];
+    if (!video) return;
+    video.currentTime = 0;
+    video.play().catch(() => {});
   }, [activeId]);
 
   useEffect(() => {
@@ -79,6 +87,9 @@ export function HeroCarousel({ chapters }: { chapters: HeroChapter[] }) {
             {chapter.video ? (
               shouldLoadVideo ? (
                 <video
+                  ref={(el) => {
+                    videoRefs.current[chapter.id] = el;
+                  }}
                   className="absolute inset-0 h-full w-full object-cover"
                   src={chapter.video.src}
                   poster={chapter.video.poster ?? chapter.image}
