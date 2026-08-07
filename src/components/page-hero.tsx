@@ -19,7 +19,7 @@ export function PageHero({
   video,
 }: PageHeroProps) {
   return (
-    <section className="relative flex h-[85dvh] min-h-[560px] items-center justify-center overflow-hidden">
+    <section className="relative flex h-[100dvh] items-center justify-center overflow-hidden">
       {video ? (
         <video
           className="absolute inset-0 h-full w-full object-cover"
