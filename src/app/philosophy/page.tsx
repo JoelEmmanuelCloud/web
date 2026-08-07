@@ -46,7 +46,7 @@ export default function PhilosophyPage() {
       <section className="bg-ink-raised px-6 py-24 sm:px-10">
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-2 lg:items-center">
           <Reveal>
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
               <Image
                 src="/images/shopify-cdn/pwgtrufflesmatugga2_large.jpg"
                 alt="Paul Wayne Gregory truffle collection"
@@ -98,7 +98,7 @@ export default function PhilosophyPage() {
           <div className="grid gap-10 sm:grid-cols-2">
             <Reveal>
               <Link href="/shop" className="group block">
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                   <Image
                     src="/images/shopify-cdn/ArtRangeTwo24.04.jpg"
                     alt="Art Range collection"
@@ -122,7 +122,7 @@ export default function PhilosophyPage() {
 
             <Reveal>
               <Link href="/shop" className="group block">
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                   <Image
                     src="/images/shopify-cdn/ChampagneTruffles.02.jpg"
                     alt="Classic truffle collection"

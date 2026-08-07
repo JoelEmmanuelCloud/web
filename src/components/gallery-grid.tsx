@@ -15,7 +15,7 @@ export function GalleryGrid({ images }: { images: string[] }) {
             <button
               type="button"
               onClick={() => setActive(src)}
-              className="relative block aspect-square w-full overflow-hidden bg-paper/5"
+              className="relative block aspect-square w-full overflow-hidden rounded-3xl bg-paper/5"
               aria-label={`Open gallery image ${i + 1}`}
             >
               <Image
@@ -43,7 +43,7 @@ export function GalleryGrid({ images }: { images: string[] }) {
           >
             Close &times;
           </button>
-          <div className="relative h-full max-h-[80vh] w-full max-w-3xl">
+          <div className="relative h-full max-h-[80vh] w-full max-w-3xl overflow-hidden rounded-3xl">
             <Image
               src={active}
               alt=""

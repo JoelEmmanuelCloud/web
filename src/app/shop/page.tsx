@@ -52,7 +52,7 @@ function ProductSection({
           {products.map((product) => (
             <Reveal key={product.slug}>
               <Link href={`/shop/${product.slug}`} className="group block">
-                <div className="relative aspect-square overflow-hidden bg-paper/5">
+                <div className="relative aspect-square overflow-hidden rounded-3xl bg-paper/5">
                   <Image
                     src={product.image}
                     alt={product.name}

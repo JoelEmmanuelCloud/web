@@ -34,7 +34,7 @@ export function LiveSummary({
       <button
         type="button"
         onClick={() => setZoom((v) => !v)}
-        className="relative flex aspect-square w-full items-center justify-center overflow-hidden border border-line"
+        className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-3xl border border-line"
         style={{
           backgroundColor: state.boxColour?.hex ?? "#17120e",
         }}
@@ -44,7 +44,7 @@ export function LiveSummary({
           className={`transition-transform duration-500 ${zoom ? "scale-150" : "scale-100"}`}
         >
           {state.personalise.mode === "logo" && state.personalise.logoDataUrl ? (
-            <div className="relative h-24 w-40">
+            <div className="relative h-24 w-40 overflow-hidden rounded-xl">
               <Image
                 src={state.personalise.logoDataUrl}
                 alt="Your logo"

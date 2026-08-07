@@ -32,7 +32,7 @@ export function StoryGrid({
           {cards.map((card) => (
             <Reveal key={card.href}>
               <Link href={card.href} className="group block">
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                   <Image
                     src={card.image}
                     alt=""

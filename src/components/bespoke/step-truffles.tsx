@@ -71,7 +71,7 @@ export function StepTruffles({
                 count > 0 ? "border-accent" : "border-line"
               }`}
             >
-              <div className="relative aspect-square overflow-hidden bg-paper/5">
+              <div className="relative aspect-square overflow-hidden rounded-2xl bg-paper/5">
                 <Image
                   src={flavour.image}
                   alt={flavour.name}

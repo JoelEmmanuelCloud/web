@@ -45,7 +45,7 @@ export default async function ProductPage({
 
         <div className="grid gap-14 lg:grid-cols-2">
           <div className="flex flex-col gap-4">
-            <div className="relative aspect-square overflow-hidden bg-paper/5">
+            <div className="relative aspect-square overflow-hidden rounded-3xl bg-paper/5">
               <Image
                 src={product.image}
                 alt={product.name}
@@ -60,7 +60,7 @@ export default async function ProductPage({
                 {product.gallery.map((src) => (
                   <div
                     key={src}
-                    className="relative aspect-square overflow-hidden bg-paper/5"
+                    className="relative aspect-square overflow-hidden rounded-2xl bg-paper/5"
                   >
                     <Image
                       src={src}
