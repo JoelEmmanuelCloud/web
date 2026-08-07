@@ -21,6 +21,7 @@ export default function GalleryPage() {
         heading="Gallery"
         subheading="Multi-award winning work, from competition showpieces to the craft behind every collection."
         image="/images/shopify-cdn/pwg-test-images03.jpg"
+        video={{ src: "/video/gallery-reveal.mp4" }}
       />
 
       <section className="bg-ink px-6 py-24 sm:px-10">
