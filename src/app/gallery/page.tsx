@@ -1,0 +1,33 @@
+import type { Metadata } from "next";
+import { PageHero } from "@/components/page-hero";
+import { GalleryGrid } from "@/components/gallery-grid";
+
+export const metadata: Metadata = {
+  title: "Gallery | Paul Wayne Gregory Chocolates",
+  description:
+    "Showpieces, competition work, and the craft behind Paul Wayne Gregory Chocolates.",
+};
+
+const galleryImages = Array.from(
+  { length: 11 },
+  (_, i) => `/images/gallery/gallery-${String(i + 1).padStart(2, "0")}.jpg`,
+).concat("/images/gallery/gallery-12.jpeg");
+
+export default function GalleryPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Showpieces &amp; Competition Work"
+        heading="Gallery"
+        subheading="Multi-award winning work, from competition showpieces to the craft behind every collection."
+        image="/images/shopify-cdn/pwg-test-images03.jpg"
+      />
+
+      <section className="bg-ink px-6 py-24 sm:px-10">
+        <div className="mx-auto max-w-7xl">
+          <GalleryGrid images={galleryImages} />
+        </div>
+      </section>
+    </>
+  );
+}

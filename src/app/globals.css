@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-ink: #0e0b09;
+  --color-ink-raised: #17120e;
+  --color-paper: #f4ece3;
+  --color-paper-dim: #b8a99b;
+  --color-line: rgba(244, 236, 227, 0.14);
+  --color-accent: #e6007e;
+  --color-accent-ink: #ffffff;
+  --color-blush: #f2cfe0;
+  --color-blush-ink: #2a0f1c;
+  --color-atelier: #241a12;
+  --color-amber: #c98a4b;
+  --font-display: var(--font-raleway);
+  --font-body: var(--font-raleway);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: var(--color-ink);
+  --color-ink-raised: var(--color-ink-raised);
+  --color-paper: var(--color-paper);
+  --color-paper-dim: var(--color-paper-dim);
+  --color-line: var(--color-line);
+  --color-accent: var(--color-accent);
+  --color-accent-ink: var(--color-accent-ink);
+  --color-blush: var(--color-blush);
+  --color-blush-ink: var(--color-blush-ink);
+  --color-atelier: var(--color-atelier);
+  --color-amber: var(--color-amber);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+}
+
+.tracked-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+.tracked-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.nav-scrim {
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 15%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
