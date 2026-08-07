@@ -13,7 +13,7 @@ const chapters: HeroChapter[] = [
     subheading: "Multi-award winning chocolatier Paul Wayne Gregory",
     cta: { label: "Shop Now", href: "/shop" },
     image: "/images/shopify-cdn/pwg-test-images03.jpg",
-    video: { src: "/video/opening-pour.mp4" },
+    video: { src: "/video/opening-pour.mp4", loop: false },
   },
   {
     id: "makers-hands",
@@ -22,7 +22,7 @@ const chapters: HeroChapter[] = [
     subheading: "Every piece, hand finished",
     cta: { label: "Our Philosophy", href: "/philosophy" },
     image: "/images/shopify-cdn/pwg_paul_piping_01.jpg",
-    video: { src: "/video/makers-hands.mp4" },
+    video: { src: "/video/makers-hands.mp4", loop: false },
   },
   {
     id: "collection",
@@ -31,7 +31,7 @@ const chapters: HeroChapter[] = [
     subheading: "Hand-decorated, multi-award winning",
     cta: { label: "Discover Now", href: "/shop" },
     image: "/images/shopify-cdn/pwgartrangeone121_large.jpg",
-    video: { src: "/video/collection.mp4" },
+    video: { src: "/video/collection.mp4", loop: false },
   },
 ];
 

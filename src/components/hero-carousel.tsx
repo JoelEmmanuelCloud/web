@@ -47,8 +47,7 @@ export function HeroCarousel({ chapters }: { chapters: HeroChapter[] }) {
   function handleVideoEnded(chapterId: string) {
     if (activeIdRef.current !== chapterId) return;
     const index = chapters.findIndex((c) => c.id === chapterId);
-    const next = chapters[index + 1];
-    if (!next) return;
+    const next = chapters[(index + 1) % chapters.length];
     document
       .getElementById(next.id)
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
