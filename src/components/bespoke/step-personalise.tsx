@@ -37,7 +37,7 @@ export function StepPersonalise({
         before production begins.
       </p>
 
-      <div className="flex gap-4">
+      <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
         <button
           type="button"
           onClick={() => setMode("logo")}
