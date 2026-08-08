@@ -11,6 +11,26 @@ function isActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
+const heroVideoByRoute: Record<string, string> = {
+  "/philosophy": "/video/indulgence-melt.mp4",
+  "/gallery": "/video/gallery-reveal.mp4",
+  "/shop": "/video/flavour-reveal.mp4",
+  "/contact": "/video/our-craft.mp4",
+  "/bespoke-box": "/video/bespoke-ribbon.mp4",
+};
+
+const preloadedVideos = new Set<string>();
+
+function preloadHeroVideo(href: string) {
+  const src = heroVideoByRoute[href];
+  if (!src || preloadedVideos.has(src)) return;
+  preloadedVideos.add(src);
+  const video = document.createElement("video");
+  video.preload = "auto";
+  video.muted = true;
+  video.src = src;
+}
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -69,6 +89,9 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
+                onMouseEnter={() => preloadHeroVideo(item.href)}
+                onFocus={() => preloadHeroVideo(item.href)}
+                onTouchStart={() => preloadHeroVideo(item.href)}
                 aria-current={active ? "page" : undefined}
                 className={`tracked-label relative pb-1 text-xs transition-colors ${
                   active
@@ -106,6 +129,7 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
+                onTouchStart={() => preloadHeroVideo(item.href)}
                 aria-current={active ? "page" : undefined}
                 className={`tracked-label py-3 text-xs transition-colors ${
                   active ? "text-paper" : "text-paper-dim hover:text-paper"
