@@ -14,115 +14,111 @@ export type HeroChapter = {
   video?: { src: string; poster?: string; loop?: boolean };
 };
 
+const CROSSFADE_MS = 1200;
+const KEN_BURNS_MS = 9000;
+
 export function HeroCarousel({ chapters }: { chapters: HeroChapter[] }) {
-  const [activeId, setActiveId] = useState(chapters[0]?.id);
-  const activeIdRef = useRef(activeId);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
   const videoRefs = useRef<Record<string, HTMLVideoElement | null>>({});
 
   useEffect(() => {
-    activeIdRef.current = activeId;
-  }, [activeId]);
-
-  useEffect(() => {
-    const video = videoRefs.current[activeId ?? ""];
-    if (!video) return;
-    video.currentTime = 0;
-    video.play().catch(() => {});
-  }, [activeId]);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.6) {
-            setActiveId(entry.target.id);
-          }
-        });
-      },
-      { root: container, threshold: [0.6] },
-    );
-
-    const sections = container.querySelectorAll("[data-chapter]");
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
+    const raf = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(raf);
   }, []);
 
+  useEffect(() => {
+    const activeChapter = chapters[activeIndex];
+    Object.entries(videoRefs.current).forEach(([id, video]) => {
+      if (!video) return;
+      if (id === activeChapter.id) {
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
+  }, [activeIndex, chapters]);
+
   function goToChapter(index: number) {
-    const target = chapters[(index + chapters.length) % chapters.length];
-    document
-      .getElementById(target.id)
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    setActiveIndex((index + chapters.length) % chapters.length);
   }
 
-  function handleVideoEnded(chapterId: string) {
-    if (activeIdRef.current !== chapterId) return;
-    const index = chapters.findIndex((c) => c.id === chapterId);
-    goToChapter(index + 1);
+  function handleVideoEnded(index: number) {
+    setActiveIndex((current) => {
+      if (current !== index) return current;
+      return (index + 1) % chapters.length;
+    });
   }
-
-  const activeIndex = chapters.findIndex((c) => c.id === activeId);
 
   return (
-    <div className="relative">
-      <div
-        ref={containerRef}
-        className="h-[100dvh] snap-y snap-mandatory overflow-y-auto scroll-smooth"
-      >
-        {chapters.map((chapter, index) => {
-          const shouldLoadVideo =
-            !!chapter.video && Math.abs(index - activeIndex) <= 1;
+    <div className="relative h-[100dvh] overflow-hidden bg-ink">
+      {chapters.map((chapter, index) => {
+        const forwardDistance = (index - activeIndex + chapters.length) % chapters.length;
+        const loopDistance = Math.min(forwardDistance, chapters.length - forwardDistance);
+        const shouldLoadVideo = !!chapter.video && loopDistance <= 1;
+        const isActive = index === activeIndex;
+        const zooming = isActive && mounted;
 
-          return (
+        return (
           <section
             key={chapter.id}
-            id={chapter.id}
-            data-chapter
-            className="relative flex h-[100dvh] snap-start items-center justify-center overflow-hidden"
+            aria-hidden={!isActive}
+            inert={!isActive}
+            className={`absolute inset-0 flex items-center justify-center overflow-hidden transition-opacity ease-in-out ${
+              isActive ? "opacity-100" : "pointer-events-none opacity-0"
+            }`}
+            style={{ transitionDuration: `${CROSSFADE_MS}ms` }}
           >
-            {chapter.video ? (
-              shouldLoadVideo ? (
-                <video
-                  ref={(el) => {
-                    videoRefs.current[chapter.id] = el;
-                  }}
-                  className="absolute inset-0 h-full w-full object-cover"
-                  src={chapter.video.src}
-                  poster={chapter.video.poster ?? chapter.image}
-                  autoPlay
-                  muted
-                  loop={chapter.video.loop ?? true}
-                  playsInline
-                  controls={false}
-                  onEnded={
-                    chapter.video.loop === false
-                      ? () => handleVideoEnded(chapter.id)
-                      : undefined
-                  }
-                />
+            <div
+              className="absolute inset-0"
+              style={{
+                transform: zooming ? "scale(1.06)" : "scale(1)",
+                transition: zooming
+                  ? `transform ${KEN_BURNS_MS}ms linear`
+                  : "transform 0s linear",
+              }}
+            >
+              {chapter.video ? (
+                shouldLoadVideo ? (
+                  <video
+                    ref={(el) => {
+                      videoRefs.current[chapter.id] = el;
+                    }}
+                    className="h-full w-full object-cover"
+                    src={chapter.video.src}
+                    poster={chapter.video.poster ?? chapter.image}
+                    autoPlay
+                    muted
+                    loop={chapter.video.loop ?? true}
+                    playsInline
+                    controls={false}
+                    onEnded={
+                      chapter.video.loop === false
+                        ? () => handleVideoEnded(index)
+                        : undefined
+                    }
+                  />
+                ) : (
+                  <Image
+                    src={chapter.video.poster ?? chapter.image}
+                    alt=""
+                    fill
+                    sizes="100vw"
+                    className="object-cover"
+                  />
+                )
               ) : (
                 <Image
-                  src={chapter.video.poster ?? chapter.image}
+                  src={chapter.image}
                   alt=""
                   fill
                   sizes="100vw"
+                  priority={index === 0}
                   className="object-cover"
                 />
-              )
-            ) : (
-              <Image
-                src={chapter.image}
-                alt=""
-                fill
-                sizes="100vw"
-                priority={chapter.id === chapters[0]?.id}
-                className="object-cover"
-              />
-            )}
+              )}
+            </div>
 
             {chapter.heading && (
               <>
@@ -133,15 +129,39 @@ export function HeroCarousel({ chapters }: { chapters: HeroChapter[] }) {
 
                 <div className="relative z-10 flex flex-col items-center gap-6 px-6 text-center">
                   {chapter.eyebrow && (
-                    <p className="tracked-label text-xs text-paper-dim">
+                    <p
+                      className="tracked-label text-xs text-paper-dim transition-all ease-out"
+                      style={{
+                        transitionDuration: "700ms",
+                        transitionDelay: isActive ? "450ms" : "0ms",
+                        opacity: isActive ? 1 : 0,
+                        transform: isActive ? "translateY(0)" : "translateY(10px)",
+                      }}
+                    >
                       {chapter.eyebrow}
                     </p>
                   )}
-                  <h1 className="tracked-display max-w-3xl text-2xl text-paper sm:text-4xl">
+                  <h1
+                    className="tracked-display max-w-3xl text-2xl text-paper transition-all ease-out sm:text-4xl"
+                    style={{
+                      transitionDuration: "700ms",
+                      transitionDelay: isActive ? "550ms" : "0ms",
+                      opacity: isActive ? 1 : 0,
+                      transform: isActive ? "translateY(0)" : "translateY(10px)",
+                    }}
+                  >
                     {chapter.heading}
                   </h1>
                   {chapter.subheading && (
-                    <p className="tracked-label text-xs text-paper-dim sm:text-sm">
+                    <p
+                      className="tracked-label text-xs text-paper-dim transition-all ease-out sm:text-sm"
+                      style={{
+                        transitionDuration: "700ms",
+                        transitionDelay: isActive ? "650ms" : "0ms",
+                        opacity: isActive ? 1 : 0,
+                        transform: isActive ? "translateY(0)" : "translateY(10px)",
+                      }}
+                    >
                       {chapter.subheading}
                     </p>
                   )}
@@ -149,6 +169,12 @@ export function HeroCarousel({ chapters }: { chapters: HeroChapter[] }) {
                     <Link
                       href={chapter.cta.href}
                       className="tracked-label mt-2 flex h-[46px] items-center justify-center rounded-full bg-paper px-8 text-xs text-ink transition-colors hover:bg-accent hover:text-accent-ink"
+                      style={{
+                        transitionDuration: "700ms",
+                        transitionDelay: isActive ? "750ms" : "0ms",
+                        opacity: isActive ? 1 : 0,
+                        transform: isActive ? "translateY(0)" : "translateY(10px)",
+                      }}
                     >
                       {chapter.cta.label}
                     </Link>
@@ -157,19 +183,19 @@ export function HeroCarousel({ chapters }: { chapters: HeroChapter[] }) {
               </>
             )}
           </section>
-          );
-        })}
-      </div>
+        );
+      })}
 
       <div className="absolute left-6 top-1/2 z-20 hidden -translate-y-1/2 flex-col gap-4 sm:flex">
-        {chapters.map((chapter) => (
-          <a
+        {chapters.map((chapter, index) => (
+          <button
             key={chapter.id}
-            href={`#${chapter.id}`}
-            aria-label={chapter.heading ?? chapter.id}
-            aria-current={activeId === chapter.id}
+            type="button"
+            onClick={() => goToChapter(index)}
+            aria-label={chapter.heading ?? `Chapter ${index + 1}`}
+            aria-current={index === activeIndex}
             className={`h-2.5 w-2.5 rounded-full border border-paper/70 transition-colors ${
-              activeId === chapter.id ? "bg-paper" : "bg-transparent"
+              index === activeIndex ? "bg-paper" : "bg-transparent"
             }`}
           />
         ))}
