@@ -4,7 +4,7 @@ import { StoryGrid, type StoryCard } from "@/components/story-grid";
 const chapters: HeroChapter[] = [
   {
     id: "cold-open",
-    image: "/images/shopify-cdn/pwgartrangeone121_large.jpg",
+    image: "/images/shopify-cdn/pwgartrangeone121.jpg",
     video: { src: "/video/hero-ad-cut.mp4", loop: false },
   },
   {
@@ -30,7 +30,7 @@ const chapters: HeroChapter[] = [
     heading: "Art Range",
     subheading: "Hand-decorated, multi-award winning",
     cta: { label: "Discover Now", href: "/shop" },
-    image: "/images/shopify-cdn/pwgartrangeone121_large.jpg",
+    image: "/images/shopify-cdn/pwgartrangeone121.jpg",
     video: { src: "/video/collection.mp4", loop: false },
   },
 ];
@@ -38,7 +38,7 @@ const chapters: HeroChapter[] = [
 const storyCards: StoryCard[] = [
   {
     href: "/shop",
-    image: "/images/shopify-cdn/pwgtrufflesmatugga2_large.jpg",
+    image: "/images/shopify-cdn/pwgtrufflesmatugga2.jpg",
     title: "Shop The Collection",
     description:
       "Hand-crafted chocolates and truffles, built around one philosophy: indulgence is everything.",

@@ -3,8 +3,16 @@ export type NavItem = {
   href: string;
 };
 
-export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://paulwaynegregory.com";
+function resolveSiteUrl() {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return "https://paulwaynegregory.com";
+}
+
+export const siteUrl = resolveSiteUrl();
 
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
