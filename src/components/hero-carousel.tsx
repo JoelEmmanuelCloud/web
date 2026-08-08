@@ -88,7 +88,8 @@ export function HeroCarousel({ chapters }: { chapters: HeroChapter[] }) {
                     className="h-full w-full object-cover"
                     src={chapter.video.src}
                     poster={chapter.video.poster ?? chapter.image}
-                    autoPlay
+                    autoPlay={isActive}
+                    preload={isActive ? "auto" : "metadata"}
                     muted
                     loop={chapter.video.loop ?? true}
                     playsInline
