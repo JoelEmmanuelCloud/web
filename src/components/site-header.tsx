@@ -115,6 +115,14 @@ export function SiteHeader() {
               </Link>
             );
           })}
+          <Link
+            href="/shop"
+            onClick={() => setOpen(false)}
+            className="tracked-label flex items-center gap-2 border-t border-line py-3 pt-4 text-xs text-paper-dim transition-colors hover:text-paper"
+          >
+            <CartIcon />
+            Cart
+          </Link>
         </nav>
       )}
     </header>
