@@ -15,7 +15,7 @@ const raleway = Raleway({
 const title = "Paul Wayne Gregory Chocolates";
 const description =
   "Multi-award winning chocolatier Paul Wayne Gregory. Indulgence is everything.";
-const shareImage = "/images/shopify-cdn/pwgartrangeone121_large.jpg";
+const shareImage = "/images/shopify-cdn/pwgartrangeone121.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

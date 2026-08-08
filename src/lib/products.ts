@@ -52,7 +52,7 @@ export const products: Product[] = [
     allergens:
       "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
     dietary: ["Suitable for vegetarians", "Nut free"],
-    image: "/images/shopify-cdn/pwgartrangeone121_large.jpg",
+    image: "/images/shopify-cdn/pwgartrangeone121.jpg",
     gallery: [
       "/images/shopify-cdn/pwgartrangeone121.jpg",
       "/images/shopify-cdn/ArtRangeone_2.jpg",
@@ -179,7 +179,7 @@ export const products: Product[] = [
     allergens:
       "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
     dietary: ["Suitable for vegetarians", "Nut free"],
-    image: "/images/shopify-cdn/pwgtrufflesgingerbread1_large.jpg",
+    image: "/images/shopify-cdn/pwgtrufflesgingerbread1.jpg",
     gallery: ["/images/shopify-cdn/GingerbreadTruffles_3.jpg"],
   },
   {
@@ -197,7 +197,7 @@ export const products: Product[] = [
     allergens:
       "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
     dietary: ["Suitable for vegetarians", "Nut free"],
-    image: "/images/shopify-cdn/pwgtrufflesmatugga2_large.jpg",
+    image: "/images/shopify-cdn/pwgtrufflesmatugga2.jpg",
     gallery: [
       "/images/shopify-cdn/IMG_6136.16.jpg",
       "/images/shopify-cdn/DarRumTruffles.25.jpg",
@@ -219,7 +219,7 @@ export const products: Product[] = [
     allergens:
       "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
     dietary: ["Suitable for non-dairy diets", "Suitable for vegetarians", "Nut free"],
-    image: "/images/shopify-cdn/pwgtrufflesmixedspice1_large.jpg",
+    image: "/images/shopify-cdn/pwgtrufflesmixedspice1.jpg",
     gallery: [
       "/images/shopify-cdn/spice1aa.jpg",
       "/images/shopify-cdn/spice3.jpg",
@@ -243,7 +243,7 @@ export const products: Product[] = [
     allergens:
       "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
     dietary: ["Suitable for vegetarians", "Nut free"],
-    image: "/images/shopify-cdn/PassionwTruffles.A.1_large.jpg",
+    image: "/images/shopify-cdn/PassionwTruffles.A.1.jpg",
     gallery: ["/images/shopify-cdn/pwgtrufflespassionfruit2.jpg"],
   },
   {
