@@ -90,8 +90,9 @@ export function SiteHeader() {
 
         <Link
           href="/shop"
-          className="tracked-label hidden text-xs text-paper-dim transition-colors hover:text-paper md:block"
+          className="tracked-label hidden items-center gap-2 text-xs text-paper-dim transition-colors hover:text-paper md:flex"
         >
+          <CartIcon />
           Cart
         </Link>
       </div>
@@ -117,5 +118,31 @@ export function SiteHeader() {
         </nav>
       )}
     </header>
+  );
+}
+
+function CartIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      aria-hidden
+    >
+      <path
+        d="M4.5 5.5H11.5L11.1 13.2C11.07 13.78 10.59 14.25 10 14.25H6C5.41 14.25 4.93 13.78 4.9 13.2L4.5 5.5Z"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M6 5.5V4.25C6 3.14 6.9 2.25 8 2.25C9.1 2.25 10 3.14 10 4.25V5.5"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
