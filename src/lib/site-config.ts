@@ -3,6 +3,9 @@ export type NavItem = {
   href: string;
 };
 
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://paulwaynegregory.com";
+
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Philosophy", href: "/philosophy" },
