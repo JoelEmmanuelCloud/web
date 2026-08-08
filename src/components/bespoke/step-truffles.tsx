@@ -88,7 +88,7 @@ export function StepTruffles({
                   type="button"
                   onClick={() => adjust(flavour.slug, -1)}
                   disabled={count === 0}
-                  className="h-8 w-8 border border-line text-paper-dim transition-colors hover:border-paper-dim disabled:opacity-30"
+                  className="h-11 w-11 border border-line text-paper-dim transition-colors hover:border-paper-dim disabled:opacity-30 sm:h-8 sm:w-8"
                 >
                   &minus;
                 </button>
@@ -97,7 +97,7 @@ export function StepTruffles({
                   type="button"
                   onClick={() => adjust(flavour.slug, 1)}
                   disabled={disabled}
-                  className="h-8 w-8 border border-line text-paper-dim transition-colors hover:border-paper-dim disabled:opacity-30"
+                  className="h-11 w-11 border border-line text-paper-dim transition-colors hover:border-paper-dim disabled:opacity-30 sm:h-8 sm:w-8"
                 >
                   +
                 </button>

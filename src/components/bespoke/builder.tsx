@@ -53,7 +53,7 @@ export function Builder() {
   ];
 
   return (
-    <div className="px-6 pt-32 pb-24 sm:px-10">
+    <div className="px-6 pt-32 pb-28 sm:px-10 lg:pb-24">
       <div className="mx-auto max-w-6xl">
         <StepIndicator current={step} />
 
