@@ -132,25 +132,21 @@ export function SiteHeader() {
 function CartIcon() {
   return (
     <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
       fill="none"
       aria-hidden
     >
       <path
-        d="M4.5 5.5H11.5L11.1 13.2C11.07 13.78 10.59 14.25 10 14.25H6C5.41 14.25 4.93 13.78 4.9 13.2L4.5 5.5Z"
+        d="M2 2H4L6.3 12.7C6.45 13.4 7.05 13.9 7.75 13.9H15.1C15.79 13.9 16.38 13.42 16.53 12.75L18 6H5.2"
         stroke="currentColor"
-        strokeWidth="1.2"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M6 5.5V4.25C6 3.14 6.9 2.25 8 2.25C9.1 2.25 10 3.14 10 4.25V5.5"
-        stroke="currentColor"
-        strokeWidth="1.2"
+        strokeWidth="1.3"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
+      <circle cx="8" cy="17" r="1.15" fill="currentColor" />
+      <circle cx="15.5" cy="17" r="1.15" fill="currentColor" />
     </svg>
   );
 }
