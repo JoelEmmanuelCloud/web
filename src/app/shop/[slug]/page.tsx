@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/reveal";
 import { getProductBySlug, formatPrice, products } from "@/lib/products";
-import { siteEmails } from "@/lib/site-config";
+import { siteEmails, siteUrl } from "@/lib/site-config";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -16,9 +16,25 @@ export async function generateMetadata({
   const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) return {};
+  const title = `${product.name} | Paul Wayne Gregory Chocolates`;
   return {
-    title: `${product.name} | Paul Wayne Gregory Chocolates`,
+    title,
     description: product.hook,
+    openGraph: {
+      title,
+      description: product.hook,
+      url: `${siteUrl}/shop/${product.slug}`,
+      siteName: "Paul Wayne Gregory Chocolates",
+      images: [{ url: product.image }],
+      locale: "en_GB",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: product.hook,
+      images: [product.image],
+    },
   };
 }
 
@@ -33,8 +49,29 @@ export default async function ProductPage({
     `Enquiry: ${product.name}`,
   )}`;
 
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.hook,
+    image: `${siteUrl}${product.image}`,
+    offers: {
+      "@type": "Offer",
+      url: `${siteUrl}/shop/${product.slug}`,
+      priceCurrency: "GBP",
+      price: product.price,
+      availability: "https://schema.org/InStock",
+    },
+  };
+
   return (
     <div className="px-6 pt-32 pb-24 sm:px-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <div className="mx-auto max-w-6xl">
         <Link
           href="/shop"
