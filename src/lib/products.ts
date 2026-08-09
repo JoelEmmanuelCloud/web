@@ -19,6 +19,7 @@ export type ProductContent = {
 
 export type Product = ProductContent & {
   availableForSale: boolean;
+  variantId: string | null;
 };
 
 export const productContent: ProductContent[] = [
@@ -280,7 +281,7 @@ export async function getProducts(): Promise<Product[]> {
   return productContent.map((content) => {
     const live = shopifyProducts.get(content.shopifyHandle ?? content.slug);
     if (!live) {
-      return { ...content, availableForSale: true };
+      return { ...content, availableForSale: true, variantId: null };
     }
 
     return {
@@ -289,6 +290,7 @@ export async function getProducts(): Promise<Product[]> {
       image: live.images[0] ?? content.image,
       gallery: live.images.length > 0 ? live.images : content.gallery,
       availableForSale: live.availableForSale,
+      variantId: live.variantId,
     };
   });
 }

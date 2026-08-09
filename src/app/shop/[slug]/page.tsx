@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/reveal";
+import { AddToCartButton } from "@/components/add-to-cart-button";
 import { getProductBySlug, formatPrice, getProducts } from "@/lib/products";
 import { siteEmails, siteUrl } from "@/lib/site-config";
 
@@ -133,12 +134,26 @@ export default async function ProductPage({
               </div>
             </div>
 
-            <Link
-              href={enquireHref}
-              className="tracked-label flex h-[46px] w-full max-w-xs items-center justify-center rounded-full bg-paper px-8 text-xs text-ink transition-colors hover:bg-accent hover:text-accent-ink"
-            >
-              Enquire To Order
-            </Link>
+            <div className="flex flex-col gap-3">
+              {product.variantId ? (
+                <AddToCartButton variantId={product.variantId} />
+              ) : (
+                <Link
+                  href={enquireHref}
+                  className="tracked-label flex h-[46px] w-full max-w-xs items-center justify-center rounded-full bg-paper px-8 text-xs text-ink transition-colors hover:bg-accent hover:text-accent-ink"
+                >
+                  Enquire To Order
+                </Link>
+              )}
+              {product.variantId && (
+                <Link
+                  href={enquireHref}
+                  className="tracked-label text-xs text-paper-dim transition-colors hover:text-paper"
+                >
+                  Or enquire about this product
+                </Link>
+              )}
+            </div>
 
             <div className="flex flex-col gap-4 border-t border-line pt-8">
               {product.description.map((paragraph, i) => (
