@@ -10,6 +10,7 @@ import { StepReview } from "@/components/bespoke/step-review";
 import { LiveSummary, type BuilderState } from "@/components/bespoke/live-summary";
 import { calculatePrice } from "@/lib/bespoke-config";
 import { decodeBuilderState } from "@/lib/bespoke-share";
+import type { Product } from "@/lib/products";
 
 const initialState: BuilderState = {
   boxStyle: null,
@@ -25,7 +26,7 @@ const initialState: BuilderState = {
   },
 };
 
-export function Builder() {
+export function Builder({ truffleFlavours }: { truffleFlavours: Product[] }) {
   const searchParams = useSearchParams();
   const [step, setStep] = useState(0);
   const [state, setState] = useState<BuilderState>(() => {
@@ -60,7 +61,13 @@ export function Builder() {
         <div className="grid gap-14 lg:grid-cols-[1fr_360px]">
           <div>
             {step === 0 && <StepBox state={state} onChange={patch} />}
-            {step === 1 && <StepTruffles state={state} onChange={patch} />}
+            {step === 1 && (
+              <StepTruffles
+                state={state}
+                onChange={patch}
+                truffleFlavours={truffleFlavours}
+              />
+            )}
             {step === 2 && <StepPersonalise state={state} onChange={patch} />}
             {step === 3 && <StepReview state={state} price={price} />}
 

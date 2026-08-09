@@ -3,10 +3,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/reveal";
-import { getProductBySlug, formatPrice, products } from "@/lib/products";
+import { getProductBySlug, formatPrice, getProducts } from "@/lib/products";
 import { siteEmails, siteUrl } from "@/lib/site-config";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const products = await getProducts();
   return products.map((product) => ({ slug: product.slug }));
 }
 
@@ -14,7 +15,7 @@ export async function generateMetadata({
   params,
 }: PageProps<"/shop/[slug]">): Promise<Metadata> {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   if (!product) return {};
   const title = `${product.name} | Paul Wayne Gregory Chocolates`;
   return {
@@ -42,7 +43,7 @@ export default async function ProductPage({
   params,
 }: PageProps<"/shop/[slug]">) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   if (!product) notFound();
 
   const enquireHref = `mailto:${siteEmails.webSales}?subject=${encodeURIComponent(
