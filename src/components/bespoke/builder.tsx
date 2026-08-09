@@ -69,7 +69,13 @@ export function Builder({ truffleFlavours }: { truffleFlavours: Product[] }) {
               />
             )}
             {step === 2 && <StepPersonalise state={state} onChange={patch} />}
-            {step === 3 && <StepReview state={state} price={price} />}
+            {step === 3 && (
+              <StepReview
+                state={state}
+                price={price}
+                truffleFlavours={truffleFlavours}
+              />
+            )}
 
             <div className="mt-14 flex justify-between border-t border-line pt-8">
               <button
