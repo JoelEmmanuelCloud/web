@@ -1,12 +1,16 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { Builder } from "@/components/bespoke/builder";
+import { getProducts } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Configure Your Box | Paul Wayne Gregory Chocolates",
 };
 
-export default function BespokeBoxBuildPage() {
+export default async function BespokeBoxBuildPage() {
+  const products = await getProducts();
+  const truffleFlavours = products.filter((p) => p.collection === "truffles");
+
   return (
     <div className="relative min-h-screen">
       <video
@@ -20,7 +24,7 @@ export default function BespokeBoxBuildPage() {
       />
       <div className="fixed inset-0 -z-10 bg-ink/80" />
       <Suspense fallback={null}>
-        <Builder />
+        <Builder truffleFlavours={truffleFlavours} />
       </Suspense>
     </div>
   );

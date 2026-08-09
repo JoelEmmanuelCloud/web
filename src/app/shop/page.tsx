@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
-import { products, formatPrice } from "@/lib/products";
+import { getProducts, formatPrice, type Product } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Shop | Paul Wayne Gregory Chocolates",
@@ -11,7 +11,8 @@ export const metadata: Metadata = {
     "Hand-crafted chocolates and truffles from Paul Wayne Gregory — the Chocolate Art Collection and the Truffles Collection.",
 };
 
-export default function ShopPage() {
+export default async function ShopPage() {
+  const products = await getProducts();
   const artCollection = products.filter((p) => p.collection === "chocolate-art");
   const truffles = products.filter((p) => p.collection === "truffles");
 
@@ -37,7 +38,7 @@ function ProductSection({
   tone = "base",
 }: {
   title: string;
-  products: typeof import("@/lib/products").products;
+  products: Product[];
   tone?: "base" | "raised";
 }) {
   return (

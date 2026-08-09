@@ -31,7 +31,7 @@ function preloadHeroVideo(href: string) {
   video.src = src;
 }
 
-export function SiteHeader() {
+export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -112,10 +112,10 @@ export function SiteHeader() {
         </nav>
 
         <Link
-          href="/shop"
+          href="/cart"
           className="tracked-label hidden items-center gap-2 text-xs text-paper-dim transition-colors hover:text-paper md:flex"
         >
-          <CartIcon />
+          <CartIcon count={cartCount} />
           Cart
         </Link>
       </div>
@@ -140,11 +140,11 @@ export function SiteHeader() {
             );
           })}
           <Link
-            href="/shop"
+            href="/cart"
             onClick={() => setOpen(false)}
             className="tracked-label flex items-center gap-2 border-t border-line py-3 pt-4 text-xs text-paper-dim transition-colors hover:text-paper"
           >
-            <CartIcon />
+            <CartIcon count={cartCount} />
             Cart
           </Link>
         </nav>
@@ -153,24 +153,25 @@ export function SiteHeader() {
   );
 }
 
-function CartIcon() {
+function CartIcon({ count }: { count: number }) {
   return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      aria-hidden
-    >
-      <path
-        d="M2 2H4L6.3 12.7C6.45 13.4 7.05 13.9 7.75 13.9H15.1C15.79 13.9 16.38 13.42 16.53 12.75L18 6H5.2"
-        stroke="currentColor"
-        strokeWidth="1.3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle cx="8" cy="17" r="1.15" fill="currentColor" />
-      <circle cx="15.5" cy="17" r="1.15" fill="currentColor" />
-    </svg>
+    <span className="relative inline-flex">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
+        <path
+          d="M2 2H4L6.3 12.7C6.45 13.4 7.05 13.9 7.75 13.9H15.1C15.79 13.9 16.38 13.42 16.53 12.75L18 6H5.2"
+          stroke="currentColor"
+          strokeWidth="1.3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <circle cx="8" cy="17" r="1.15" fill="currentColor" />
+        <circle cx="15.5" cy="17" r="1.15" fill="currentColor" />
+      </svg>
+      {count > 0 && (
+        <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[9px] text-accent-ink">
+          {count}
+        </span>
+      )}
+    </span>
   );
 }

@@ -3,10 +3,12 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/reveal";
-import { getProductBySlug, formatPrice, products } from "@/lib/products";
+import { AddToCartButton } from "@/components/add-to-cart-button";
+import { getProductBySlug, formatPrice, getProducts } from "@/lib/products";
 import { siteEmails, siteUrl } from "@/lib/site-config";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const products = await getProducts();
   return products.map((product) => ({ slug: product.slug }));
 }
 
@@ -14,7 +16,7 @@ export async function generateMetadata({
   params,
 }: PageProps<"/shop/[slug]">): Promise<Metadata> {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   if (!product) return {};
   const title = `${product.name} | Paul Wayne Gregory Chocolates`;
   return {
@@ -42,7 +44,7 @@ export default async function ProductPage({
   params,
 }: PageProps<"/shop/[slug]">) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   if (!product) notFound();
 
   const enquireHref = `mailto:${siteEmails.webSales}?subject=${encodeURIComponent(
@@ -132,12 +134,26 @@ export default async function ProductPage({
               </div>
             </div>
 
-            <Link
-              href={enquireHref}
-              className="tracked-label flex h-[46px] w-full max-w-xs items-center justify-center rounded-full bg-paper px-8 text-xs text-ink transition-colors hover:bg-accent hover:text-accent-ink"
-            >
-              Enquire To Order
-            </Link>
+            <div className="flex flex-col gap-3">
+              {product.variantId ? (
+                <AddToCartButton variantId={product.variantId} />
+              ) : (
+                <Link
+                  href={enquireHref}
+                  className="tracked-label flex h-[46px] w-full max-w-xs items-center justify-center rounded-full bg-paper px-8 text-xs text-ink transition-colors hover:bg-accent hover:text-accent-ink"
+                >
+                  Enquire To Order
+                </Link>
+              )}
+              {product.variantId && (
+                <Link
+                  href={enquireHref}
+                  className="tracked-label text-xs text-paper-dim transition-colors hover:text-paper"
+                >
+                  Or enquire about this product
+                </Link>
+              )}
+            </div>
 
             <div className="flex flex-col gap-4 border-t border-line pt-8">
               {product.description.map((paragraph, i) => (

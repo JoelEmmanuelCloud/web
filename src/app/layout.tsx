@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { CookieConsent } from "@/components/cookie-consent-loader";
 import { siteUrl, socialLinks } from "@/lib/site-config";
+import { getCartCount } from "@/lib/cart";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -51,7 +52,9 @@ const organizationJsonLd = {
   sameAs: [socialLinks.instagram, socialLinks.x],
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const cartCount = await getCartCount();
+
   return (
     <html lang="en" className={`${raleway.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-ink text-paper">
@@ -61,7 +64,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
           }}
         />
-        <SiteHeader />
+        <SiteHeader cartCount={cartCount} />
         <main className="flex-1">{children}</main>
         <SiteFooter />
         <CookieConsent />

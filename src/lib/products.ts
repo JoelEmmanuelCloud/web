@@ -1,5 +1,8 @@
-export type Product = {
+import { fetchShopifyProducts } from "@/lib/shopify";
+
+export type ProductContent = {
   slug: string;
+  shopifyHandle?: string;
   collection: "chocolate-art" | "truffles";
   name: string;
   price: number;
@@ -14,7 +17,12 @@ export type Product = {
   gallery: string[];
 };
 
-export const products: Product[] = [
+export type Product = ProductContent & {
+  availableForSale: boolean;
+  variantId: string | null;
+};
+
+export const productContent: ProductContent[] = [
   {
     slug: "art-range-one-box-of-12",
     collection: "chocolate-art",
@@ -184,6 +192,7 @@ export const products: Product[] = [
   },
   {
     slug: "matugga-rum-truffles",
+    shopifyHandle: "dark-rum-truffles",
     collection: "truffles",
     name: "Matugga Rum Truffles",
     price: 13.95,
@@ -266,7 +275,28 @@ export const products: Product[] = [
   },
 ];
 
-export function getProductBySlug(slug: string) {
+export async function getProducts(): Promise<Product[]> {
+  const shopifyProducts = await fetchShopifyProducts();
+
+  return productContent.map((content) => {
+    const live = shopifyProducts.get(content.shopifyHandle ?? content.slug);
+    if (!live) {
+      return { ...content, availableForSale: true, variantId: null };
+    }
+
+    return {
+      ...content,
+      price: live.price,
+      image: live.images[0] ?? content.image,
+      gallery: live.images.length > 0 ? live.images : content.gallery,
+      availableForSale: live.availableForSale,
+      variantId: live.variantId,
+    };
+  });
+}
+
+export async function getProductBySlug(slug: string) {
+  const products = await getProducts();
   return products.find((p) => p.slug === slug);
 }
 

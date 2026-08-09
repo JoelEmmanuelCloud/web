@@ -1,18 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { products } from "@/lib/products";
+import type { Product } from "@/lib/products";
 import { boxSizes } from "@/lib/bespoke-config";
 import type { BuilderState } from "@/components/bespoke/live-summary";
-
-const truffleFlavours = products.filter((p) => p.collection === "truffles");
 
 export function StepTruffles({
   state,
   onChange,
+  truffleFlavours,
 }: {
   state: BuilderState;
   onChange: (patch: Partial<BuilderState>) => void;
+  truffleFlavours: Product[];
 }) {
   const size = state.size ?? 0;
   const maxFlavours =
