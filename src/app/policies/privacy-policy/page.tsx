@@ -12,16 +12,15 @@ export default function PrivacyPolicyPage() {
   return (
     <LegalPage
       title="Privacy Policy"
-      lastUpdated="8 August 2026"
+      lastUpdated="12 August 2026"
       intro="This policy explains what personal data we collect when you use this site or contact us, why we collect it, and the rights you have over it. We’re the data controller for the personal data described here."
       sections={[
         {
           heading: "Who We Are",
           paragraphs: [
-            "Paul Wayne Gregory Chocolates is a UK chocolatier. Our registered company details are being finalised and will be added here in full. In the meantime, you can reach us about anything in this policy at " +
+            "This site is operated by Paul Wayne Gregory Chocolates Ltd, a company registered in England and Wales under company number 09068409, with its registered office at 167-169 Great Portland Street, 5th Floor, London, England, W1W 5PF. We're the data controller for the personal data described in this policy. You can reach us about anything in this policy at " +
               siteEmails.general +
               ".",
-            "[Registered company name, company number, and registered office address to be confirmed and added here.]",
           ],
         },
         {

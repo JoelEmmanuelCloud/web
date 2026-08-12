@@ -12,16 +12,16 @@ export default function TermsOfServicePage() {
   return (
     <LegalPage
       title="Terms of Service"
-      lastUpdated="8 August 2026"
+      lastUpdated="12 August 2026"
       intro="These terms govern your use of this website and any order you place with Paul Wayne Gregory Chocolates (“we”, “us”, “our”). By using this site or placing an order, you agree to them. Please read them alongside our Privacy Policy, Refund Policy, and Shipping Policy, linked in the footer."
       sections={[
         {
           heading: "Who We Are",
           paragraphs: [
-            "Paul Wayne Gregory Chocolates is a UK chocolatier trading under this name. Our registered company details are being finalised and will be added here in full — in the meantime, you can reach us directly at " +
+            "This site is operated by Paul Wayne Gregory Chocolates Ltd, a company registered in England and Wales under company number 09068409, with its registered office at 167-169 Great Portland Street, 5th Floor, London, England, W1W 5PF (“we”, “us”, “our”). You can reach us directly at " +
               siteEmails.general +
               ".",
-            "[Registered company name, company number, registered office address, and VAT number to be confirmed and added here.]",
+            "We are not currently VAT-registered, so prices shown on this site do not include VAT.",
           ],
         },
         {
