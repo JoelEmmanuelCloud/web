@@ -76,12 +76,12 @@ export function StepPersonalise({
       {state.personalise.mode === "logo" && (
         <div className="flex flex-col gap-3">
           <label className="tracked-label text-xs text-paper-dim">
-            JPEG only for now — PDF support is still being confirmed with our
-            supplier
+            JPEG, PNG, or SVG — logo must be supplied in black. Foil area is
+            up to 125mm &times; 125mm, set in 1.5cm from the edge of the box.
           </label>
           <input
             type="file"
-            accept="image/jpeg"
+            accept="image/jpeg,image/png,image/svg+xml"
             onChange={(e) => handleLogoUpload(e.target.files?.[0])}
             className="text-sm text-paper-dim file:mr-4 file:border file:border-line file:bg-transparent file:px-4 file:py-2 file:text-xs file:text-paper"
           />
@@ -131,8 +131,9 @@ export function StepPersonalise({
               ))}
             </div>
             <p className="mt-3 text-xs text-paper-dim">
-              Approved font list and printable area pending confirmation from
-              our foiling supplier.
+              Foil area is up to 125mm &times; 125mm, set in 1.5cm from the
+              edge of the box. Approved font list still pending confirmation
+              from our foiling supplier.
             </p>
           </div>
         </div>
