@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Shop | Paul Wayne Gregory Chocolates",
   description:
     "Hand-crafted chocolates and truffles from Paul Wayne Gregory — the Chocolate Art Collection and the Truffles Collection.",
+  alternates: { canonical: "/shop" },
 };
 
 export default async function ShopPage() {

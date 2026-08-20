@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Terms of Service | Paul Wayne Gregory Chocolates",
   description:
     "The terms that govern using this site and ordering from Paul Wayne Gregory Chocolates.",
+  alternates: { canonical: "/policies/terms-of-service" },
 };
 
 export default function TermsOfServicePage() {

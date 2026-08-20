@@ -3,6 +3,7 @@ import { PolicyPage } from "@/components/policy-page";
 
 export const metadata: Metadata = {
   title: "Refund Policy | Paul Wayne Gregory Chocolates",
+  alternates: { canonical: "/policies/refund-policy" },
 };
 
 export default function RefundPolicyPage() {

@@ -35,7 +35,7 @@ export function StoryGrid({
                 <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                   <Image
                     src={card.image}
-                    alt=""
+                    alt={card.title}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"

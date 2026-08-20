@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Paul Wayne Gregory Chocolates",
   description:
     "How we collect, use, and protect your information when you shop with us or get in touch.",
+  alternates: { canonical: "/policies/privacy-policy" },
 };
 
 export default function PrivacyPolicyPage() {

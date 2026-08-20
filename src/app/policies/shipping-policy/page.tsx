@@ -3,6 +3,7 @@ import { PolicyPage } from "@/components/policy-page";
 
 export const metadata: Metadata = {
   title: "Shipping Policy | Paul Wayne Gregory Chocolates",
+  alternates: { canonical: "/policies/shipping-policy" },
 };
 
 export default function ShippingPolicyPage() {

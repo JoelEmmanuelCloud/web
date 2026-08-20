@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Philosophy | Paul Wayne Gregory Chocolates",
   description:
     "Indulgence is everything — the philosophy behind Paul Wayne Gregory Chocolates, not a strapline but the standard every recipe is built to.",
+  alternates: { canonical: "/philosophy" },
 };
 
 export default function PhilosophyPage() {

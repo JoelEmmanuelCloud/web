@@ -7,6 +7,7 @@ import { CartLineControls } from "@/components/cart-line-controls";
 
 export const metadata: Metadata = {
   title: "Your Cart | Paul Wayne Gregory Chocolates",
+  robots: { index: false, follow: true },
 };
 
 export default async function CartPage() {

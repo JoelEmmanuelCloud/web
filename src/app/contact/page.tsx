@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Contact | Paul Wayne Gregory Chocolates",
   description:
     "Get in touch with Paul Wayne Gregory Chocolates — general enquiries, orders, and press.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
