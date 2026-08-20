@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Gallery | Paul Wayne Gregory Chocolates",
   description:
     "Showpieces, competition work, and the craft behind Paul Wayne Gregory Chocolates.",
+  alternates: { canonical: "/gallery" },
 };
 
 const galleryImages = Array.from(

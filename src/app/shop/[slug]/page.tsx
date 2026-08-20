@@ -22,6 +22,7 @@ export async function generateMetadata({
   return {
     title,
     description: product.hook,
+    alternates: { canonical: `/shop/${product.slug}` },
     openGraph: {
       title,
       description: product.hook,
@@ -103,7 +104,7 @@ export default async function ProductPage({
                   >
                     <Image
                       src={src}
-                      alt=""
+                      alt={product.name}
                       fill
                       sizes="(max-width: 1024px) 33vw, 16vw"
                       className="object-cover"

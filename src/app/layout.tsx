@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Raleway } from "next/font/google";
+import { Raleway, Fraunces } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -13,6 +13,14 @@ const raleway = Raleway({
   weight: ["400", "500", "600", "700"],
 });
 
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  weight: "variable",
+  style: ["normal"],
+  axes: ["SOFT", "opsz"],
+});
+
 const title = "Paul Wayne Gregory Chocolates";
 const description =
   "Multi-award winning chocolatier Paul Wayne Gregory. Indulgence is everything.";
@@ -22,6 +30,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title,
     description,
@@ -56,7 +67,10 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
   const cartCount = await getCartCount();
 
   return (
-    <html lang="en" className={`${raleway.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${raleway.variable} ${fraunces.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col bg-ink text-paper">
         <script
           type="application/ld+json"

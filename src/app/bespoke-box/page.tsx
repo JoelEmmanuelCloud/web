@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Bespoke Box | Paul Wayne Gregory Chocolates",
   description:
     "Design your own luxury truffle box — your style, your flavours, your name on the lid.",
+  alternates: { canonical: "/bespoke-box" },
 };
 
 export default function BespokeBoxPage() {

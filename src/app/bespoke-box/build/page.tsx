@@ -5,6 +5,7 @@ import { getProducts } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Configure Your Box | Paul Wayne Gregory Chocolates",
+  robots: { index: false, follow: true },
 };
 
 export default async function BespokeBoxBuildPage() {

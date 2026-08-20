@@ -20,7 +20,7 @@ export function GalleryGrid({ images }: { images: string[] }) {
             >
               <Image
                 src={src}
-                alt=""
+                alt={`Paul Wayne Gregory Chocolates — showpiece ${i + 1}`}
                 fill
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="object-cover transition-transform duration-500 hover:scale-105"
@@ -46,7 +46,7 @@ export function GalleryGrid({ images }: { images: string[] }) {
           <div className="relative h-full max-h-[80vh] w-full max-w-3xl overflow-hidden rounded-3xl">
             <Image
               src={active}
-              alt=""
+              alt={`Paul Wayne Gregory Chocolates — showpiece ${images.indexOf(active) + 1}`}
               fill
               sizes="(max-width: 768px) 100vw, 768px"
               className="object-contain"
