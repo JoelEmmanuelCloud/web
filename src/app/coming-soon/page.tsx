@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ComingSoonPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-10 bg-ink px-6 py-24 text-center">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-10 bg-ink px-6 py-24 text-center">
       <Image
         src="/images/brand/pwg-logo-GRY.png"
         alt="Paul Wayne Gregory"
@@ -57,6 +57,6 @@ export default function ComingSoonPage() {
           </a>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

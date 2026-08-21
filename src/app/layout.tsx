@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Raleway, Fraunces } from "next/font/google";
+import { headers } from "next/headers";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -64,7 +65,9 @@ const organizationJsonLd = {
 };
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
-  const cartCount = await getCartCount();
+  const headersList = await headers();
+  const isGated = headersList.get("x-pwg-gate") === "coming-soon";
+  const cartCount = isGated ? 0 : await getCartCount();
 
   return (
     <html
@@ -78,10 +81,10 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
           }}
         />
-        <SiteHeader cartCount={cartCount} />
+        {!isGated && <SiteHeader cartCount={cartCount} />}
         <main className="flex-1">{children}</main>
-        <SiteFooter />
-        <CookieConsent />
+        {!isGated && <SiteFooter />}
+        {!isGated && <CookieConsent />}
       </body>
     </html>
   );
