@@ -3,6 +3,8 @@ import { getProducts } from "@/lib/products";
 import { siteUrl } from "@/lib/site-config";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  if (process.env.COMING_SOON_MODE === "true") return [];
+
   const now = new Date();
   const products = await getProducts();
 
