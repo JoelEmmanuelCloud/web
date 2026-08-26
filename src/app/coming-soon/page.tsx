@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { socialLinks, siteEmails } from "@/lib/site-config";
+import { siteEmails } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Coming Soon | Paul Wayne Gregory Chocolates",
@@ -16,7 +16,7 @@ export default function ComingSoonPage() {
         alt="Paul Wayne Gregory"
         width={220}
         height={122}
-        className="h-16 w-auto invert"
+        className="h-28 w-auto invert"
         priority
       />
 
@@ -26,7 +26,7 @@ export default function ComingSoonPage() {
         </p>
         <p className="max-w-md text-base leading-8 text-paper-dim sm:text-lg">
           We&rsquo;re putting the finishing touches on something new.
-          Indulgence is everything &mdash; and it&rsquo;s worth the wait.
+          Indulgence is everything.
         </p>
       </div>
 
@@ -38,24 +38,6 @@ export default function ComingSoonPage() {
         >
           {siteEmails.general}
         </a>
-        <div className="mt-2 flex items-center gap-6 text-xs">
-          <a
-            href={socialLinks.instagram}
-            target="_blank"
-            rel="noreferrer"
-            className="tracked-label text-paper-dim hover:text-paper"
-          >
-            Instagram
-          </a>
-          <a
-            href={socialLinks.x}
-            target="_blank"
-            rel="noreferrer"
-            className="tracked-label text-paper-dim hover:text-paper"
-          >
-            X
-          </a>
-        </div>
       </div>
     </div>
   );

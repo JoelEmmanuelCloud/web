@@ -77,7 +77,7 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
             alt="Paul Wayne Gregory"
             width={220}
             height={122}
-            className="h-14 w-auto invert"
+            className="h-20 w-auto invert"
             priority
           />
         </Link>
