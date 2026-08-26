@@ -3,6 +3,7 @@ import { NextResponse, type NextRequest } from "next/server";
 const BYPASS_COOKIE = "pwg_preview";
 const BYPASS_PARAM = "preview";
 const GATE_HEADER = "x-pwg-gate";
+const GATED_HOSTNAME_SUFFIX = "paulwaynegregory.com";
 
 function gatedResponse(request: NextRequest, url = request.nextUrl) {
   const headers = new Headers(request.headers);
@@ -13,6 +14,9 @@ function gatedResponse(request: NextRequest, url = request.nextUrl) {
 export function proxy(request: NextRequest) {
   const comingSoonEnabled = process.env.COMING_SOON_MODE === "true";
   if (!comingSoonEnabled) return NextResponse.next();
+
+  const hostname = request.nextUrl.hostname;
+  if (!hostname.endsWith(GATED_HOSTNAME_SUFFIX)) return NextResponse.next();
 
   const { pathname, searchParams } = request.nextUrl;
 
