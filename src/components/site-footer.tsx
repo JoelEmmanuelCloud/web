@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { footerInfoLinks, socialLinks, siteEmails } from "@/lib/site-config";
+import { footerInfoLinks, siteEmails } from "@/lib/site-config";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -42,25 +42,6 @@ export function SiteFooter() {
               &rarr;
             </button>
           </form>
-        </div>
-
-        <div className="flex justify-center gap-6">
-          <a
-            href={socialLinks.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tracked-label text-xs text-paper-dim transition-colors hover:text-paper"
-          >
-            Instagram
-          </a>
-          <a
-            href={socialLinks.x}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tracked-label text-xs text-paper-dim transition-colors hover:text-paper"
-          >
-            X
-          </a>
         </div>
 
         <div className="flex flex-col items-center gap-2 border-t border-line pt-8 text-center">

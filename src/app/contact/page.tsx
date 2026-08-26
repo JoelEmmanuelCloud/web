@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
-import { siteEmails, socialLinks } from "@/lib/site-config";
+import { siteEmails } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Contact | Paul Wayne Gregory Chocolates",
@@ -60,25 +60,6 @@ export default function ContactPage() {
             </div>
           </Reveal>
         </div>
-
-        <Reveal className="mx-auto mt-16 flex max-w-4xl justify-center gap-8 border-t border-line pt-10">
-          <a
-            href={socialLinks.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tracked-label text-xs text-paper-dim transition-colors hover:text-paper"
-          >
-            Instagram
-          </a>
-          <a
-            href={socialLinks.x}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tracked-label text-xs text-paper-dim transition-colors hover:text-paper"
-          >
-            X
-          </a>
-        </Reveal>
       </section>
     </>
   );

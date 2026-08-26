@@ -5,7 +5,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { CookieConsent } from "@/components/cookie-consent-loader";
-import { siteUrl, socialLinks } from "@/lib/site-config";
+import { siteUrl } from "@/lib/site-config";
 import { getCartCount } from "@/lib/cart";
 
 const raleway = Raleway({
@@ -61,7 +61,6 @@ const organizationJsonLd = {
   name: title,
   url: siteUrl,
   logo: `${siteUrl}/images/brand/pwg-logo-GRY.png`,
-  sameAs: [socialLinks.instagram, socialLinks.x],
 };
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
