@@ -26,11 +26,6 @@ export const footerInfoLinks: NavItem[] = [
   { label: "Terms of Service", href: "/policies/terms-of-service" },
 ];
 
-export const socialLinks = {
-  instagram: "https://www.instagram.com/pwg_chocolates",
-  x: "https://twitter.com/pwg_chocolate",
-};
-
 export const siteEmails = {
   general: "info@paulwaynegregory.com",
   webSales: "websales@paulwaynegregory.com",
