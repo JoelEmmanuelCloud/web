@@ -22,7 +22,7 @@ export default async function ShopPage() {
       <PageHero
         eyebrow="Choose Your Indulgence"
         heading="The Collection"
-        subheading="Hand-crafted chocolates and truffles, built around one philosophy: indulgence is everything."
+        subheading="Hand-crafted chocolates and truffles, created from one philosophy: indulgence is everything."
         image="/images/shopify-cdn/pwgartrangeone121_large.jpg"
         video={{ src: "/video/flavour-reveal.mp4" }}
       />

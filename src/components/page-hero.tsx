@@ -51,7 +51,7 @@ export function PageHero({
         {eyebrow && (
           <p className="tracked-label text-xs text-paper-dim">{eyebrow}</p>
         )}
-        <h1 className="tracked-display max-w-3xl text-2xl text-paper sm:text-4xl">
+        <h1 className="tracked-display max-w-3xl text-2xl text-accent sm:text-4xl">
           {heading}
         </h1>
         {subheading && (

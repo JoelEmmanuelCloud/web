@@ -13,11 +13,16 @@ export const siteUrl = resolveSiteUrl();
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Philosophy", href: "/philosophy" },
+  { label: "About", href: "/about" },
   { label: "Gallery", href: "/gallery" },
   { label: "Shop", href: "/shop" },
   { label: "Contact", href: "/contact" },
   { label: "Bespoke Box", href: "/bespoke-box" },
 ];
+
+export const socialLinks = {
+  facebook: "https://www.facebook.com",
+};
 
 export const footerInfoLinks: NavItem[] = [
   { label: "Privacy Policy", href: "/policies/privacy-policy" },

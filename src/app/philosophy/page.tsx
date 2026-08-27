@@ -15,17 +15,17 @@ export default function PhilosophyPage() {
   return (
     <>
       <PageHero
-        eyebrow="The Philosophy"
+        eyebrow="Our Philosophy"
         heading="Indulgence Is Everything"
-        subheading="Not a strapline. The standard every recipe, every decoration, and every box is built to."
+        subheading="Not a strapline. The standard for every recipe, every decoration, every design, every box."
         image="/images/shopify-cdn/pwg-test-images03_5d64ae09-b48f-4f11-9979-6445be256bbe.jpg"
         video={{ src: "/video/indulgence-melt.mp4" }}
       />
 
       <section className="bg-ink px-6 py-24 sm:px-10">
         <div className="mx-auto flex max-w-2xl flex-col gap-6 text-center">
-          <p className="tracked-label text-xs text-accent">Why This Word</p>
-          <h2 className="tracked-display text-xl text-paper sm:text-2xl">
+          <p className="tracked-label text-xs text-paper">Why A Philosophy?</p>
+          <h2 className="tracked-display text-xl text-accent sm:text-2xl">
             A Philosophy, Not A Slogan
           </h2>
           <p className="text-base leading-8 text-paper-dim">
@@ -62,7 +62,7 @@ export default function PhilosophyPage() {
               <p className="tracked-label text-xs text-paper-dim">
                 The Taste Framework
               </p>
-              <h2 className="tracked-display text-lg text-paper sm:text-xl">
+              <h2 className="tracked-display text-lg text-accent sm:text-xl">
                 Can Indulgence Be Measured?
               </h2>
               <p className="text-base leading-8 text-paper-dim">
@@ -74,7 +74,7 @@ export default function PhilosophyPage() {
               </p>
               <p className="text-base leading-8 text-paper-dim">
                 We&rsquo;re building this out into proper masterclass
-                content — starting with Lesson One and Two: can indulgence be
+                content — starting with Lesson One: can indulgence be
                 measured? It&rsquo;s the first time we&rsquo;ve taught this
                 openly, and the first time we&rsquo;ve shown the creative
                 journey behind a new range as it happens, rather than after
@@ -89,9 +89,9 @@ export default function PhilosophyPage() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <p className="tracked-label text-xs text-paper-dim">
-              Two Ranges, One Standard
+              Two styles, one Standard.
             </p>
-            <h2 className="tracked-display mt-3 text-xl text-paper sm:text-2xl">
+            <h2 className="tracked-display mt-3 text-xl text-accent sm:text-2xl">
               The Collection
             </h2>
           </div>
@@ -110,12 +110,11 @@ export default function PhilosophyPage() {
                 </div>
                 <div className="mt-5 border-l border-line pl-5">
                   <h3 className="tracked-label text-xs text-paper">
-                    The New Range
+                    Chocolate Bonbons
                   </h3>
                   <p className="mt-2 text-sm text-paper-dim">
-                    Introduced alongside this relaunch and documented as
-                    it&rsquo;s created — the first time we&rsquo;ve taken
-                    customers behind the scenes of a range being built.
+                    The art range which was born out of the multi-award
+                    winning classic range.
                   </p>
                 </div>
               </Link>
