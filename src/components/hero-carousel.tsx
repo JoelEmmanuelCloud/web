@@ -143,7 +143,7 @@ export function HeroCarousel({ chapters }: { chapters: HeroChapter[] }) {
                     </p>
                   )}
                   <h1
-                    className="tracked-display max-w-3xl text-2xl text-paper transition-all ease-out sm:text-4xl"
+                    className="tracked-display max-w-3xl text-2xl text-accent transition-all ease-out sm:text-4xl"
                     style={{
                       transitionDuration: "700ms",
                       transitionDelay: isActive ? "550ms" : "0ms",

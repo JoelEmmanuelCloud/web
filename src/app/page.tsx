@@ -44,6 +44,12 @@ const storyCards: StoryCard[] = [
       "Hand-crafted chocolates and truffles, built around one philosophy: indulgence is everything.",
   },
   {
+    href: "/gallery",
+    image: "/images/shopify-cdn/pwg_paul_piping_01.jpg",
+    title: "The Windrush Collection",
+    description: "A new truffle collection, coming soon.",
+  },
+  {
     href: "/bespoke-box",
     image: "/images/shopify-cdn/12chocos_B.jpg",
     title: "Bespoke Box",
@@ -68,7 +74,9 @@ export default function Home() {
         <div className="mx-auto flex max-w-2xl flex-col gap-6">
           <p className="text-base leading-8 text-paper-dim sm:text-lg">
             Multi-award winning chocolatier Paul Wayne Gregory has one main
-            desire&hellip; to show the world that
+            desire.
+            <br />
+            To show the world that
           </p>
           <p className="tracked-display text-lg text-accent sm:text-xl">
             &ldquo;Indulgence Is Everything&rdquo;

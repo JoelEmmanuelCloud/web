@@ -13,6 +13,7 @@ function isActive(pathname: string, href: string) {
 
 const heroVideoByRoute: Record<string, string> = {
   "/philosophy": "/video/indulgence-melt.mp4",
+  "/about": "/video/makers-hands.mp4",
   "/gallery": "/video/gallery-reveal.mp4",
   "/shop": "/video/flavour-reveal.mp4",
   "/contact": "/video/our-craft.mp4",
@@ -83,7 +84,7 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {primaryNav.slice(1).map((item) => {
+          {primaryNav.map((item) => {
             const active = isActive(pathname, item.href);
             return (
               <Link

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 
@@ -30,12 +29,9 @@ export default function BespokeBoxPage() {
             the lid — a step-by-step build with a live preview and price the
             whole way through.
           </p>
-          <Link
-            href="/bespoke-box/build"
-            className="tracked-label flex h-[46px] items-center justify-center rounded-full border border-blush-ink px-8 text-xs text-blush-ink transition-colors hover:bg-blush-ink hover:text-blush"
-          >
-            Begin Your Box
-          </Link>
+          <p className="tracked-label flex h-[46px] items-center justify-center rounded-full border border-blush-ink px-8 text-xs text-blush-ink">
+            Coming Soon
+          </p>
         </div>
       </section>
     </>
