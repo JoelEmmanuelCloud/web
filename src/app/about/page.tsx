@@ -17,7 +17,7 @@ export default function AboutPage() {
         heading="Paul Wayne Gregory"
         subheading="Multi-award winning chocolatier."
         image="/images/shopify-cdn/pwg_paul_piping_01.jpg"
-        video={{ src: "/video/makers-hands.mp4" }}
+        video={{ src: "/video/tempering-craft.mp4" }}
       />
 
       <section className="bg-ink px-6 py-24 sm:px-10">
