@@ -114,10 +114,11 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
 
         <Link
           href="/cart"
-          className="tracked-label hidden items-center gap-2 text-xs text-paper-dim transition-colors hover:text-paper md:flex"
+          aria-label="Cart"
+          className="tracked-label flex items-center gap-2 text-xs text-paper-dim transition-colors hover:text-paper"
         >
           <CartIcon count={cartCount} />
-          Cart
+          <span className="hidden md:inline">Cart</span>
         </Link>
       </div>
 
@@ -140,14 +141,6 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
               </Link>
             );
           })}
-          <Link
-            href="/cart"
-            onClick={() => setOpen(false)}
-            className="tracked-label flex items-center gap-2 border-t border-line py-3 pt-4 text-xs text-paper-dim transition-colors hover:text-paper"
-          >
-            <CartIcon count={cartCount} />
-            Cart
-          </Link>
         </nav>
       )}
     </header>
