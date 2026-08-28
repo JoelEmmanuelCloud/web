@@ -37,7 +37,7 @@ export default async function ShopPage() {
               Behind Each Style
             </h2>
           </div>
-          <div className="grid gap-10 sm:grid-cols-2">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             <Reveal>
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                 <video
@@ -71,6 +71,24 @@ export default async function ShopPage() {
               <div className="mt-5 border-l border-line pl-5">
                 <h3 className="tracked-label text-xs text-paper">
                   Truffles
+                </h3>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                <video
+                  className="h-full w-full object-cover"
+                  src="/video/shop-ingots-cut.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls={false}
+                />
+              </div>
+              <div className="mt-5 border-l border-line pl-5">
+                <h3 className="tracked-label text-xs text-paper">
+                  Chocolate Ingots
                 </h3>
               </div>
             </Reveal>
