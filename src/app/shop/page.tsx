@@ -27,6 +27,57 @@ export default async function ShopPage() {
         video={{ src: "/video/flavour-reveal.mp4" }}
       />
 
+      <section className="bg-ink px-6 py-24 sm:px-10">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-16 text-center">
+            <p className="tracked-label text-xs text-paper-dim">
+              Two Styles, One Standard
+            </p>
+            <h2 className="tracked-display mt-3 text-xl text-accent sm:text-2xl">
+              Behind Each Style
+            </h2>
+          </div>
+          <div className="grid gap-10 sm:grid-cols-2">
+            <Reveal>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                <video
+                  className="h-full w-full object-cover"
+                  src="/video/shop-bonbons-creation.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls={false}
+                />
+              </div>
+              <div className="mt-5 border-l border-line pl-5">
+                <h3 className="tracked-label text-xs text-paper">
+                  Chocolate Bonbons
+                </h3>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                <video
+                  className="h-full w-full object-cover"
+                  src="/video/shop-truffles-creation.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls={false}
+                />
+              </div>
+              <div className="mt-5 border-l border-line pl-5">
+                <h3 className="tracked-label text-xs text-paper">
+                  Truffles
+                </h3>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       <ProductSection title="Chocolate Art Collection" products={artCollection} />
       <ProductSection title="Truffles Collection" products={truffles} tone="raised" />
     </>
