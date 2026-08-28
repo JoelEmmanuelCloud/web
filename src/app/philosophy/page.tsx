@@ -125,7 +125,7 @@ export default function PhilosophyPage() {
                 <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                   <Image
                     src="/images/shopify-cdn/ChampagneTruffles.02.jpg"
-                    alt="Classic truffle collection"
+                    alt="Windrush truffle collection"
                     fill
                     sizes="(max-width: 640px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -133,12 +133,11 @@ export default function PhilosophyPage() {
                 </div>
                 <div className="mt-5 border-l border-line pl-5">
                   <h3 className="tracked-label text-xs text-paper">
-                    The Classic Range
+                    Windrush
                   </h3>
                   <p className="mt-2 text-sm text-paper-dim">
-                    Our founding collection, now proven over years — every
-                    flavour in it has won an award, and each one has a story
-                    worth retelling.
+                    Get ready to go behind the scenes for the very first
+                    time, witness the creations as they unfold.
                   </p>
                 </div>
               </Link>
