@@ -46,6 +46,19 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+    document.body.style.overflow = "hidden";
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="nav-scrim absolute inset-0" aria-hidden />
@@ -61,15 +74,11 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
           type="button"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
-          aria-label="Toggle menu"
+          aria-label={open ? "Close menu" : "Open menu"}
           className="tracked-label flex items-center gap-3 text-xs text-paper md:hidden"
         >
-          <span className="flex h-4 w-6 flex-col justify-between">
-            <span className="h-px w-full bg-paper" />
-            <span className="h-px w-full bg-paper" />
-            <span className="h-px w-full bg-paper" />
-          </span>
-          Menu
+          <MenuIcon open={open} />
+          {open ? "Close" : "Menu"}
         </button>
 
         <Link href="/" className="shrink-0">
@@ -123,27 +132,60 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
       </div>
 
       {open && (
-        <nav className="relative flex flex-col gap-1 border-t border-line bg-ink px-6 py-6 md:hidden">
-          {primaryNav.map((item) => {
-            const active = isActive(pathname, item.href);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                onTouchStart={() => preloadHeroVideo(item.href)}
-                aria-current={active ? "page" : undefined}
-                className={`tracked-label py-3 text-xs transition-colors ${
-                  active ? "text-paper" : "text-paper-dim hover:text-paper"
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
+        <div className="fixed inset-x-0 bottom-0 top-24 z-40 overflow-y-auto border-t border-line bg-ink md:hidden">
+          <nav className="flex flex-col gap-1 px-6 py-6">
+            {primaryNav.map((item) => {
+              const active = isActive(pathname, item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  onTouchStart={() => preloadHeroVideo(item.href)}
+                  aria-current={active ? "page" : undefined}
+                  className={`tracked-label py-3 text-xs transition-colors ${
+                    active ? "text-paper" : "text-paper-dim hover:text-paper"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+          <button
+            type="button"
+            onClick={() => setOpen(false)}
+            aria-label="Close menu"
+            className="tracked-label flex items-center gap-3 border-t border-line px-6 py-6 text-xs text-paper-dim transition-colors hover:text-paper"
+          >
+            <MenuIcon open={true} />
+            Close
+          </button>
+        </div>
       )}
     </header>
+  );
+}
+
+function MenuIcon({ open }: { open: boolean }) {
+  return (
+    <span className="relative flex h-4 w-6 flex-col items-center justify-center">
+      <span
+        className={`absolute h-px w-6 bg-paper transition-transform duration-200 ${
+          open ? "rotate-45" : "-translate-y-1.5"
+        }`}
+      />
+      <span
+        className={`absolute h-px w-6 bg-paper transition-opacity duration-200 ${
+          open ? "opacity-0" : "opacity-100"
+        }`}
+      />
+      <span
+        className={`absolute h-px w-6 bg-paper transition-transform duration-200 ${
+          open ? "-rotate-45" : "translate-y-1.5"
+        }`}
+      />
+    </span>
   );
 }
 
