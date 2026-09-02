@@ -45,7 +45,7 @@ const storyCards: StoryCard[] = [
   },
   {
     href: "/windrush",
-    image: "/images/windrush/windrush-07-box-cover-final.png",
+    image: "/images/windrush/windrush-07-box-cover-final.webp",
     title: "The Windrush Collection",
     description: "A celebration of legacy, courage & new beginnings.",
   },

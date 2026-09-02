@@ -124,7 +124,7 @@ export default function PhilosophyPage() {
               <Link href="/windrush" className="group block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                   <Image
-                    src="/images/windrush/windrush-07-box-cover-final.png"
+                    src="/images/windrush/windrush-07-box-cover-final.webp"
                     alt="Windrush truffle collection"
                     fill
                     sizes="(max-width: 640px) 100vw, 50vw"

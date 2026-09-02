@@ -13,15 +13,15 @@ export const metadata: Metadata = {
 
 const storyPanels = [
   {
-    image: "/images/windrush/windrush-04-story-panel-1.png",
+    image: "/images/windrush/windrush-04-story-panel-1.webp",
     alt: "Windrush story panel one: A Journey of Hope, Carrying Dreams, Building Tomorrow",
   },
   {
-    image: "/images/windrush/windrush-06-story-panel-2.png",
+    image: "/images/windrush/windrush-06-story-panel-2.webp",
     alt: "Windrush story panel two: Leaving Home Holding Hope, Far From Home Close To Heart, Building More Than A Life",
   },
   {
-    image: "/images/windrush/windrush-08-story-panel-3.png",
+    image: "/images/windrush/windrush-08-story-panel-3.webp",
     alt: "Windrush story panel three: A Handshake Of Welcome, Rooted In Resilience, Shaping The Future",
   },
 ];
@@ -34,7 +34,7 @@ export default function WindrushPage() {
         heading="Windrush"
         subheading="A Celebration Of Legacy, Courage & New Beginnings."
         cta={{ label: "The Bespoke Box", href: "/bespoke-box" }}
-        image="/images/windrush/windrush-05-promo-page.png"
+        image="/images/windrush/windrush-05-promo-page.webp"
       />
 
       <section className="bg-ink-raised px-6 py-24 sm:px-10">
@@ -42,7 +42,7 @@ export default function WindrushPage() {
           <Reveal>
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
               <Image
-                src="/images/windrush/windrush-07-box-cover-final.png"
+                src="/images/windrush/windrush-07-box-cover-final.webp"
                 alt="Windrush Chocolate Truffles box — a celebration of legacy, courage & new beginnings"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
