@@ -1,8 +1,21 @@
+"use client";
+
 import Link from "next/link";
+import { useState, type FormEvent } from "react";
 import { footerInfoLinks, siteEmails } from "@/lib/site-config";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
+  const [email, setEmail] = useState("");
+
+  function handleSubscribe(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const subject = encodeURIComponent("Newsletter Signup");
+    const body = encodeURIComponent(
+      `Please add this address to the newsletter: ${email}`,
+    );
+    window.location.href = `mailto:${siteEmails.general}?subject=${subject}&body=${body}`;
+  }
 
   return (
     <footer className="border-t border-line bg-ink-raised">
@@ -27,10 +40,15 @@ export function SiteFooter() {
           <p className="tracked-label text-xs text-paper-dim">
             Subscribe to Indulgence
           </p>
-          <form className="flex w-full max-w-sm items-center border-b border-line pb-2">
+          <form
+            onSubmit={handleSubscribe}
+            className="flex w-full max-w-sm items-center border-b border-line pb-2"
+          >
             <input
               type="email"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
               className="w-full bg-transparent text-sm text-paper placeholder:text-paper-dim focus:outline-none"
             />
