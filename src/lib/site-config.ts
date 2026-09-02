@@ -16,6 +16,7 @@ export const primaryNav: NavItem[] = [
   { label: "About", href: "/about" },
   { label: "Gallery", href: "/gallery" },
   { label: "Shop", href: "/shop" },
+  { label: "Windrush", href: "/windrush" },
   { label: "Contact", href: "/contact" },
   { label: "Bespoke Box", href: "/bespoke-box" },
 ];
