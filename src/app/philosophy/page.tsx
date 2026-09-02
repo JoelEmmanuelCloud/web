@@ -121,10 +121,10 @@ export default function PhilosophyPage() {
             </Reveal>
 
             <Reveal>
-              <Link href="/shop" className="group block">
+              <Link href="/windrush" className="group block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                   <Image
-                    src="/images/shopify-cdn/ChampagneTruffles.02.jpg"
+                    src="/images/windrush/windrush-07-box-cover-final.png"
                     alt="Windrush truffle collection"
                     fill
                     sizes="(max-width: 640px) 100vw, 50vw"

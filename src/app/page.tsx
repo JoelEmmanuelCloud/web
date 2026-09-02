@@ -44,10 +44,10 @@ const storyCards: StoryCard[] = [
       "Hand-crafted chocolates and truffles, built around one philosophy: indulgence is everything.",
   },
   {
-    href: "/gallery",
-    image: "/images/shopify-cdn/pwg_paul_piping_01.jpg",
+    href: "/windrush",
+    image: "/images/windrush/windrush-07-box-cover-final.png",
     title: "The Windrush Collection",
-    description: "A new truffle collection, coming soon.",
+    description: "A celebration of legacy, courage & new beginnings.",
   },
   {
     href: "/bespoke-box",
