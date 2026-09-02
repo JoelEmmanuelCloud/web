@@ -43,22 +43,31 @@ export async function addToCart(
   variantId: string,
   quantity: number = 1,
   attributes?: { key: string; value: string }[],
-) {
-  const cartId = await getCartId();
+): Promise<{ ok: boolean }> {
   const line = { merchandiseId: variantId, quantity, attributes };
 
-  if (!cartId) {
-    const cart = await shopifyCartCreate([line]);
-    if (cart) await setCartId(cart.id);
-  } else {
-    const cart = await shopifyCartLinesAdd(cartId, [line]);
-    if (!cart) {
-      const newCart = await shopifyCartCreate([line]);
-      if (newCart) await setCartId(newCart.id);
-    }
-  }
+  try {
+    const cartId = await getCartId();
 
-  revalidatePath("/", "layout");
+    if (!cartId) {
+      const cart = await shopifyCartCreate([line]);
+      if (!cart) return { ok: false };
+      await setCartId(cart.id);
+    } else {
+      const cart = await shopifyCartLinesAdd(cartId, [line]);
+      if (!cart) {
+        const newCart = await shopifyCartCreate([line]);
+        if (!newCart) return { ok: false };
+        await setCartId(newCart.id);
+      }
+    }
+
+    revalidatePath("/", "layout");
+    return { ok: true };
+  } catch (error) {
+    console.error("Failed to add to cart", error);
+    return { ok: false };
+  }
 }
 
 export async function updateCartLineQuantity(lineId: string, quantity: number) {
@@ -99,6 +108,5 @@ export async function addBespokeBoxToCart(input: {
     return { ok: false };
   }
 
-  await addToCart(match.id, 1, input.attributes);
-  return { ok: true };
+  return addToCart(match.id, 1, input.attributes);
 }
