@@ -22,8 +22,8 @@ export default function AboutPage() {
 
       <section className="bg-ink px-6 py-24 sm:px-10">
         <div className="mx-auto flex max-w-2xl flex-col gap-6 text-center">
-          <p className="tracked-label text-xs text-accent">Behind The Craft</p>
-          <h2 className="tracked-display text-xl text-paper sm:text-2xl">
+          <p className="tracked-label text-xs text-paper">Behind The Craft</p>
+          <h2 className="tracked-display text-xl text-accent sm:text-2xl">
             A Master Of This Craft
           </h2>
           <p className="text-base leading-8 text-paper-dim">
@@ -34,15 +34,14 @@ export default function AboutPage() {
           </p>
           <p className="text-base leading-8 text-paper-dim">
             Read more about that philosophy, and the taste framework behind
-            it, on the{" "}
-            <Link
-              href="/philosophy"
-              className="text-paper underline underline-offset-4 transition-colors hover:text-accent"
-            >
-              Philosophy page
-            </Link>
-            .
+            it, below.
           </p>
+          <Link
+            href="/philosophy"
+            className="tracked-label text-xs text-paper underline underline-offset-4 transition-colors hover:text-accent"
+          >
+            Our Philosophy
+          </Link>
         </div>
       </section>
 

@@ -61,7 +61,7 @@ const storyCards: StoryCard[] = [
     image: "/images/shopify-cdn/PWG_CHOCOLAT_2018_coverimage_27d762b0-dcd9-4a86-b1a4-703e603d7c96.jpg",
     title: "The Gallery",
     description:
-      "Showpieces, competition work, and the craft behind the collection.",
+      "Showpieces, commission works, and the craftsmanship behind the collections.",
   },
 ];
 

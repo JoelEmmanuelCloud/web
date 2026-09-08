@@ -22,10 +22,10 @@ export function StoryGrid({
     <section className="bg-ink px-6 py-24 sm:px-10">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 flex flex-col items-center gap-3 text-center">
-          <h2 className="tracked-display text-xl text-paper sm:text-2xl">
-            {eyebrow}
+          <h2 className="tracked-display text-xl text-accent sm:text-2xl">
+            {heading}
           </h2>
-          <p className="tracked-label text-xs text-paper-dim">{heading}</p>
+          <p className="tracked-label text-xs text-paper-dim">{eyebrow}</p>
         </div>
 
         <div className="grid gap-10 sm:grid-cols-2">
@@ -42,7 +42,7 @@ export function StoryGrid({
                   />
                 </div>
                 <div className="mt-5 border-l border-line pl-5">
-                  <h3 className="tracked-label text-xs text-paper">
+                  <h3 className="tracked-label text-xs text-accent">
                     {card.title}
                   </h3>
                   <p className="mt-2 text-sm text-paper-dim">
