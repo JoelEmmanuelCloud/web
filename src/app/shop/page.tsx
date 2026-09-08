@@ -37,7 +37,7 @@ export default async function ShopPage() {
               Behind Each Style
             </h2>
           </div>
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-10 sm:grid-cols-2">
             <Reveal>
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                 <video
@@ -76,20 +76,44 @@ export default async function ShopPage() {
             </Reveal>
             <Reveal>
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-                <video
-                  className="h-full w-full object-cover"
-                  src="/video/shop-ingots-cut.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  controls={false}
+                <Image
+                  src="/images/shopify-cdn/pwg_paul_piping_01.jpg"
+                  alt="Hot Chocolate, coming soon"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
               <div className="mt-5 border-l border-line pl-5">
-                <h3 className="tracked-label text-xs text-paper">
-                  Chocolate Ingots
-                </h3>
+                <div className="flex items-center gap-3">
+                  <h3 className="tracked-label text-xs text-paper">
+                    Hot Chocolate
+                  </h3>
+                  <span className="tracked-label rounded-full border border-line px-3 py-1 text-[10px] text-paper-dim">
+                    Coming Soon
+                  </span>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                <Image
+                  src="/images/windrush/windrush-07-box-cover-final.webp"
+                  alt="Windrush collection, coming soon"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="mt-5 border-l border-line pl-5">
+                <div className="flex items-center gap-3">
+                  <h3 className="tracked-label text-xs text-paper">
+                    Windrush Collection
+                  </h3>
+                  <span className="tracked-label rounded-full border border-line px-3 py-1 text-[10px] text-paper-dim">
+                    Coming Soon
+                  </span>
+                </div>
               </div>
             </Reveal>
           </div>

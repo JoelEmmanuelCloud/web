@@ -121,6 +121,57 @@ export default function PhilosophyPage() {
             </Reveal>
 
             <Reveal>
+              <Link href="/shop" className="group block">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                  <Image
+                    src="/images/shopify-cdn/ChampagneTruffles.02.jpg"
+                    alt="Truffle collection"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="mt-5 border-l border-line pl-5">
+                  <h3 className="tracked-label text-xs text-paper">
+                    Truffles
+                  </h3>
+                  <p className="mt-2 text-sm text-paper-dim">
+                    Classic looking truffles with a modern feel, flavour and
+                    concepts.
+                  </p>
+                </div>
+              </Link>
+            </Reveal>
+
+            <Reveal>
+              <div className="block">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                  <Image
+                    src="/images/shopify-cdn/pwg_paul_piping_01.jpg"
+                    alt="Hot Chocolate, coming soon"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="mt-5 border-l border-line pl-5">
+                  <div className="flex items-center gap-3">
+                    <h3 className="tracked-label text-xs text-paper">
+                      Hot Chocolate
+                    </h3>
+                    <span className="tracked-label rounded-full border border-line px-3 py-1 text-[10px] text-paper-dim">
+                      Coming Soon
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm text-paper-dim">
+                    Taste single origin chocolate from around the world in a
+                    cup of real hot chocolate.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal>
               <Link href="/windrush" className="group block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                   <Image
@@ -132,12 +183,18 @@ export default function PhilosophyPage() {
                   />
                 </div>
                 <div className="mt-5 border-l border-line pl-5">
-                  <h3 className="tracked-label text-xs text-paper">
-                    Windrush
-                  </h3>
+                  <div className="flex items-center gap-3">
+                    <h3 className="tracked-label text-xs text-paper">
+                      Windrush
+                    </h3>
+                    <span className="tracked-label rounded-full border border-line px-3 py-1 text-[10px] text-paper-dim">
+                      Coming Soon
+                    </span>
+                  </div>
                   <p className="mt-2 text-sm text-paper-dim">
-                    Get ready to go behind the scenes for the very first
-                    time, witness the creations as they unfold.
+                    Honouring the legacy of the Windrush Generation,
+                    celebrating their courage, resilience, and lasting
+                    contribution to Britain.
                   </p>
                 </div>
               </Link>
