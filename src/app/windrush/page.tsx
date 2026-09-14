@@ -11,6 +11,39 @@ export const metadata: Metadata = {
   alternates: { canonical: "/windrush" },
 };
 
+const flavours = [
+  {
+    name: "Coconut",
+    theme: "A Taste of Home",
+    hook: "A taste of the tropics, beautifully reimagined.",
+  },
+  {
+    name: "Passion Fruit",
+    theme: "New Beginnings",
+    hook: "Bright, vibrant and impossible to resist.",
+  },
+  {
+    name: "Fruit Cake",
+    theme: "Moments of Celebration",
+    hook: "The taste of home, with a Caribbean soul.",
+  },
+  {
+    name: "Blue Mountain Coffee",
+    theme: "Morning Conversations",
+    hook: "Bold Caribbean character mixed with chocolate luxury.",
+  },
+  {
+    name: "Dark Caribbean Rum",
+    theme: "The Spirit of the Caribbean",
+    hook: "Deep, warming and irresistibly grown-up.",
+  },
+  {
+    name: "Sorrel & A Touch Of Mixed Spice",
+    theme: "Traditions Remembered",
+    hook: "A Caribbean classic with a luxurious chocolate twist.",
+  },
+];
+
 const storyPanels = [
   {
     image: "/images/windrush/windrush-04-story-panel-1.webp",
@@ -53,14 +86,33 @@ export default function WindrushPage() {
           <Reveal>
             <div className="flex flex-col gap-5">
               <p className="tracked-label text-xs text-paper-dim">
-                Honouring A Legacy
+                Every Journey Has A Story
               </p>
               <h2 className="tracked-display text-lg text-accent sm:text-xl">
                 The Windrush Project
               </h2>
               <p className="text-base leading-8 text-paper-dim">
-                Get ready to go behind the scenes for the very first time,
-                witness the creations as they unfold.
+                Some stories deserve to be remembered. The Windrush
+                Collection has been created to honour one of the most
+                significant journeys in British history — celebrating the
+                courage, resilience and determination of the men and women
+                who travelled from the Caribbean to Britain, bringing with
+                them their skills, ambition and a rich culture that has
+                helped shape modern Britain.
+              </p>
+              <p className="text-base leading-8 text-paper-dim">
+                As a Master Chocolatier, I wanted to tell this remarkable
+                story in a different way — not through words alone, but
+                through flavour. Each handcrafted chocolate has been
+                carefully created to capture the tastes, aromas and memories
+                carried across the Atlantic: familiar flavours of home,
+                moments of celebration, family traditions, and ingredients
+                that evoke comfort, belonging and hope.
+              </p>
+              <p className="text-base leading-8 text-paper-dim">
+                Together, they create more than a box of chocolates. They
+                create a journey — through heritage, through culture,
+                through memory.
               </p>
             </div>
           </Reveal>
@@ -68,6 +120,36 @@ export default function WindrushPage() {
       </section>
 
       <section className="bg-ink px-6 py-24 sm:px-10">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-14 text-center">
+            <p className="tracked-label text-xs text-paper-dim">
+              Six Handcrafted Chocolates, Six Distinctive Flavours
+            </p>
+            <h2 className="tracked-display mt-3 text-xl text-accent sm:text-2xl">
+              The Collection
+            </h2>
+          </div>
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            {flavours.map((flavour) => (
+              <Reveal key={flavour.name}>
+                <div className="border-l border-line pl-5">
+                  <p className="tracked-label text-xs text-paper-dim">
+                    {flavour.theme}
+                  </p>
+                  <h3 className="tracked-label mt-2 text-xs text-paper">
+                    {flavour.name}
+                  </h3>
+                  <p className="mt-2 text-sm text-paper-dim">
+                    {flavour.hook}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-ink-raised px-6 py-24 sm:px-10">
         <div className="mx-auto flex max-w-6xl flex-col gap-10">
           <div className="text-center">
             <p className="tracked-label text-xs text-paper-dim">
@@ -91,6 +173,24 @@ export default function WindrushPage() {
               </div>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-ink px-6 py-24 text-center sm:px-10">
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-5">
+          <p className="tracked-label text-xs text-paper-dim">
+            A Personal Dedication
+          </p>
+          <p className="text-base leading-8 text-paper-dim">
+            &ldquo;I dedicate this creation to all the brave people who came
+            to this unknown land to make a new life for themselves, and by
+            doing so, you have helped shape my life. So I thank you
+            all.&rdquo;
+          </p>
+          <p className="tracked-label text-xs text-accent">One Love!</p>
+          <p className="tracked-label text-xs text-paper-dim">
+            — Paul Wayne Gregory
+          </p>
         </div>
       </section>
 

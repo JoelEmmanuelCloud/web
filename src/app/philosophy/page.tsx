@@ -85,6 +85,66 @@ export default function PhilosophyPage() {
         </div>
       </section>
 
+      <section className="bg-ink-raised px-6 py-24 sm:px-10">
+        <div className="mx-auto flex max-w-2xl flex-col gap-6 text-center">
+          <p className="tracked-label text-xs text-paper">
+            Can Indulgence Be Measured?
+          </p>
+          <h2 className="tracked-display text-xl text-accent sm:text-2xl">
+            What Does Indulgence Really Mean?
+          </h2>
+          <blockquote className="flex flex-col gap-5 text-left">
+            <p className="text-base leading-8 text-paper-dim">
+              &ldquo;The chocolates we create are made from some of the finest
+              ingredients in the world, which we have taken a great deal of
+              time to source. We are proud to say that we do not use any
+              artificial food flavourings or artificial flavoured
+              compounds.
+            </p>
+            <p className="text-base leading-8 text-paper-dim">
+              The concept of our style starts with the look of the chocolate
+              and ends in that rich after taste of smooth silky chocolate in
+              the back of the mouth, with the main flavour taking centre
+              stage. This is to create an experience of indulgence, which
+              created the company&rsquo;s mission of &lsquo;Indulgence is
+              everything.&rsquo;
+            </p>
+            <p className="text-base leading-8 text-paper-dim">
+              A touch of salt or a minimal percentage of sugars may be added
+              to selected chocolate fillings, to simply enhance the natural
+              flavour of the main ingredient or simply to bring out a hidden
+              taste note of flavour, to enhance a savoury ingredient, or
+              simply to balance the flavours within the mouth. This
+              understanding has been discovered through careful research and
+              testing with our chocolate range and concept — creating what I
+              call the flavour width to build from.
+            </p>
+            <p className="text-base leading-8 text-paper-dim">
+              Let me explain: you do not come to us to get a meal which will
+              fill you, or even a stop gap between meals. People come to us
+              for one reason and one reason only — a moment of pleasure, a
+              moment of self indulgence, for yourself or someone special.
+            </p>
+            <p className="text-base leading-8 text-paper-dim">
+              It&rsquo;s that fine blend of selected chocolate, perfectly
+              tempered to give that crisp crunch in the mouth. With full
+              flavoured centres, light and well balanced with the right
+              percentage cocoa from the chocolate selected to create that
+              rich smooth finish, and then, that after taste of rich smooth
+              silky chocolate to savour.
+            </p>
+            <p className="text-base leading-8 text-paper-dim">
+              To most people, this is just an experience one must undertake
+              at least once in their life time. For me, this is my
+              life.&rdquo;
+            </p>
+          </blockquote>
+          <p className="tracked-label text-xs text-paper-dim">
+            — P.W. Gregory
+          </p>
+        </div>
+      </section>
+
       <section className="bg-ink px-6 py-24 sm:px-10">
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
@@ -92,7 +152,7 @@ export default function PhilosophyPage() {
               Two styles, one Standard.
             </p>
             <h2 className="tracked-display mt-3 text-xl text-accent sm:text-2xl">
-              The Collection
+              The Styles
             </h2>
           </div>
 
@@ -110,7 +170,7 @@ export default function PhilosophyPage() {
                 </div>
                 <div className="mt-5 border-l border-line pl-5">
                   <h3 className="tracked-label text-xs text-paper">
-                    Chocolate Bonbons
+                    Art Range Bonbon
                   </h3>
                   <p className="mt-2 text-sm text-paper-dim">
                     The art range which was born out of the multi-award
