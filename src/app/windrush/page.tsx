@@ -34,13 +34,13 @@ const flavours = [
     name: "Blue Mountain Coffee",
     theme: "Morning Conversations",
     hook: "Bold Caribbean character mixed with chocolate luxury.",
-    image: null,
+    image: "/images/windrush/flavours/blue-mountain-coffee.webp",
   },
   {
     name: "Dark Caribbean Rum",
     theme: "The Spirit of the Caribbean",
     hook: "Deep, warming and irresistibly grown-up.",
-    image: null,
+    image: "/images/windrush/flavours/dark-caribbean-rum.webp",
   },
   {
     name: "Sorrel & A Touch Of Mixed Spice",
