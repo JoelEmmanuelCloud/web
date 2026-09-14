@@ -16,31 +16,37 @@ const flavours = [
     name: "Coconut",
     theme: "A Taste of Home",
     hook: "A taste of the tropics, beautifully reimagined.",
+    image: "/images/windrush/flavours/coconut.webp",
   },
   {
     name: "Passion Fruit",
     theme: "New Beginnings",
     hook: "Bright, vibrant and impossible to resist.",
+    image: "/images/windrush/flavours/passion-fruit.webp",
   },
   {
     name: "Fruit Cake",
     theme: "Moments of Celebration",
     hook: "The taste of home, with a Caribbean soul.",
+    image: "/images/windrush/flavours/fruit-cake.webp",
   },
   {
     name: "Blue Mountain Coffee",
     theme: "Morning Conversations",
     hook: "Bold Caribbean character mixed with chocolate luxury.",
+    image: null,
   },
   {
     name: "Dark Caribbean Rum",
     theme: "The Spirit of the Caribbean",
     hook: "Deep, warming and irresistibly grown-up.",
+    image: null,
   },
   {
     name: "Sorrel & A Touch Of Mixed Spice",
     theme: "Traditions Remembered",
     hook: "A Caribbean classic with a luxurious chocolate twist.",
+    image: "/images/windrush/flavours/sorrel-mixed-spice.webp",
   },
 ];
 
@@ -132,16 +138,29 @@ export default function WindrushPage() {
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {flavours.map((flavour) => (
               <Reveal key={flavour.name}>
-                <div className="border-l border-line pl-5">
-                  <p className="tracked-label text-xs text-paper-dim">
-                    {flavour.theme}
-                  </p>
-                  <h3 className="tracked-label mt-2 text-xs text-paper">
-                    {flavour.name}
-                  </h3>
-                  <p className="mt-2 text-sm text-paper-dim">
-                    {flavour.hook}
-                  </p>
+                <div className="flex flex-col gap-5">
+                  {flavour.image ? (
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                      <Image
+                        src={flavour.image}
+                        alt={`${flavour.name} truffle — ${flavour.theme}`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="border-l border-line pl-5">
+                    <p className="tracked-label text-xs text-paper-dim">
+                      {flavour.theme}
+                    </p>
+                    <h3 className="tracked-label mt-2 text-xs text-paper">
+                      {flavour.name}
+                    </h3>
+                    <p className="mt-2 text-sm text-paper-dim">
+                      {flavour.hook}
+                    </p>
+                  </div>
                 </div>
               </Reveal>
             ))}
