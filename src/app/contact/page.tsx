@@ -31,7 +31,7 @@ export default function ContactPage() {
               </p>
               <Link
                 href={`mailto:${siteEmails.general}`}
-                className="text-lg text-paper transition-colors hover:text-accent"
+                className="text-lg text-paper wrap-anywhere transition-colors hover:text-accent"
               >
                 {siteEmails.general}
               </Link>
@@ -49,7 +49,7 @@ export default function ContactPage() {
               </p>
               <Link
                 href={`mailto:${siteEmails.webSales}`}
-                className="text-lg text-paper transition-colors hover:text-accent"
+                className="text-lg text-paper wrap-anywhere transition-colors hover:text-accent"
               >
                 {siteEmails.webSales}
               </Link>
