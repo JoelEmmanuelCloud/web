@@ -143,7 +143,7 @@ export function HeroCarousel({ chapters }: { chapters: HeroChapter[] }) {
                     </p>
                   )}
                   <h1
-                    className="tracked-display max-w-3xl whitespace-pre-line text-[length:min(1.5rem,calc((100vw_-_4rem)/13.5))] leading-[calc(2/1.5)] text-accent transition-all ease-out sm:text-4xl sm:leading-[calc(2.5/2.25)]"
+                    className="tracked-display max-w-3xl whitespace-pre-line text-[length:clamp(1rem,calc((100vw_-_4rem)/13.5),1.5rem)] leading-[calc(2/1.5)] text-accent transition-all ease-out sm:text-4xl sm:leading-[calc(2.5/2.25)]"
                     style={{
                       transitionDuration: "700ms",
                       transitionDelay: isActive ? "550ms" : "0ms",
