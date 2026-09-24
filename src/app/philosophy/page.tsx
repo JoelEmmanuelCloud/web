@@ -16,7 +16,7 @@ export default function PhilosophyPage() {
     <>
       <PageHero
         eyebrow="Our Philosophy"
-        heading="Indulgence Is Everything"
+        heading={"Indulgence\nIs Everything"}
         subheading="Not a strapline. The standard for every recipe, every decoration, every design, every box."
         image="/images/shopify-cdn/pwg-test-images03_5d64ae09-b48f-4f11-9979-6445be256bbe.jpg"
         video={{ src: "/video/indulgence-melt.mp4" }}
@@ -30,7 +30,7 @@ export default function PhilosophyPage() {
           </h2>
           <p className="text-base leading-8 text-paper-dim">
             Most chocolate companies have a strapline. We have a philosophy.
-            &ldquo;Indulgence is everything&rdquo; isn&rsquo;t a line on a box
+            &ldquo;Indulgence&nbsp;is&nbsp;everything&rdquo; isn&rsquo;t a line on a box
             — it&rsquo;s the guideline every recipe gets held to before it
             earns a place in the collection.
           </p>
@@ -106,8 +106,8 @@ export default function PhilosophyPage() {
               and ends in that rich after taste of smooth silky chocolate in
               the back of the mouth, with the main flavour taking centre
               stage. This is to create an experience of indulgence, which
-              created the company&rsquo;s mission of &lsquo;Indulgence is
-              everything.&rsquo;
+              created the company&rsquo;s mission of
+              &lsquo;Indulgence&nbsp;is&nbsp;everything.&rsquo;
             </p>
             <p className="text-base leading-8 text-paper-dim">
               A touch of salt or a minimal percentage of sugars may be added

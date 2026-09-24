@@ -29,7 +29,7 @@ export default function BespokeBoxPage() {
             the lid — a step-by-step build with a live preview and price the
             whole way through.
           </p>
-          <p className="tracked-label flex h-[46px] items-center justify-center rounded-full border border-blush-ink px-8 text-xs text-blush-ink">
+          <p className="tracked-label flex h-[52px] items-center justify-center rounded-full bg-accent px-10 text-sm text-accent-ink shadow-lg shadow-accent/30">
             Coming Soon
           </p>
         </div>

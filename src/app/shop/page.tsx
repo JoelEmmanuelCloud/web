@@ -22,7 +22,7 @@ export default async function ShopPage() {
       <PageHero
         eyebrow="Choose Your Indulgence"
         heading="The Collection"
-        subheading="Hand-crafted chocolates and truffles, created from one philosophy: indulgence is everything."
+        subheading="Hand-crafted chocolates and truffles, created from one philosophy: indulgence&nbsp;is&nbsp;everything."
         image="/images/shopify-cdn/pwgartrangeone121_large.jpg"
         video={{ src: "/video/flavour-reveal.mp4" }}
       />
@@ -47,7 +47,7 @@ function ProductSection({
       className={`px-6 py-24 sm:px-10 ${tone === "raised" ? "bg-ink-raised" : "bg-ink"}`}
     >
       <div className="mx-auto max-w-7xl">
-        <h2 className="tracked-display mb-14 text-center text-xl text-paper sm:text-2xl">
+        <h2 className="tracked-display mb-14 text-center text-xl text-accent sm:text-2xl">
           {title}
         </h2>
         <div className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">

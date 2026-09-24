@@ -28,7 +28,7 @@ export default function AboutPage() {
           </h2>
           <p className="text-base leading-8 text-paper-dim">
             Paul Wayne Gregory is a multi-award winning chocolatier. Every
-            recipe carries his own philosophy — indulgence is everything —
+            recipe carries his own philosophy — indulgence&nbsp;is&nbsp;everything —
             a standard he developed himself and holds every creation to
             before it earns a place in the collection.
           </p>

@@ -64,7 +64,7 @@ export default function TermsOfServicePage() {
         {
           heading: "Intellectual Property",
           paragraphs: [
-            "The Paul Wayne Gregory name, logo, “Indulgence is everything,” and all site content — text, photography, video, and design — belong to us or our licensors. You may view and share pages for personal, non-commercial use, but you may not copy, reproduce, or repurpose our content or branding without our written permission.",
+            "The Paul Wayne Gregory name, logo, “Indulgence\u00a0is\u00a0everything,” and all site content — text, photography, video, and design — belong to us or our licensors. You may view and share pages for personal, non-commercial use, but you may not copy, reproduce, or repurpose our content or branding without our written permission.",
           ],
         },
         {
