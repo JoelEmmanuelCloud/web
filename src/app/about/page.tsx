@@ -142,7 +142,7 @@ export default function AboutPage() {
           <p className="tracked-label text-xs text-paper-dim">
             Looking Ahead
           </p>
-          <h2 className="tracked-display text-xl text-accent sm:text-2xl">
+          <h2 className="tracked-display text-[length:min(1.25rem,calc((100vw_-_4rem)/14.5))] leading-[calc(1.75/1.25)] text-accent sm:text-2xl sm:leading-[calc(2/1.5)]">
             Craftsmanship, Passed On
           </h2>
           <p className="text-base leading-8 text-paper-dim">
