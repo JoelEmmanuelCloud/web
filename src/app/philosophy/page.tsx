@@ -16,7 +16,7 @@ export default function PhilosophyPage() {
     <>
       <PageHero
         eyebrow="Our Philosophy"
-        heading="Indulgence Is Everything"
+        heading={"Indulgence\nIs Everything"}
         subheading="Not a strapline. The standard for every recipe, every decoration, every design, every box."
         image="/images/shopify-cdn/pwg-test-images03_5d64ae09-b48f-4f11-9979-6445be256bbe.jpg"
         video={{ src: "/video/indulgence-melt.mp4" }}

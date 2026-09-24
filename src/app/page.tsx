@@ -9,7 +9,7 @@ const chapters: HeroChapter[] = [
   },
   {
     id: "opening-pour",
-    heading: "Indulgence Is Everything",
+    heading: "Indulgence\nIs Everything",
     subheading: "Multi-award winning chocolatier Paul Wayne Gregory",
     cta: { label: "Shop Now", href: "/shop" },
     image: "/images/shopify-cdn/pwg-test-images03.jpg",
@@ -79,7 +79,9 @@ export default function Home() {
             To show the world that
           </p>
           <p className="tracked-display text-lg text-accent sm:text-xl">
-            &ldquo;Indulgence Is Everything&rdquo;
+            &ldquo;Indulgence
+            <br />
+            Is Everything&rdquo;
           </p>
           <p className="text-base leading-8 text-paper-dim sm:text-lg">
             Indulge yourself&hellip;
