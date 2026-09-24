@@ -195,6 +195,28 @@ export default function WindrushPage() {
         </div>
       </section>
 
+      <section className="bg-ink-raised px-6 py-20 text-center sm:px-10">
+        <div className="mx-auto flex max-w-md flex-col items-center gap-6">
+          <p className="tracked-label text-xs text-paper-dim">
+            Displayed With Permission
+          </p>
+          <div className="rounded-3xl bg-paper p-8">
+            <div className="relative h-32 w-full">
+              <Image
+                src="/images/windrush/windrush-09-wno-logo.webp"
+                alt="Windrush National Organisation logo"
+                fill
+                sizes="(max-width: 640px) 80vw, 400px"
+                className="object-contain"
+              />
+            </div>
+          </div>
+          <p className="text-sm text-paper-dim">
+            Used with the permission of the Windrush National Organisation.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-ink px-6 py-24 text-center sm:px-10">
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-5">
           <p className="tracked-label text-xs text-paper-dim">
