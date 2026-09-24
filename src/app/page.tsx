@@ -41,7 +41,7 @@ const storyCards: StoryCard[] = [
     image: "/images/shopify-cdn/pwgtrufflesmatugga2.jpg",
     title: "Shop The Collection",
     description:
-      "Hand-crafted chocolates and truffles, built around one philosophy: indulgence is everything.",
+      "Hand-crafted chocolates and truffles, built around one philosophy: indulgence\u00a0is\u00a0everything.",
   },
   {
     href: "/windrush",

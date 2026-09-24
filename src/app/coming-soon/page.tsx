@@ -26,7 +26,7 @@ export default function ComingSoonPage() {
         </p>
         <p className="max-w-md text-base leading-8 text-paper-dim sm:text-lg">
           We&rsquo;re putting the finishing touches on something new.
-          Indulgence is everything.
+          Indulgence&nbsp;is&nbsp;everything.
         </p>
       </div>
 
