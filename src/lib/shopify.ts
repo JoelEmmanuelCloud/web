@@ -384,7 +384,7 @@ export async function fetchProductVariantsByHandle(
         nodes: { id: string; selectedOptions: { name: string; value: string }[] }[];
       };
     } | null;
-  }>(PRODUCT_VARIANTS_BY_HANDLE_QUERY, { handle });
+  }>(PRODUCT_VARIANTS_BY_HANDLE_QUERY, { handle }, { noStore: true });
 
   if (!data?.product) return [];
 
