@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
@@ -68,13 +67,32 @@ const storyPanels = [
 export default function WindrushPage() {
   return (
     <>
-      <PageHero
-        eyebrow="The Windrush Collection"
-        heading="Windrush"
-        subheading="A Celebration Of Legacy, Courage & New Beginnings."
-        cta={{ label: "The Bespoke Box", href: "/bespoke-box" }}
-        image="/images/windrush/windrush-05-promo-page.webp"
-      />
+      <section className="bg-ink pt-24">
+        <h1 className="sr-only">
+          The Windrush Collection — A Celebration Of Legacy, Courage &amp; New
+          Beginnings
+        </h1>
+        <div className="mx-auto max-w-[1080px] sm:px-10 sm:pt-10">
+          <div className="relative aspect-[3/2] overflow-hidden sm:rounded-3xl">
+            <Image
+              src="/images/windrush/windrush-10-hero-collection.webp"
+              alt="Paul Wayne Gregory Chocolates, The Windrush Collection: an open box of six cocoa-dusted Windrush Chocolate Truffles, limited edition and handmade, in Passion Fruit, Fruit Cake, Coconut, Blue Mountain Coffee, Dark Rum, and Sorrel with a touch of mixed spice"
+              fill
+              priority
+              sizes="(max-width: 1160px) 100vw, 1080px"
+              className="object-cover"
+            />
+          </div>
+        </div>
+        <div className="flex justify-center px-6 py-12">
+          <Link
+            href="/bespoke-box"
+            className="tracked-label flex h-[46px] items-center justify-center rounded-full bg-paper px-8 text-xs text-ink transition-colors hover:bg-accent hover:text-accent-ink"
+          >
+            The Bespoke Box
+          </Link>
+        </div>
+      </section>
 
       <section className="bg-ink-raised px-6 py-24 sm:px-10">
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-2 lg:items-center">
