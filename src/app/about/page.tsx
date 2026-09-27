@@ -157,13 +157,13 @@ export default function AboutPage() {
 
       <section className="bg-ink px-6 py-24 text-center sm:px-10">
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-5">
-          <p className="tracked-label text-xs text-paper-dim">
+          <p className="tracked-label text-xs text-accent">
             In His Own Words
           </p>
-          <p className="text-base leading-8 text-paper-dim">
+          <p className="text-base italic leading-8 text-paper-dim">
             &ldquo;If someone remembers only one thing about the brand, I
-            want it to be that I was able to give them a moment — that moment
-            of self indulgence.&rdquo;
+            want it to be that I was able to give them a special moment —
+            that moment of self indulgence.&rdquo;
           </p>
           <p className="tracked-label text-xs text-paper-dim">
             — Paul Wayne Gregory
