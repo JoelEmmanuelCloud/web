@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
@@ -15,37 +14,55 @@ const flavours = [
   {
     name: "Coconut",
     theme: "A Taste of Home",
-    hook: "A taste of the tropics, beautifully reimagined.",
+    tagline: "A taste of the tropics, beautifully reimagined.",
+    description:
+      "Silky white chocolate meets delicate coconut in a luxuriously smooth truffle, bringing the warmth and sweetness of the Caribbean together with refined artisan chocolate craftsmanship.",
+    signoff: "One bite. One memory. Pure indulgence.",
     image: "/images/windrush/flavours/coconut.webp",
   },
   {
     name: "Passion Fruit",
     theme: "New Beginnings",
-    hook: "Bright, vibrant and impossible to resist.",
+    tagline: "Bright, vibrant and impossible to resist.",
+    description:
+      "A luscious passion fruit centre wrapped in fine rich chocolate, balancing the exotic Caribbean fruit with a sophisticated touch of elegance. Sweet, sharp and wonderfully refreshing is well balanced.",
+    signoff: "A little taste of sunshine in every bite.",
     image: "/images/windrush/flavours/passion-fruit.webp",
   },
   {
     name: "Fruit Cake",
     theme: "Moments of Celebration",
-    hook: "The taste of home, with a Caribbean soul.",
+    tagline: "The taste of home, with a Caribbean soul.",
+    description:
+      "Rich soaked fruit, warming spices makes the base of the traditional Fruit cake, then brought together with decadent chocolate. Inspired by the flavours of home, familiar, comforting and beautifully indulgent.",
+    signoff: "A lifetime memory, reimagined in chocolate.",
     image: "/images/windrush/flavours/fruit-cake.webp",
   },
   {
     name: "Blue Mountain Coffee",
     theme: "Morning Conversations",
-    hook: "Bold Caribbean character mixed with chocolate luxury.",
+    tagline: "Bold Caribbean character mixed with chocolate luxury.",
+    description:
+      "Exceptional Blue Mountain coffee brings its deep roasted notes and subtle richness to this velvety textured chocolate truffle. Creates an elegant balance of intensity, creaminess and chocolate finish.",
+    signoff: "Smooth. Sophisticated. Unforgettable.",
     image: "/images/windrush/flavours/blue-mountain-coffee.webp",
   },
   {
     name: "Dark Caribbean Rum",
     theme: "The Spirit of the Caribbean",
-    hook: "Deep, warming and irresistibly grown-up.",
+    tagline: "Deep, warming and irresistibly grown-up.",
+    description:
+      "Rich dark chocolate meets the warmth and depth of flavour of real Caribbean rum, creating a beautifully balanced truffle with lingering notes of spice, oak and sweetness to savour.",
+    signoff: "Slow down. Savour the moment.",
     image: "/images/windrush/flavours/dark-caribbean-rum.webp",
   },
   {
     name: "Sorrel & A Touch Of Mixed Spice",
     theme: "Traditions Remembered",
-    hook: "A Caribbean classic with a luxurious chocolate twist.",
+    tagline: "A Caribbean classic with a luxurious chocolate twist.",
+    description:
+      "Fragrant sorrel and warming island spices unfold through rich chocolate, creating a beautifully aromatic truffle that is vibrant, sophisticated and wonderfully nostalgic.",
+    signoff: "Exotic, warming and utterly moreish.",
     image: "/images/windrush/flavours/sorrel-mixed-spice.webp",
   },
 ];
@@ -68,13 +85,32 @@ const storyPanels = [
 export default function WindrushPage() {
   return (
     <>
-      <PageHero
-        eyebrow="The Windrush Collection"
-        heading="Windrush"
-        subheading="A Celebration Of Legacy, Courage & New Beginnings."
-        cta={{ label: "The Bespoke Box", href: "/bespoke-box" }}
-        image="/images/windrush/windrush-05-promo-page.webp"
-      />
+      <section className="bg-ink pt-24">
+        <h1 className="sr-only">
+          The Windrush Collection — A Celebration Of Legacy, Courage &amp; New
+          Beginnings
+        </h1>
+        <div className="mx-auto max-w-[1080px] sm:px-10 sm:pt-10">
+          <div className="relative aspect-[3/2] overflow-hidden sm:rounded-3xl">
+            <Image
+              src="/images/windrush/windrush-10-hero-collection.webp"
+              alt="Paul Wayne Gregory Chocolates, The Windrush Collection: an open box of six cocoa-dusted Windrush Chocolate Truffles, limited edition and handmade, in Passion Fruit, Fruit Cake, Coconut, Blue Mountain Coffee, Dark Rum, and Sorrel with a touch of mixed spice"
+              fill
+              priority
+              sizes="(max-width: 1160px) 100vw, 1080px"
+              className="object-cover"
+            />
+          </div>
+        </div>
+        <div className="flex justify-center px-6 py-12">
+          <Link
+            href="/bespoke-box"
+            className="tracked-label flex h-[46px] items-center justify-center rounded-full bg-paper px-8 text-xs text-ink transition-colors hover:bg-accent hover:text-accent-ink"
+          >
+            The Bespoke Box
+          </Link>
+        </div>
+      </section>
 
       <section className="bg-ink-raised px-6 py-24 sm:px-10">
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-2 lg:items-center">
@@ -157,8 +193,14 @@ export default function WindrushPage() {
                     <h3 className="tracked-label mt-2 text-xs text-paper">
                       {flavour.name}
                     </h3>
-                    <p className="mt-2 text-sm text-paper-dim">
-                      {flavour.hook}
+                    <p className="mt-3 text-sm text-paper">
+                      {flavour.tagline}
+                    </p>
+                    <p className="mt-3 text-sm leading-7 text-paper-dim">
+                      {flavour.description}
+                    </p>
+                    <p className="mt-3 text-sm italic text-paper">
+                      {flavour.signoff}
                     </p>
                   </div>
                 </div>
