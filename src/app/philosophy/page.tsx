@@ -49,8 +49,8 @@ export default function PhilosophyPage() {
           <Reveal>
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
               <Image
-                src="/images/shopify-cdn/pwgtrufflesmatugga2_large.jpg"
-                alt="Paul Wayne Gregory truffle collection"
+                src="/images/philosophy/philosophy-truffles-and-spices.webp"
+                alt="Cocoa-dusted truffles, two cut open to show a soft caramel centre, with cinnamon bark, star anise and allspice"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -161,8 +161,8 @@ export default function PhilosophyPage() {
               <Link href="/shop" className="group block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                   <Image
-                    src="/images/shopify-cdn/ArtRangeTwo24.04.jpg"
-                    alt="Art Range collection"
+                    src="/images/philosophy/style-art-range-bonbon.webp"
+                    alt="Art Range bonbons in red, gold, green and dark decorated finishes on slate, with pistachios and orange peel"
                     fill
                     sizes="(max-width: 640px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -184,8 +184,8 @@ export default function PhilosophyPage() {
               <Link href="/shop" className="group block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                   <Image
-                    src="/images/shopify-cdn/ChampagneTruffles.02.jpg"
-                    alt="Truffle collection"
+                    src="/images/philosophy/style-truffles.webp"
+                    alt="Cocoa-dusted chocolate truffles on a white surface"
                     fill
                     sizes="(max-width: 640px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
