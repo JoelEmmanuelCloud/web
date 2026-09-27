@@ -49,8 +49,8 @@ export default function PhilosophyPage() {
           <Reveal>
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
               <Image
-                src="/images/shopify-cdn/pwgtrufflesmatugga2_large.jpg"
-                alt="Paul Wayne Gregory truffle collection"
+                src="/images/philosophy/philosophy-truffles-and-spices.webp"
+                alt="Cocoa-dusted truffles, two cut open to show a soft caramel centre, with cinnamon bark, star anise and allspice"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
