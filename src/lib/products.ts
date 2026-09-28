@@ -154,7 +154,7 @@ export const productContent: ProductContent[] = [
     slug: "champagne-cocktail-truffles",
     collection: "truffles",
     name: "Real Champagne Truffles",
-    price: 13.95,
+    price: 14.95,
     hook: "Perfect for the unforgettable moments.",
     serving: "110g",
     description: [
@@ -217,7 +217,7 @@ export const productContent: ProductContent[] = [
     slug: "salted-caramel-truffles",
     collection: "truffles",
     name: "Salted Caramel Truffles",
-    price: 12.95,
+    price: 13.95,
     hook: "A sensational flavour experience.",
     serving: "110g",
     description: [
