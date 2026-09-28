@@ -14,7 +14,10 @@ function isActive(pathname: string, href: string) {
 const heroVideoByRoute: Record<string, string> = {
   "/philosophy": "/video/indulgence-melt.mp4",
   "/about": "/video/tempering-craft.mp4",
+  "/gallery": "/video/gallery-reveal.mp4",
+  "/shop": "/video/flavour-reveal.mp4",
   "/contact": "/video/our-craft.mp4",
+  "/bespoke-box": "/video/bespoke-ribbon.mp4",
 };
 
 const preloadedVideos = new Set<string>();
