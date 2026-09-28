@@ -52,10 +52,16 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
     function onKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") setOpen(false);
     }
+    const desktop = window.matchMedia("(min-width: 64rem)");
+    function onBreakpoint(e: MediaQueryListEvent) {
+      if (e.matches) setOpen(false);
+    }
     window.addEventListener("keydown", onKeyDown);
+    desktop.addEventListener("change", onBreakpoint);
     return () => {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", onKeyDown);
+      desktop.removeEventListener("change", onBreakpoint);
     };
   }, [open]);
 
