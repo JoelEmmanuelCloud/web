@@ -153,12 +153,12 @@ export const productContent: ProductContent[] = [
   {
     slug: "champagne-cocktail-truffles",
     collection: "truffles",
-    name: "Champagne Cocktail Truffles",
+    name: "Real Champagne Truffles",
     price: 13.95,
     hook: "Perfect for the unforgettable moments.",
     serving: "110g",
     description: [
-      "Indulge in the exquisite allure of our Champagne Cocktail Truffles, tailor-made for cherished occasions that deserve a touch of elegance. We use authentic champagne as the cornerstone of the recipe, with added lemon, a touch of rum, mixed spices, and vanilla pod.",
+      "Indulge in the exquisite allure of our Real Champagne Truffles, tailor-made for cherished occasions that deserve a touch of elegance. We use authentic champagne as the cornerstone of the recipe, with added lemon, a touch of rum, mixed spices, and vanilla pod.",
       "No artificial flavourings or compounds — 100% natural ingredients, balanced with the finest chocolate to sustain the flavour through every bite.",
     ],
     ingredients:
@@ -176,7 +176,7 @@ export const productContent: ProductContent[] = [
     slug: "matugga-rum-truffles",
     shopifyHandle: "dark-rum-truffles",
     collection: "truffles",
-    name: "Matugga Rum Truffles",
+    name: "Real Dark Rum Truffles",
     price: 13.95,
     hook: "Limited stock.",
     serving: "110g",
