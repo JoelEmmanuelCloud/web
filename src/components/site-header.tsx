@@ -14,10 +14,7 @@ function isActive(pathname: string, href: string) {
 const heroVideoByRoute: Record<string, string> = {
   "/philosophy": "/video/indulgence-melt.mp4",
   "/about": "/video/tempering-craft.mp4",
-  "/gallery": "/video/gallery-reveal.mp4",
-  "/shop": "/video/flavour-reveal.mp4",
   "/contact": "/video/our-craft.mp4",
-  "/bespoke-box": "/video/bespoke-ribbon.mp4",
 };
 
 const preloadedVideos = new Set<string>();
@@ -52,10 +49,16 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
     function onKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") setOpen(false);
     }
+    const desktop = window.matchMedia("(min-width: 64rem)");
+    function onBreakpoint(e: MediaQueryListEvent) {
+      if (e.matches) setOpen(false);
+    }
     window.addEventListener("keydown", onKeyDown);
+    desktop.addEventListener("change", onBreakpoint);
     return () => {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", onKeyDown);
+      desktop.removeEventListener("change", onBreakpoint);
     };
   }, [open]);
 
@@ -75,7 +78,7 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
-          className="tracked-label flex items-center gap-3 text-xs text-paper md:hidden"
+          className="tracked-label flex items-center gap-3 text-xs text-paper lg:hidden"
         >
           <MenuIcon open={open} />
           {open ? "Close" : "Menu"}
@@ -92,7 +95,7 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {primaryNav.map((item) => {
             const active = isActive(pathname, item.href);
             return (
@@ -127,12 +130,12 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
           className="tracked-label flex items-center gap-2 text-xs text-paper-dim transition-colors hover:text-paper"
         >
           <CartIcon count={cartCount} />
-          <span className="hidden md:inline">Cart</span>
+          <span className="hidden lg:inline">Cart</span>
         </Link>
       </div>
 
       {open && (
-        <div className="fixed inset-x-0 bottom-0 top-24 z-40 overflow-y-auto border-t border-line bg-ink md:hidden">
+        <div className="fixed inset-x-0 bottom-0 top-24 z-40 overflow-y-auto border-t border-line bg-ink lg:hidden">
           <nav className="flex flex-col gap-1 px-6 py-6">
             {primaryNav.map((item) => {
               const active = isActive(pathname, item.href);

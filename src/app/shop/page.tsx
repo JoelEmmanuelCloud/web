@@ -23,8 +23,12 @@ export default async function ShopPage() {
         eyebrow="Choose Your Indulgence"
         heading="The Collection"
         subheading="Hand-crafted chocolates and truffles, created from one philosophy: indulgence&nbsp;is&nbsp;everything."
-        image="/images/shopify-cdn/pwgartrangeone121_large.jpg"
-        video={{ src: "/video/flavour-reveal.mp4" }}
+        image="/images/shop/shop-hero-truffle-bags.webp"
+        framed={{
+          width: 922,
+          height: 487,
+          alt: "Champagne Cocktail and Salted Caramel Luxury Truffles bags beside cocoa-dusted truffles, in front of a window overlooking the London skyline at dusk",
+        }}
       />
 
       <ProductSection title="Chocolate Art Collection" products={artCollection} />
