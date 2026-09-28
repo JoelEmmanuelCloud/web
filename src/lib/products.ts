@@ -27,7 +27,7 @@ export const productContent: ProductContent[] = [
     slug: "art-range-one-box-of-12",
     collection: "chocolate-art",
     name: "Art Range One — Box of 12",
-    price: 23.45,
+    price: 22.95,
     hook: "Experience the magic of indulgence, our multi-award winning range.",
     description: [
       "Discover the exquisite delight of our award-winning Art Selection Chocolates. With a harmonious blend of artistry and flavour, our chocolates are carefully hand-crafted to offer you an unparalleled indulgence experience.",
@@ -91,7 +91,7 @@ export const productContent: ProductContent[] = [
     slug: "art-range-two-box-of-12",
     collection: "chocolate-art",
     name: "Art Range Two — Box of 12",
-    price: 23.45,
+    price: 22.95,
     hook: "Inspired by our multi-award winning Range One.",
     description: [
       "A collection of exquisite chocolates that embodies our philosophy of indulgence — four unique flavours taking you on a memorable flavour journey, each one decorated to be as visually striking as it is delicious.",
