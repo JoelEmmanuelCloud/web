@@ -22,7 +22,8 @@ export default function GalleryPage() {
         eyebrow="Showpieces &amp; Commissioned Work"
         heading="Gallery"
         subheading="Multi-award winning work, from commissioned art pieces to centre showpieces."
-        image="/images/gallery/gallery-hero-chocolate-frames.webp"
+        image="/images/shopify-cdn/pwg-test-images03.jpg"
+        video={{ src: "/video/gallery-reveal.mp4" }}
       />
 
       <section className="bg-ink px-6 py-24 sm:px-10">

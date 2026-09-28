@@ -38,28 +38,28 @@ const chapters: HeroChapter[] = [
 const storyCards: StoryCard[] = [
   {
     href: "/shop",
-    image: "/images/shopify-cdn/pwgtrufflesmatugga2.jpg",
+    image: "/images/shop/shop-hero-truffle-bags.webp",
     title: "The Shop Collection",
     description:
       "Hand-crafted chocolates and truffles, built around one philosophy: indulgence\u00a0is\u00a0everything.",
   },
   {
     href: "/windrush",
-    image: "/images/windrush/windrush-07-box-cover-final.webp",
+    image: "/images/windrush/windrush-10-hero-collection.webp",
     title: "The Windrush Collection",
     description:
       "A truffle collection in celebration of legacy, courage and new beginnings.",
   },
   {
     href: "/bespoke-box",
-    image: "/images/shopify-cdn/12chocos_B.jpg",
+    image: "/images/bespoke/bespoke-hero-crest-box.webp",
     title: "Bespoke Box",
     description:
       "Design your own luxury chocolate box, from chocolate flavours to your name or logo on top of the box.",
   },
   {
     href: "/gallery",
-    image: "/images/shopify-cdn/PWG_CHOCOLAT_2018_coverimage_27d762b0-dcd9-4a86-b1a4-703e603d7c96.jpg",
+    image: "/images/gallery/gallery-hero-chocolate-frames.webp",
     title: "The Gallery",
     description:
       "Showpieces, commission works, the craft behind the collections.",
