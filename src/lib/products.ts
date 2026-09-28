@@ -173,24 +173,6 @@ export const productContent: ProductContent[] = [
     ],
   },
   {
-    slug: "gingerbread-truffles",
-    collection: "truffles",
-    name: "Gingerbread Truffles",
-    price: 12.45,
-    hook: "Made with authentic ginger cake.",
-    serving: "110g",
-    description: [
-      "True to our core philosophy, we use genuine gingerbread cake to achieve a rich, robust flavour. A velvety ganache centre, infused with subtle spices, elevates the taste while keeping a luxuriously smooth texture.",
-    ],
-    ingredients:
-      "(60%) Ginger Cake (Wheat Flour, Water, Sugar, Vegetable Oils, Dried Whey Milk Protein, Dried Whole Eggs, Ginger Flavouring), Caramelised Sugar, UHT Cream, Glucose, Inverted Sugar, Vanilla Pods, Ginger, Mixed Spice, Lemon, Dark Chocolate, Milk Chocolate. Dark: min 65% · Milk: min 35% cocoa / 21% milk solids.",
-    allergens:
-      "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
-    dietary: ["Suitable for vegetarians", "Nut free"],
-    image: "/images/shopify-cdn/pwgtrufflesgingerbread1.jpg",
-    gallery: ["/images/shopify-cdn/GingerbreadTruffles_3.jpg"],
-  },
-  {
     slug: "matugga-rum-truffles",
     shopifyHandle: "dark-rum-truffles",
     collection: "truffles",
@@ -210,30 +192,6 @@ export const productContent: ProductContent[] = [
     gallery: [
       "/images/shopify-cdn/IMG_6136.16.jpg",
       "/images/shopify-cdn/DarRumTruffles.25.jpg",
-    ],
-  },
-  {
-    slug: "mixed-spice-truffles",
-    collection: "truffles",
-    name: "Mixed Spice Truffles",
-    price: 12.95,
-    hook: "A uniting infusion of flavours — our first non-dairy truffle.",
-    serving: "110g",
-    description: [
-      "The same decadent vision, delivered dairy-free. Cinnamon through star anise, blended and infused into a velvety ganache, carried by bittersweet chocolate.",
-      "Our first entry in the non-dairy selection — can you really taste the difference?",
-    ],
-    ingredients:
-      "Mixed Spices (Cinnamon, Nutmeg, Star Anise, Ginger, Cumin, Clove, Coriander, Allspice), Dark Chocolate, Oat Milk, Rice Milk, Plant-Based Butter, Glucose, Inverted Sugar, Salt, Lemon Juice. Dark: 65% · Oat Milk Chocolate: min 42%.",
-    allergens:
-      "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
-    dietary: ["Suitable for non-dairy diets", "Suitable for vegetarians", "Nut free"],
-    image: "/images/shopify-cdn/pwgtrufflesmixedspice1.jpg",
-    gallery: [
-      "/images/shopify-cdn/spice1aa.jpg",
-      "/images/shopify-cdn/spice3.jpg",
-      "/images/shopify-cdn/spice25.jpg",
-      "/images/shopify-cdn/SpiceBlack.jpg",
     ],
   },
   {
