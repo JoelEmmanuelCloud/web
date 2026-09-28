@@ -15,8 +15,12 @@ export default function BespokeBoxPage() {
         eyebrow="Commission A Box"
         heading="A Personal Creation"
         subheading="Whatever you imagine, your box becomes. Every detail invites personalisation."
-        image="/images/shopify-cdn/12chocos_B.jpg"
-        video={{ src: "/video/bespoke-ribbon.mp4" }}
+        image="/images/bespoke/bespoke-hero-crest-box.webp"
+        framed={{
+          width: 1014,
+          height: 1080,
+          alt: "A black bespoke chocolate box printed with a white heraldic crest, set on a candlelit dinner table beside a matching place card",
+        }}
       />
 
       <section className="bg-blush px-6 py-20 text-center sm:px-10">
