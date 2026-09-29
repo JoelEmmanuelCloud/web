@@ -242,17 +242,6 @@ export default function WindrushPage() {
           <p className="tracked-label text-xs text-paper-dim">
             Displayed With Permission
           </p>
-          <div className="rounded-3xl bg-paper p-8">
-            <div className="relative h-32 w-full">
-              <Image
-                src="/images/windrush/windrush-09-wno-logo.webp"
-                alt="Windrush National Organisation logo"
-                fill
-                sizes="(max-width: 640px) 80vw, 400px"
-                className="object-contain"
-              />
-            </div>
-          </div>
           <p className="text-sm text-paper-dim">
             Used with the permission of the Windrush National Organisation.
           </p>
