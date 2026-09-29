@@ -45,7 +45,7 @@ const storyCards: StoryCard[] = [
   },
   {
     href: "/windrush",
-    image: "/images/windrush/windrush-10-hero-collection.webp",
+    image: "/images/windrush/windrush-07-box-cover-final.webp",
     title: "The Windrush Collection",
     description:
       "A truffle collection in celebration of legacy, courage and new beginnings.",
