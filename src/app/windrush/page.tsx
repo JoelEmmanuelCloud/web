@@ -115,13 +115,13 @@ export default function WindrushPage() {
       <section className="bg-ink-raised px-6 py-24 sm:px-10">
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-2 lg:items-center">
           <Reveal>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-white">
               <Image
-                src="/images/windrush/windrush-07-box-cover-final.webp"
-                alt="Windrush Chocolate Truffles box — a celebration of legacy, courage & new beginnings"
+                src="/images/windrush/windrush-09-wno-logo.webp"
+                alt="Windrush National Organisation logo — Advocating Today For A Better Future, established July 2020"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-contain p-6"
               />
             </div>
           </Reveal>
