@@ -29,7 +29,15 @@ export default function GalleryPage() {
       <section className="bg-ink px-6 py-24 sm:px-10">
         <div className="mx-auto max-w-7xl">
           <GalleryGrid images={galleryImages} />
-          <div className="mt-16 flex justify-center">
+          <div className="mt-16 flex justify-center gap-8">
+            <a
+              href={socialLinks.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tracked-label text-xs text-paper-dim transition-colors hover:text-paper"
+            >
+              Instagram
+            </a>
             <a
               href={socialLinks.facebook}
               target="_blank"

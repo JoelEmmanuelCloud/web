@@ -104,10 +104,10 @@ export default function WindrushPage() {
         </div>
         <div className="flex justify-center px-6 py-12">
           <Link
-            href="/bespoke-box"
+            href="/shop"
             className="tracked-label flex h-[46px] items-center justify-center rounded-full bg-paper px-8 text-xs text-ink transition-colors hover:bg-accent hover:text-accent-ink"
           >
-            The Bespoke Box
+            Shop Now
           </Link>
         </div>
       </section>

@@ -23,6 +23,7 @@ export const primaryNav: NavItem[] = [
 
 export const socialLinks = {
   facebook: "https://www.facebook.com",
+  instagram: "https://www.instagram.com/pwg_chocolates/",
 };
 
 export const footerInfoLinks: NavItem[] = [

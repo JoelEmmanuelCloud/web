@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, type FormEvent } from "react";
-import { footerInfoLinks, siteEmails } from "@/lib/site-config";
+import { footerInfoLinks, siteEmails, socialLinks } from "@/lib/site-config";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -71,6 +71,14 @@ export function SiteFooter() {
             className="text-xs text-paper-dim transition-colors hover:text-paper"
           >
             {siteEmails.general}
+          </a>
+          <a
+            href={socialLinks.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tracked-label mt-2 text-xs text-paper-dim transition-colors hover:text-paper"
+          >
+            Instagram
           </a>
         </div>
       </div>

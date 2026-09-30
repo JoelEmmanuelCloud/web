@@ -80,19 +80,9 @@ export default function Home() {
             To show the world that
           </p>
           <p className="tracked-display text-lg text-accent sm:text-xl">
-            <span className="relative">
-              <span aria-hidden className="absolute right-full">
-                &ldquo;
-              </span>
-              Indulgence
-            </span>
+            Indulgence
             <br />
-            <span className="relative">
-              Is Everything
-              <span aria-hidden className="absolute left-full">
-                &rdquo;
-              </span>
-            </span>
+            Is Everything
           </p>
           <p className="text-base leading-8 text-paper-dim sm:text-lg">
             Indulge yourself&hellip;
