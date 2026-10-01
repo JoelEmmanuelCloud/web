@@ -231,6 +231,50 @@ export const productContent: ProductContent[] = [
     image: "/images/shopify-cdn/pwgtrufflessaltedcaramel1.jpg",
     gallery: ["/images/shopify-cdn/0020_8a6e79ab-ff9f-438d-8c25-63a6401c94b8.jpg"],
   },
+  {
+    slug: "windrush-truffle-box",
+    collection: "truffles",
+    name: "Windrush Truffle Box",
+    price: 10.95,
+    hook: "A celebration of legacy, courage & new beginnings.",
+    description: [
+      "Some stories deserve to be remembered. The Windrush Collection has been created to honour one of the most significant journeys in British history, celebrating the courage, resilience and determination of the men and women who travelled from the Caribbean to Britain, bringing with them their skills, ambition and a rich culture that has helped shape modern Britain.",
+      "Six handcrafted truffles, six distinctive flavours.",
+    ],
+    flavours: [
+      {
+        name: "Coconut",
+        description: "A taste of the tropics, beautifully reimagined.",
+      },
+      {
+        name: "Passion Fruit",
+        description: "Bright, vibrant and impossible to resist.",
+      },
+      {
+        name: "Fruit Cake",
+        description: "The taste of home, with a Caribbean soul.",
+      },
+      {
+        name: "Blue Mountain Coffee",
+        description: "Bold Caribbean character mixed with chocolate luxury.",
+      },
+      {
+        name: "Dark Caribbean Rum",
+        description: "Deep, warming and irresistibly grown-up.",
+      },
+      {
+        name: "Sorrel & A Touch Of Mixed Spice",
+        description: "A Caribbean classic with a luxurious chocolate twist.",
+      },
+    ],
+    ingredients:
+      "Full ingredient details for the Windrush Truffle Box are being finalised.",
+    allergens:
+      "If you have an allergy or dietary requirement, please contact us before ordering and we will confirm the allergen information for this box.",
+    dietary: [],
+    image: "/images/windrush/windrush-10-hero-collection.webp",
+    gallery: [],
+  },
 ];
 
 export async function getProducts(): Promise<Product[]> {
