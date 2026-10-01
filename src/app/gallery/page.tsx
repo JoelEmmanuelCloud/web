@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = Array.from(
-  { length: 11 },
-  (_, i) => `/images/gallery/gallery-${String(i + 1).padStart(2, "0")}.jpg`,
-).concat("/images/gallery/gallery-12.jpeg");
+  { length: 17 },
+  (_, i) => `/images/gallery/gallery-${String(i + 1).padStart(2, "0")}.webp`,
+);
 
 export default function GalleryPage() {
   return (
