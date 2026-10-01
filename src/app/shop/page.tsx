@@ -68,7 +68,9 @@ function ProductSection({
                     {product.name}
                   </h3>
                   <span className="whitespace-nowrap text-sm text-paper-dim">
-                    {formatPrice(product.price)}
+                    {product.availableForSale
+                      ? formatPrice(product.price)
+                      : "Sold Out"}
                   </span>
                 </div>
                 <p className="mt-2 text-sm text-paper-dim">{product.hook}</p>
