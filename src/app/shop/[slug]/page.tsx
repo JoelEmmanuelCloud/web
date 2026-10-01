@@ -136,8 +136,16 @@ export default async function ProductPage({
             </div>
 
             <div className="flex flex-col gap-3">
-              {product.variantId ? (
+              {product.variantId && product.availableForSale ? (
                 <AddToCartButton variantId={product.variantId} />
+              ) : product.variantId ? (
+                <button
+                  type="button"
+                  disabled
+                  className="tracked-label flex h-[46px] w-full max-w-xs cursor-not-allowed items-center justify-center rounded-full border border-line px-8 text-xs text-paper-dim"
+                >
+                  Sold Out
+                </button>
               ) : (
                 <Link
                   href={enquireHref}
