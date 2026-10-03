@@ -248,44 +248,57 @@ export const productContent: ProductContent[] = [
     collection: "truffles",
     name: "Windrush Truffle Box",
     price: 10.95,
-    hook: "A celebration of legacy, courage & new beginnings.",
+    hook: "A flavour collection for memories.",
     description: [
-      "Some stories deserve to be remembered. The Windrush Collection has been created to honour one of the most significant journeys in British history, celebrating the courage, resilience and determination of the men and women who travelled from the Caribbean to Britain, bringing with them their skills, ambition and a rich culture that has helped shape modern Britain.",
+      "Some stories deserve to be remembered. The Windrush Collection has been created to honour one of the most significant journeys in modern British history, celebrating the courage, resilience and determination of the men and women who travelled from the Caribbean to Britain, bringing with them their skills, ambition and a rich culture that has helped shape modern Britain.",
       "Six handcrafted truffles, six distinctive flavours.",
     ],
     flavours: [
       {
         name: "Coconut",
-        description: "A taste of the tropics, beautifully reimagined.",
+        description:
+          "A taste of the tropics, beautifully reimagined. Silky white chocolate meets delicate coconut in a luxuriously smooth truffle, bringing the warmth and sweetness of the Caribbean together with refined artisan chocolate craftsmanship. One bite. One memory. Pure indulgence.",
       },
       {
         name: "Passion Fruit",
-        description: "Bright, vibrant and impossible to resist.",
+        description:
+          "Bright, vibrant and impossible to resist. A luscious passion fruit centre wrapped in fine rich chocolate, balancing the exotic Caribbean fruit with a sophisticated touch of elegance. Sweet, sharp and wonderfully refreshing is well balanced. A little taste of sunshine in every bite.",
       },
       {
         name: "Fruit Cake",
-        description: "The taste of home, with a Caribbean soul.",
+        description:
+          "The taste of home, with a Caribbean soul. Rich soaked fruit, warming spices makes the base of the traditional Fruit cake, then brought together with decadent chocolate. Inspired by the flavours of home, familiar, comforting and beautifully indulgent. A lifetime memory, reimagined in chocolate.",
       },
       {
         name: "Blue Mountain Coffee",
-        description: "Bold Caribbean character mixed with chocolate luxury.",
+        description:
+          "Bold Caribbean character mixed with chocolate luxury. Exceptional Blue Mountain coffee brings its deep roasted notes and subtle richness to this velvety textured chocolate truffle. Creates an elegant balance of intensity, creaminess and chocolate finish. Smooth. Sophisticated. Unforgettable.",
       },
       {
         name: "Dark Caribbean Rum",
-        description: "Deep, warming and irresistibly grown-up.",
+        description:
+          "Deep, warming and irresistibly grown-up. Rich dark chocolate meets the warmth and depth of flavour of real Caribbean rum, creating a beautifully balanced truffle with lingering notes of spice, oak and sweetness to savour. Slow down. Savour the moment.",
       },
       {
         name: "Sorrel & A Touch Of Mixed Spice",
-        description: "A Caribbean classic with a luxurious chocolate twist.",
+        description:
+          "A Caribbean classic with a luxurious chocolate twist. Fragrant sorrel and warming island spices unfold through rich chocolate, creating a beautifully aromatic truffle that is vibrant, sophisticated and wonderfully nostalgic. Exotic, warming and utterly moreish.",
       },
     ],
     ingredients:
-      "Full ingredient details for the Windrush Truffle Box are being finalised.",
+      "Passion Fruit Purée, Coconut Purée, Blue Mountain Coffee, Dark Rum, Sorrel, Mixed Fruit (Sultanas, Raisins, Currants, Prunes, Mixed Peel), Mixed Spice (Ginger, Vanilla, Nutmeg, Cinnamon, Clove, Pimenta), Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Lemon, FLOUR, Sea Salt, Dark Chocolate, Milk Chocolate, White Chocolate, Cocoa Butter. Dark: min 65 & 70% cocoa solids · White: min 28%.",
     allergens:
-      "If you have an allergy or dietary requirement, please contact us before ordering and we will confirm the allergen information for this box.",
-    dietary: [],
-    image: "/images/windrush/windrush-10-hero-collection.webp",
+      "Allergen information for this box is being confirmed. If you have an allergy or dietary requirement, please contact us before ordering.",
+    dietary: ["Suitable for vegetarians"],
+    image: "/images/windrush/shop/windrush-table-setting.webp",
     gallery: [],
+    cardImage: "/images/windrush/shop/windrush-box-white.webp",
+    photos: [
+      "/images/windrush/shop/windrush-table-setting.webp",
+      "/images/windrush/shop/windrush-lifestyle-02.webp",
+      "/images/windrush/shop/windrush-collection-hero.webp",
+    ],
+    storyLink: { label: "Full Story", href: "/windrush" },
   },
 ];
 
