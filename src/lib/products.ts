@@ -160,17 +160,20 @@ export const productContent: ProductContent[] = [
     collection: "truffles",
     name: "Real Champagne Truffles",
     price: 14.95,
-    hook: "Perfect for the unforgettable moments.",
+    hook: "A celebration in chocolate.",
     serving: "110g",
     description: [
-      "Indulge in the exquisite allure of our Real Champagne Truffles, tailor-made for cherished occasions that deserve a touch of elegance. We use authentic champagne as the cornerstone of the recipe, with added lemon, a touch of rum, mixed spices, and vanilla pod.",
-      "No artificial flavourings or compounds — 100% natural ingredients, balanced with the finest chocolate to sustain the flavour through every bite.",
+      "Indulge in the elegance of our Real Champagne Cocktail Truffles — created for moments worth celebrating and crafted for those who appreciate something elegant and a little different.",
+      "At the heart of this recipe is Real Champagne, carefully blended with fresh lemon, a touch of rum and warming mixed spices. Each ingredient has been thoughtfully balanced with fine chocolate to create a smooth, sophisticated ganache that allows the Champagne Cocktail notes to unfold with every bite.",
+      "There are no artificial flavourings or compounds. Just carefully selected ingredients, expert craftsmanship and a beautifully balanced chocolate experience.",
+      "Elegant. Sophisticated. Made to celebrate.",
+      "This is more than a Champagne Chocolate. This is a cocktail, transformed into chocolate.",
     ],
     ingredients:
-      "Real Champagne, Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Lemon, Rum, Vanilla Pods, Mixed Spice, Salt, Pepper. Dark: 65% cocoa solids · White: min 28%.",
+      "Real Champagne, Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Lemon, Rum, Vanilla Pods, Mixed Spice (Ginger, Vanilla, Nutmeg, Cinnamon, Clove, Pimenta), Salt. Dark: min 65% cocoa solids · White: min 28%.",
     allergens:
-      "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
-    dietary: ["Suitable for vegetarians", "Nut free"],
+      "Contains SOYA & MILK. May contain traces of GLUTEN & NUTS. Produced on premises handling WHEAT.",
+    dietary: ["Suitable for vegetarians"],
     image: "/images/shopify-cdn/pwgchampagnetruffles.jpg",
     gallery: [
       "/images/shopify-cdn/ChampagneTruffles.02.jpg",
