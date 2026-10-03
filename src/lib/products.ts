@@ -244,8 +244,17 @@ export const productContent: ProductContent[] = [
     allergens:
       "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
     dietary: ["Suitable for vegetarians"],
-    image: "/images/shopify-cdn/pwgtrufflessaltedcaramel1.jpg",
-    gallery: ["/images/shopify-cdn/0020_8a6e79ab-ff9f-438d-8c25-63a6401c94b8.jpg"],
+    image: "/images/shop/salted-caramel/salted-caramel-lifestyle-drawing-room.webp",
+    gallery: [],
+    cardImage: "/images/shop/salted-caramel/salted-caramel-white.webp",
+    photos: [
+      "/images/shop/salted-caramel/salted-caramel-lifestyle-drawing-room.webp",
+      "/images/shop/salted-caramel/salted-caramel-lifestyle-mirror.webp",
+      "/images/shop/salted-caramel/salted-caramel-lifestyle-marble.webp",
+      "/images/shop/salted-caramel/salted-caramel-collection-banner.webp",
+      "/images/shop/salted-caramel/salted-caramel-white-wide.webp",
+      "/images/shop/salted-caramel/salted-caramel-lifestyle-dining.webp",
+    ],
   },
   {
     slug: "windrush-truffle-box",
