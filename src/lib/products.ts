@@ -31,38 +31,40 @@ export const productContent: ProductContent[] = [
     collection: "chocolate-art",
     name: "Art Range One — Box of 12",
     price: 22.95,
-    hook: "Experience the magic of indulgence, our multi-award winning range.",
+    hook: "Four exceptional flavours. One unforgettable chocolate experience.",
     description: [
-      "Discover the exquisite delight of our award-winning Art Selection Chocolates. With a harmonious blend of artistry and flavour, our chocolates are carefully hand-crafted to offer you an unparalleled indulgence experience.",
-      "Each handcrafted piece is a testament to our commitment to using only the finest ingredients, allowing their natural flavours to shine through — and to our belief that chocolates should be a feast for both the eyes and the palate.",
+      "Discover the award-winning Art Selection, a celebration of fine ingredients, craftsmanship and flavour.",
+      "Each chocolate is handcrafted in small batches, using carefully selected ingredients and real fruit, spices and natural flavours. Nothing is added simply for effect. Every element is chosen to create balance, depth and a memorable taste.",
+      "From the delicate fragrance of natural Vanilla to the vibrant freshness of Passion Fruit, each chocolate offers something different.",
+      "Take your time and savour each one and discover your favourite.",
     ],
     flavours: [
       {
         name: "Vanilla Pod",
         description:
-          "Natural vanilla pods from two distinct origins, blended into a harmonious, complete ganache.",
+          "A beautifully delicate yet surprisingly full-bodied Vanilla chocolate. We blend natural Vanilla Pods from two distinct origins to create a rich and harmonious full body ganache. Soft, creamy vanilla comes first, followed by subtle light caramel notes that linger gently on the palate. Elegant. Smooth. Naturally indulgent.",
       },
       {
         name: "Raspberry",
         description:
-          "Genuine raspberry purée, no artificial flavourings — light on the palate, bursting with flavour.",
+          "The taste of real Raspberries, captured in chocolate. Made with genuine Raspberry purée and no artificial flavourings or compounds, this is a bright, fresh chocolate with a beautifully light character. The Raspberry's natural acidity is carefully balanced with the correct amount of chocolate cocoa to allow its vibrant flavour to travel across the palate. Fresh. Fruity. Vibrant.",
       },
       {
         name: "Salted Caramel",
         description:
-          "Perfectly caramelised sugar balanced with just enough salt, blended with milk and dark chocolate.",
+          "A classic combination, elevated through careful craftsmanship. Sugar is slowly caramelised to create a deep, rich caramel before being delicately balanced with sea salt. Milk and dark chocolate are then blended into the ganache to create layers of sweetness, richness and depth. The result is a beautifully balanced caramel that begins with sweetness and finishes with a gentle touch of sea salt. Rich. Smooth. Moreish.",
       },
       {
         name: "Passion Fruit",
         description:
-          "Real passion fruit purée, no compounds — tangy, smooth, and perfectly balanced.",
+          "The chocolate that started it all. Our signature Passion Fruit chocolate combines real Passion Fruit purée with carefully selected chocolate to create a beautifully balanced ganache. No artificial flavourings or compounds — just the naturally vibrant character of the fruit. Light, smooth and naturally tangy, it delivers a burst of passion fruit followed by the richness of fine chocolate. This was our first award-winning chocolate and helped establish the flavour philosophy behind the Art Chocolate Collection. Vibrant. Elegant. Unforgettable.",
       },
     ],
     ingredients:
-      "Passion Fruit Purée, Raspberry Purée, MILK Chocolate, Dark Chocolate, WHITE Chocolate, Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Vanilla Pods, Mixed Spice, Lemon, Salt, Pepper. Dark: min 65–70% cocoa solids · Milk: min 35% · White: min 28%.",
+      "Passion Fruit Purée, Raspberry Purée, MILK Chocolate, Dark Chocolate, White Chocolate, Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Sugar, Vanilla Pods, Mixed Spice (Ginger, Vanilla, Nutmeg, Cinnamon, Clove, Pimenta), Lemon, Sea Salt. Dark: min 65 & 70% cocoa solids · Milk: min 36% · White: min 28%.",
     allergens:
-      "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
-    dietary: ["Suitable for vegetarians", "Nut free"],
+      "Contains SOYA & MILK. May contain traces of GLUTEN & NUTS. Produced on premises handling WHEAT.",
+    dietary: ["Suitable for vegetarians"],
     image: "/images/shopify-cdn/pwgartrangeone121.jpg",
     gallery: [
       "/images/shopify-cdn/pwgartrangeone121.jpg",
