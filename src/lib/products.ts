@@ -15,6 +15,9 @@ export type ProductContent = {
   dietary: string[];
   image: string;
   gallery: string[];
+  cardImage?: string;
+  photos?: string[];
+  storyLink?: { label: string; href: string };
 };
 
 export type Product = ProductContent & {
@@ -286,11 +289,13 @@ export async function getProducts(): Promise<Product[]> {
       return { ...content, availableForSale: true, variantId: null };
     }
 
+    const images = content.photos ?? live.images;
+
     return {
       ...content,
       price: live.price,
-      image: live.images[0] ?? content.image,
-      gallery: live.images.length > 0 ? live.images : content.gallery,
+      image: images[0] ?? content.image,
+      gallery: images.length > 0 ? images : content.gallery,
       availableForSale: live.availableForSale,
       variantId: live.variantId,
     };

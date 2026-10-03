@@ -170,6 +170,14 @@ export default async function ProductPage({
                   {paragraph}
                 </p>
               ))}
+              {product.storyLink && (
+                <Link
+                  href={product.storyLink.href}
+                  className="tracked-label text-xs text-accent transition-colors hover:text-paper"
+                >
+                  {product.storyLink.label} &rarr;
+                </Link>
+              )}
             </div>
 
             {product.flavours && (

@@ -56,7 +56,7 @@ function ProductSection({
               <Link href={`/shop/${product.slug}`} className="group block">
                 <div className="relative aspect-square overflow-hidden rounded-3xl bg-paper/5">
                   <Image
-                    src={product.image}
+                    src={product.cardImage ?? product.image}
                     alt={product.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
