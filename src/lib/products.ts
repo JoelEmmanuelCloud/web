@@ -65,11 +65,14 @@ export const productContent: ProductContent[] = [
     allergens:
       "Contains SOYA & MILK. May contain traces of GLUTEN & NUTS. Produced on premises handling WHEAT.",
     dietary: ["Suitable for vegetarians"],
-    image: "/images/shopify-cdn/pwgartrangeone121.jpg",
-    gallery: [
-      "/images/shopify-cdn/pwgartrangeone121.jpg",
-      "/images/shopify-cdn/ArtRangeone_2.jpg",
-      "/images/shopify-cdn/Rangeone_O.I.2.jpg",
+    image: "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
+    gallery: [],
+    cardImage: "/images/shop/art-range-one-12/art-range-one-12-white.webp",
+    photos: [
+      "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
+      "/images/shop/art-range-one-12/art-range-one-12-table.webp",
+      "/images/shop/art-range-one-12/art-range-one-12-box-open.webp",
+      "/images/shop/art-range-one-12/art-range-one-12-close-up.webp",
     ],
   },
   {
