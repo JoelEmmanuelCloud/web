@@ -174,10 +174,14 @@ export const productContent: ProductContent[] = [
     allergens:
       "Contains SOYA & MILK. May contain traces of GLUTEN & NUTS. Produced on premises handling WHEAT.",
     dietary: ["Suitable for vegetarians"],
-    image: "/images/shopify-cdn/pwgchampagnetruffles.jpg",
-    gallery: [
-      "/images/shopify-cdn/ChampagneTruffles.02.jpg",
-      "/images/shopify-cdn/0009.jpg",
+    image: "/images/shop/champagne/champagne-lifestyle-marble.webp",
+    gallery: [],
+    cardImage: "/images/shop/champagne/champagne-white.webp",
+    photos: [
+      "/images/shop/champagne/champagne-lifestyle-marble.webp",
+      "/images/shop/champagne/champagne-french-table.webp",
+      "/images/shop/champagne/champagne-window-view.webp",
+      "/images/shop/champagne/champagne-tasting.webp",
     ],
   },
   {
