@@ -93,7 +93,7 @@ export default function WindrushPage() {
         <div className="mx-auto max-w-[1080px] sm:px-10 sm:pt-10">
           <div className="relative aspect-[3/2] overflow-hidden sm:rounded-3xl">
             <Image
-              src="/images/windrush/windrush-10-hero-collection.webp"
+              src="/images/windrush/shop/windrush-collection-hero.webp"
               alt="Paul Wayne Gregory Chocolates, The Windrush Collection: an open box of six cocoa-dusted Windrush Chocolate Truffles, limited edition and handmade, in Passion Fruit, Fruit Cake, Coconut, Blue Mountain Coffee, Dark Rum, and Sorrel with a touch of mixed spice"
               fill
               priority
