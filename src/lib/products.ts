@@ -15,6 +15,9 @@ export type ProductContent = {
   dietary: string[];
   image: string;
   gallery: string[];
+  cardImage?: string;
+  photos?: string[];
+  storyLink?: { label: string; href: string };
 };
 
 export type Product = ProductContent & {
@@ -28,38 +31,40 @@ export const productContent: ProductContent[] = [
     collection: "chocolate-art",
     name: "Art Range One — Box of 12",
     price: 22.95,
-    hook: "Experience the magic of indulgence, our multi-award winning range.",
+    hook: "Four exceptional flavours. One unforgettable chocolate experience.",
     description: [
-      "Discover the exquisite delight of our award-winning Art Selection Chocolates. With a harmonious blend of artistry and flavour, our chocolates are carefully hand-crafted to offer you an unparalleled indulgence experience.",
-      "Each handcrafted piece is a testament to our commitment to using only the finest ingredients, allowing their natural flavours to shine through — and to our belief that chocolates should be a feast for both the eyes and the palate.",
+      "Discover the award-winning Art Selection, a celebration of fine ingredients, craftsmanship and flavour.",
+      "Each chocolate is handcrafted in small batches, using carefully selected ingredients and real fruit, spices and natural flavours. Nothing is added simply for effect. Every element is chosen to create balance, depth and a memorable taste.",
+      "From the delicate fragrance of natural Vanilla to the vibrant freshness of Passion Fruit, each chocolate offers something different.",
+      "Take your time and savour each one and discover your favourite.",
     ],
     flavours: [
       {
         name: "Vanilla Pod",
         description:
-          "Natural vanilla pods from two distinct origins, blended into a harmonious, complete ganache.",
+          "A beautifully delicate yet surprisingly full-bodied Vanilla chocolate. We blend natural Vanilla Pods from two distinct origins to create a rich and harmonious full body ganache. Soft, creamy vanilla comes first, followed by subtle light caramel notes that linger gently on the palate. Elegant. Smooth. Naturally indulgent.",
       },
       {
         name: "Raspberry",
         description:
-          "Genuine raspberry purée, no artificial flavourings — light on the palate, bursting with flavour.",
+          "The taste of real Raspberries, captured in chocolate. Made with genuine Raspberry purée and no artificial flavourings or compounds, this is a bright, fresh chocolate with a beautifully light character. The Raspberry's natural acidity is carefully balanced with the correct amount of chocolate cocoa to allow its vibrant flavour to travel across the palate. Fresh. Fruity. Vibrant.",
       },
       {
         name: "Salted Caramel",
         description:
-          "Perfectly caramelised sugar balanced with just enough salt, blended with milk and dark chocolate.",
+          "A classic combination, elevated through careful craftsmanship. Sugar is slowly caramelised to create a deep, rich caramel before being delicately balanced with sea salt. Milk and dark chocolate are then blended into the ganache to create layers of sweetness, richness and depth. The result is a beautifully balanced caramel that begins with sweetness and finishes with a gentle touch of sea salt. Rich. Smooth. Moreish.",
       },
       {
         name: "Passion Fruit",
         description:
-          "Real passion fruit purée, no compounds — tangy, smooth, and perfectly balanced.",
+          "The chocolate that started it all. Our signature Passion Fruit chocolate combines real Passion Fruit purée with carefully selected chocolate to create a beautifully balanced ganache. No artificial flavourings or compounds — just the naturally vibrant character of the fruit. Light, smooth and naturally tangy, it delivers a burst of passion fruit followed by the richness of fine chocolate. This was our first award-winning chocolate and helped establish the flavour philosophy behind the Art Chocolate Collection. Vibrant. Elegant. Unforgettable.",
       },
     ],
     ingredients:
-      "Passion Fruit Purée, Raspberry Purée, MILK Chocolate, Dark Chocolate, WHITE Chocolate, Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Vanilla Pods, Mixed Spice, Lemon, Salt, Pepper. Dark: min 65–70% cocoa solids · Milk: min 35% · White: min 28%.",
+      "Passion Fruit Purée, Raspberry Purée, MILK Chocolate, Dark Chocolate, White Chocolate, Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Sugar, Vanilla Pods, Mixed Spice (Ginger, Vanilla, Nutmeg, Cinnamon, Clove, Pimenta), Lemon, Sea Salt. Dark: min 65 & 70% cocoa solids · Milk: min 36% · White: min 28%.",
     allergens:
-      "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
-    dietary: ["Suitable for vegetarians", "Nut free"],
+      "Contains SOYA & MILK. May contain traces of GLUTEN & NUTS. Produced on premises handling WHEAT.",
+    dietary: ["Suitable for vegetarians"],
     image: "/images/shopify-cdn/pwgartrangeone121.jpg",
     gallery: [
       "/images/shopify-cdn/pwgartrangeone121.jpg",
@@ -155,17 +160,20 @@ export const productContent: ProductContent[] = [
     collection: "truffles",
     name: "Real Champagne Truffles",
     price: 14.95,
-    hook: "Perfect for the unforgettable moments.",
+    hook: "A celebration in chocolate.",
     serving: "110g",
     description: [
-      "Indulge in the exquisite allure of our Real Champagne Truffles, tailor-made for cherished occasions that deserve a touch of elegance. We use authentic champagne as the cornerstone of the recipe, with added lemon, a touch of rum, mixed spices, and vanilla pod.",
-      "No artificial flavourings or compounds — 100% natural ingredients, balanced with the finest chocolate to sustain the flavour through every bite.",
+      "Indulge in the elegance of our Real Champagne Cocktail Truffles — created for moments worth celebrating and crafted for those who appreciate something elegant and a little different.",
+      "At the heart of this recipe is Real Champagne, carefully blended with fresh lemon, a touch of rum and warming mixed spices. Each ingredient has been thoughtfully balanced with fine chocolate to create a smooth, sophisticated ganache that allows the Champagne Cocktail notes to unfold with every bite.",
+      "There are no artificial flavourings or compounds. Just carefully selected ingredients, expert craftsmanship and a beautifully balanced chocolate experience.",
+      "Elegant. Sophisticated. Made to celebrate.",
+      "This is more than a Champagne Chocolate. This is a cocktail, transformed into chocolate.",
     ],
     ingredients:
-      "Real Champagne, Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Lemon, Rum, Vanilla Pods, Mixed Spice, Salt, Pepper. Dark: 65% cocoa solids · White: min 28%.",
+      "Real Champagne, Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Lemon, Rum, Vanilla Pods, Mixed Spice (Ginger, Vanilla, Nutmeg, Cinnamon, Clove, Pimenta), Salt. Dark: min 65% cocoa solids · White: min 28%.",
     allergens:
-      "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
-    dietary: ["Suitable for vegetarians", "Nut free"],
+      "Contains SOYA & MILK. May contain traces of GLUTEN & NUTS. Produced on premises handling WHEAT.",
+    dietary: ["Suitable for vegetarians"],
     image: "/images/shopify-cdn/pwgchampagnetruffles.jpg",
     gallery: [
       "/images/shopify-cdn/ChampagneTruffles.02.jpg",
@@ -218,16 +226,20 @@ export const productContent: ProductContent[] = [
     collection: "truffles",
     name: "Salted Caramel Truffles",
     price: 13.95,
-    hook: "A sensational flavour experience.",
+    hook: "A contemporary, Award-Winning take on a beloved classic.",
     serving: "110g",
     description: [
-      "Our contemporary take on a beloved classic. A luscious, velvety caramel base is precisely salted for the perfect savoury/sweet balance, finished with a blend of hand-picked chocolates for deep caramel undertones.",
+      "Our Salted Caramel Truffle begins with a luscious, velvety caramel, carefully crafted to bring out its deep, natural flavour. We balance the caramel with a blend of milk and dark chocolate, adding richness and depth while allowing the caramel to remain the star.",
+      "A delicate touch of Sea Salt follows as a back note, bringing out the sweetness of the caramel rather than overpowering it. The result is a beautifully balanced combination of sweet, savoury and rich chocolate flavours that develops with every bite.",
+      "Rich. Smooth. Perfectly balanced. Irresistibly indulgent.",
+      "Expect deep caramel richness, creamy chocolate and a gentle touch of Sea Salt. The caramel leads, the chocolate adds depth, and the salt quietly brings everything together.",
+      "One bite, and the balance becomes the experience.",
     ],
     ingredients:
-      "Caramelised Sugar, Milk Chocolate, Dark Chocolate, UHT Cream, Butter, Glucose, Inverted Sugar, Salt, Lemon Juice. Milk: min 35% · Dark: min 65%.",
+      "Caramelised Sugar, Milk Chocolate, Dark Chocolate, UHT Cream, Butter, Glucose, Inverted Sugar, Salt. Milk: min 36% cocoa solids · Dark: min 65%.",
     allergens:
       "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
-    dietary: ["Suitable for vegetarians", "Nut free"],
+    dietary: ["Suitable for vegetarians"],
     image: "/images/shopify-cdn/pwgtrufflessaltedcaramel1.jpg",
     gallery: ["/images/shopify-cdn/0020_8a6e79ab-ff9f-438d-8c25-63a6401c94b8.jpg"],
   },
@@ -236,44 +248,57 @@ export const productContent: ProductContent[] = [
     collection: "truffles",
     name: "Windrush Truffle Box",
     price: 10.95,
-    hook: "A celebration of legacy, courage & new beginnings.",
+    hook: "A flavour collection for memories.",
     description: [
-      "Some stories deserve to be remembered. The Windrush Collection has been created to honour one of the most significant journeys in British history, celebrating the courage, resilience and determination of the men and women who travelled from the Caribbean to Britain, bringing with them their skills, ambition and a rich culture that has helped shape modern Britain.",
+      "Some stories deserve to be remembered. The Windrush Collection has been created to honour one of the most significant journeys in modern British history, celebrating the courage, resilience and determination of the men and women who travelled from the Caribbean to Britain, bringing with them their skills, ambition and a rich culture that has helped shape modern Britain.",
       "Six handcrafted truffles, six distinctive flavours.",
     ],
     flavours: [
       {
         name: "Coconut",
-        description: "A taste of the tropics, beautifully reimagined.",
+        description:
+          "A taste of the tropics, beautifully reimagined. Silky white chocolate meets delicate coconut in a luxuriously smooth truffle, bringing the warmth and sweetness of the Caribbean together with refined artisan chocolate craftsmanship. One bite. One memory. Pure indulgence.",
       },
       {
         name: "Passion Fruit",
-        description: "Bright, vibrant and impossible to resist.",
+        description:
+          "Bright, vibrant and impossible to resist. A luscious passion fruit centre wrapped in fine rich chocolate, balancing the exotic Caribbean fruit with a sophisticated touch of elegance. Sweet, sharp and wonderfully refreshing is well balanced. A little taste of sunshine in every bite.",
       },
       {
         name: "Fruit Cake",
-        description: "The taste of home, with a Caribbean soul.",
+        description:
+          "The taste of home, with a Caribbean soul. Rich soaked fruit, warming spices makes the base of the traditional Fruit cake, then brought together with decadent chocolate. Inspired by the flavours of home, familiar, comforting and beautifully indulgent. A lifetime memory, reimagined in chocolate.",
       },
       {
         name: "Blue Mountain Coffee",
-        description: "Bold Caribbean character mixed with chocolate luxury.",
+        description:
+          "Bold Caribbean character mixed with chocolate luxury. Exceptional Blue Mountain coffee brings its deep roasted notes and subtle richness to this velvety textured chocolate truffle. Creates an elegant balance of intensity, creaminess and chocolate finish. Smooth. Sophisticated. Unforgettable.",
       },
       {
         name: "Dark Caribbean Rum",
-        description: "Deep, warming and irresistibly grown-up.",
+        description:
+          "Deep, warming and irresistibly grown-up. Rich dark chocolate meets the warmth and depth of flavour of real Caribbean rum, creating a beautifully balanced truffle with lingering notes of spice, oak and sweetness to savour. Slow down. Savour the moment.",
       },
       {
         name: "Sorrel & A Touch Of Mixed Spice",
-        description: "A Caribbean classic with a luxurious chocolate twist.",
+        description:
+          "A Caribbean classic with a luxurious chocolate twist. Fragrant sorrel and warming island spices unfold through rich chocolate, creating a beautifully aromatic truffle that is vibrant, sophisticated and wonderfully nostalgic. Exotic, warming and utterly moreish.",
       },
     ],
     ingredients:
-      "Full ingredient details for the Windrush Truffle Box are being finalised.",
+      "Passion Fruit Purée, Coconut Purée, Blue Mountain Coffee, Dark Rum, Sorrel, Mixed Fruit (Sultanas, Raisins, Currants, Prunes, Mixed Peel), Mixed Spice (Ginger, Vanilla, Nutmeg, Cinnamon, Clove, Pimenta), Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Lemon, FLOUR, Sea Salt, Dark Chocolate, Milk Chocolate, White Chocolate, Cocoa Butter. Dark: min 65 & 70% cocoa solids · White: min 28%.",
     allergens:
-      "If you have an allergy or dietary requirement, please contact us before ordering and we will confirm the allergen information for this box.",
-    dietary: [],
-    image: "/images/windrush/windrush-10-hero-collection.webp",
+      "Allergen information for this box is being confirmed. If you have an allergy or dietary requirement, please contact us before ordering.",
+    dietary: ["Suitable for vegetarians"],
+    image: "/images/windrush/shop/windrush-table-setting.webp",
     gallery: [],
+    cardImage: "/images/windrush/shop/windrush-box-white.webp",
+    photos: [
+      "/images/windrush/shop/windrush-table-setting.webp",
+      "/images/windrush/shop/windrush-lifestyle-02.webp",
+      "/images/windrush/shop/windrush-collection-hero.webp",
+    ],
+    storyLink: { label: "Full Story", href: "/windrush" },
   },
 ];
 
@@ -286,11 +311,13 @@ export async function getProducts(): Promise<Product[]> {
       return { ...content, availableForSale: true, variantId: null };
     }
 
+    const images = content.photos ?? live.images;
+
     return {
       ...content,
       price: live.price,
-      image: live.images[0] ?? content.image,
-      gallery: live.images.length > 0 ? live.images : content.gallery,
+      image: images[0] ?? content.image,
+      gallery: images.length > 0 ? images : content.gallery,
       availableForSale: live.availableForSale,
       variantId: live.variantId,
     };
