@@ -16,6 +16,7 @@ export type ProductContent = {
   image: string;
   gallery: string[];
   cardImage?: string;
+  cardImageFull?: boolean;
   photos?: string[];
   storyLink?: { label: string; href: string };
   status?: "coming-soon" | "hidden";
