@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = Array.from(
-  { length: 17 },
+  { length: 14 },
   (_, i) => `/images/gallery/gallery-${String(i + 1).padStart(2, "0")}.webp`,
 );
 

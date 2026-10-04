@@ -16,8 +16,10 @@ export type ProductContent = {
   image: string;
   gallery: string[];
   cardImage?: string;
+  cardImageFull?: boolean;
   photos?: string[];
   storyLink?: { label: string; href: string };
+  status?: "coming-soon" | "hidden";
 };
 
 export type Product = ProductContent & {
@@ -68,15 +70,16 @@ export const productContent: ProductContent[] = [
     image: "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
     gallery: [],
     cardImage: "/images/shop/art-range-one-12/art-range-one-12-white.webp",
+    cardImageFull: true,
     photos: [
       "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
-      "/images/shop/art-range-one-12/art-range-one-12-table.webp",
       "/images/shop/art-range-one-12/art-range-one-12-box-open.webp",
       "/images/shop/art-range-one-12/art-range-one-12-close-up.webp",
     ],
   },
   {
     slug: "art-range-one-box-of-24",
+    status: "coming-soon",
     collection: "chocolate-art",
     name: "Art Range One — Box of 24",
     price: 42.45,
@@ -97,6 +100,7 @@ export const productContent: ProductContent[] = [
   },
   {
     slug: "art-range-two-box-of-12",
+    status: "hidden",
     collection: "chocolate-art",
     name: "Art Range Two — Box of 12",
     price: 22.95,
@@ -140,6 +144,7 @@ export const productContent: ProductContent[] = [
   },
   {
     slug: "art-range-two-box-of-24",
+    status: "hidden",
     collection: "chocolate-art",
     name: "Art Range Two — Box of 24",
     price: 42.45,
@@ -189,6 +194,7 @@ export const productContent: ProductContent[] = [
   },
   {
     slug: "matugga-rum-truffles",
+    status: "hidden",
     shopifyHandle: "dark-rum-truffles",
     collection: "truffles",
     name: "Real Dark Rum Truffles",
@@ -211,6 +217,7 @@ export const productContent: ProductContent[] = [
   },
   {
     slug: "passion-fruit-truffles",
+    status: "hidden",
     collection: "truffles",
     name: "Passion Fruit Truffles",
     price: 12.95,
@@ -253,9 +260,6 @@ export const productContent: ProductContent[] = [
     photos: [
       "/images/shop/salted-caramel/salted-caramel-lifestyle-drawing-room.webp",
       "/images/shop/salted-caramel/salted-caramel-lifestyle-mirror.webp",
-      "/images/shop/salted-caramel/salted-caramel-lifestyle-marble.webp",
-      "/images/shop/salted-caramel/salted-caramel-collection-banner.webp",
-      "/images/shop/salted-caramel/salted-caramel-white-wide.webp",
       "/images/shop/salted-caramel/salted-caramel-lifestyle-dining.webp",
     ],
   },
@@ -342,8 +346,18 @@ export async function getProducts(): Promise<Product[]> {
   });
 }
 
-export async function getProductBySlug(slug: string) {
+export async function getShopProducts() {
   const products = await getProducts();
+  return products.filter((p) => p.status !== "hidden");
+}
+
+export async function getPurchasableProducts() {
+  const products = await getProducts();
+  return products.filter((p) => !p.status);
+}
+
+export async function getProductBySlug(slug: string) {
+  const products = await getPurchasableProducts();
   return products.find((p) => p.slug === slug);
 }
 
