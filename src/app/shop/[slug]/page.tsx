@@ -4,11 +4,15 @@ import { notFound } from "next/navigation";
 import { Reveal } from "@/components/reveal";
 import { AddToCartButton } from "@/components/add-to-cart-button";
 import { ProductGallery } from "@/components/product-gallery";
-import { getProductBySlug, formatPrice, getProducts } from "@/lib/products";
+import {
+  formatPrice,
+  getProductBySlug,
+  getPurchasableProducts,
+} from "@/lib/products";
 import { siteEmails, siteUrl } from "@/lib/site-config";
 
 export async function generateStaticParams() {
-  const products = await getProducts();
+  const products = await getPurchasableProducts();
   return products.map((product) => ({ slug: product.slug }));
 }
 

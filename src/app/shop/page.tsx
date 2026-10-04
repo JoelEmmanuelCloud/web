@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
-import { getProducts, formatPrice, type Product } from "@/lib/products";
+import { getShopProducts, formatPrice, type Product } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Shop | Paul Wayne Gregory Chocolates",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ShopPage() {
-  const products = await getProducts();
+  const products = await getShopProducts();
   const artCollection = products.filter((p) => p.collection === "chocolate-art");
   const truffles = products.filter((p) => p.collection === "truffles");
 
@@ -53,46 +53,64 @@ function ProductSection({
         <div className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
             <Reveal key={product.slug}>
-              <Link href={`/shop/${product.slug}`} className="group block">
-                {product.cardImage ? (
-                  <div className="relative aspect-square overflow-hidden rounded-3xl bg-studio">
-                    <div className="absolute inset-6 transition-transform duration-700 group-hover:scale-105 sm:inset-8">
-                      <Image
-                        src={product.cardImage}
-                        alt={product.name}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-contain"
-                      />
-                    </div>
-                  </div>
-                ) : (
-                  <div className="relative aspect-square overflow-hidden rounded-3xl bg-paper/5">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                )}
-                <div className="mt-5 flex items-baseline justify-between gap-4">
-                  <h3 className="tracked-label text-xs text-paper">
-                    {product.name}
-                  </h3>
-                  <span className="whitespace-nowrap text-sm text-paper-dim">
-                    {product.availableForSale
-                      ? formatPrice(product.price)
-                      : "Sold Out"}
-                  </span>
+              {product.status === "coming-soon" ? (
+                <div>
+                  <ProductCardBody product={product} />
                 </div>
-                <p className="mt-2 text-sm text-paper-dim">{product.hook}</p>
-              </Link>
+              ) : (
+                <Link href={`/shop/${product.slug}`} className="group block">
+                  <ProductCardBody product={product} />
+                </Link>
+              )}
             </Reveal>
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function ProductCardBody({ product }: { product: Product }) {
+  return (
+    <>
+      {product.cardImage ? (
+        <div className="relative aspect-square overflow-hidden rounded-3xl bg-studio">
+          <div className="absolute inset-6 transition-transform duration-700 group-hover:scale-105 sm:inset-8">
+            <Image
+              src={product.cardImage}
+              alt={product.name}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-contain"
+            />
+          </div>
+        </div>
+      ) : (
+        <div className="relative aspect-square overflow-hidden rounded-3xl bg-paper/5">
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </div>
+      )}
+      <div className="mt-5 flex items-baseline justify-between gap-4">
+        <h3 className="tracked-label text-xs text-paper">
+          {product.name}
+        </h3>
+        {product.status !== "coming-soon" && (
+          <span className="whitespace-nowrap text-sm text-paper-dim">
+            {product.availableForSale
+              ? formatPrice(product.price)
+              : "Sold Out"}
+          </span>
+        )}
+      </div>
+      <p className="mt-2 text-sm text-paper-dim">
+        {product.status === "coming-soon" ? "Coming Soon" : product.hook}
+      </p>
+    </>
   );
 }

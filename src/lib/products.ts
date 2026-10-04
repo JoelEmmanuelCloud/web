@@ -18,6 +18,7 @@ export type ProductContent = {
   cardImage?: string;
   photos?: string[];
   storyLink?: { label: string; href: string };
+  status?: "coming-soon" | "hidden";
 };
 
 export type Product = ProductContent & {
@@ -342,8 +343,18 @@ export async function getProducts(): Promise<Product[]> {
   });
 }
 
-export async function getProductBySlug(slug: string) {
+export async function getShopProducts() {
   const products = await getProducts();
+  return products.filter((p) => p.status !== "hidden");
+}
+
+export async function getPurchasableProducts() {
+  const products = await getProducts();
+  return products.filter((p) => !p.status);
+}
+
+export async function getProductBySlug(slug: string) {
+  const products = await getPurchasableProducts();
   return products.find((p) => p.slug === slug);
 }
 
