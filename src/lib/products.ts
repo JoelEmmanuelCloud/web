@@ -78,6 +78,7 @@ export const productContent: ProductContent[] = [
   },
   {
     slug: "art-range-one-box-of-24",
+    status: "coming-soon",
     collection: "chocolate-art",
     name: "Art Range One — Box of 24",
     price: 42.45,
@@ -98,6 +99,7 @@ export const productContent: ProductContent[] = [
   },
   {
     slug: "art-range-two-box-of-12",
+    status: "hidden",
     collection: "chocolate-art",
     name: "Art Range Two — Box of 12",
     price: 22.95,
@@ -141,6 +143,7 @@ export const productContent: ProductContent[] = [
   },
   {
     slug: "art-range-two-box-of-24",
+    status: "hidden",
     collection: "chocolate-art",
     name: "Art Range Two — Box of 24",
     price: 42.45,
@@ -190,6 +193,7 @@ export const productContent: ProductContent[] = [
   },
   {
     slug: "matugga-rum-truffles",
+    status: "hidden",
     shopifyHandle: "dark-rum-truffles",
     collection: "truffles",
     name: "Real Dark Rum Truffles",
@@ -212,6 +216,7 @@ export const productContent: ProductContent[] = [
   },
   {
     slug: "passion-fruit-truffles",
+    status: "hidden",
     collection: "truffles",
     name: "Passion Fruit Truffles",
     price: 12.95,
