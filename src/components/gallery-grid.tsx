@@ -116,7 +116,7 @@ function Lightbox({
       role="dialog"
       aria-modal="true"
       aria-label="Gallery viewer"
-      className="fixed inset-0 z-[60] flex flex-col bg-ink/95"
+      className="fixed inset-0 z-[60] flex flex-col bg-ink"
     >
       <div className="flex items-center justify-between px-6 py-5">
         <span className={controlClass} aria-live="polite">
