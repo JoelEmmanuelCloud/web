@@ -70,6 +70,7 @@ export const productContent: ProductContent[] = [
     image: "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
     gallery: [],
     cardImage: "/images/shop/art-range-one-12/art-range-one-12-white.webp",
+    cardImageFull: true,
     photos: [
       "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
       "/images/shop/art-range-one-12/art-range-one-12-box-open.webp",
