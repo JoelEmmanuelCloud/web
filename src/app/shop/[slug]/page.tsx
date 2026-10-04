@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/reveal";
 import { AddToCartButton } from "@/components/add-to-cart-button";
+import { ProductGallery } from "@/components/product-gallery";
 import { getProductBySlug, formatPrice, getProducts } from "@/lib/products";
 import { siteEmails, siteUrl } from "@/lib/site-config";
 
@@ -84,36 +84,10 @@ export default async function ProductPage({
         </Link>
 
         <div className="grid gap-14 lg:grid-cols-2">
-          <div className="flex flex-col gap-4">
-            <div className="relative aspect-square overflow-hidden rounded-3xl bg-paper/5">
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
-            {product.gallery.length > 0 && (
-              <div className="grid grid-cols-3 gap-4">
-                {product.gallery.map((src) => (
-                  <div
-                    key={src}
-                    className="relative aspect-square overflow-hidden rounded-2xl bg-paper/5"
-                  >
-                    <Image
-                      src={src}
-                      alt={product.name}
-                      fill
-                      sizes="(max-width: 1024px) 33vw, 16vw"
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+          <ProductGallery
+            images={product.gallery.length > 0 ? product.gallery : [product.image]}
+            name={product.name}
+          />
 
           <div className="flex flex-col gap-8">
             <div>
