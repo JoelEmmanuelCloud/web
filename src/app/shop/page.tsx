@@ -54,15 +54,29 @@ function ProductSection({
           {products.map((product) => (
             <Reveal key={product.slug}>
               <Link href={`/shop/${product.slug}`} className="group block">
-                <div className="relative aspect-square overflow-hidden rounded-3xl bg-paper/5">
-                  <Image
-                    src={product.cardImage ?? product.image}
-                    alt={product.name}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
+                {product.cardImage ? (
+                  <div className="relative aspect-square overflow-hidden rounded-3xl bg-studio">
+                    <div className="absolute inset-6 transition-transform duration-700 group-hover:scale-105 sm:inset-8">
+                      <Image
+                        src={product.cardImage}
+                        alt={product.name}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="relative aspect-square overflow-hidden rounded-3xl bg-paper/5">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                )}
                 <div className="mt-5 flex items-baseline justify-between gap-4">
                   <h3 className="tracked-label text-xs text-paper">
                     {product.name}

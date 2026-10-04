@@ -12,6 +12,7 @@
   --color-blush-ink: #2a0f1c;
   --color-atelier: #241a12;
   --color-amber: #c98a4b;
+  --color-studio: #f5f5f5;
   --font-display: var(--font-fraunces);
   --font-body: var(--font-raleway);
 }
@@ -28,6 +29,7 @@
   --color-blush-ink: var(--color-blush-ink);
   --color-atelier: var(--color-atelier);
   --color-amber: var(--color-amber);
+  --color-studio: var(--color-studio);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
 }
