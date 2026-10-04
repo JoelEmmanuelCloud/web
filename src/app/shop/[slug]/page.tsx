@@ -174,11 +174,15 @@ export default async function ProductPage({
 
             <div className="flex flex-col gap-3 border-t border-line pt-8">
               <p className="tracked-label text-xs text-paper-dim">
-                Ingredients &amp; Allergens
+                Ingredients
               </p>
               <p className="text-sm leading-7 text-paper-dim">
                 {product.ingredients}
               </p>
+            </div>
+
+            <div className="flex flex-col gap-3 border-t border-line pt-8">
+              <p className="tracked-label text-xs text-paper-dim">Allergens</p>
               <p className="text-sm leading-7 text-paper-dim">
                 {product.allergens}
               </p>
