@@ -71,7 +71,6 @@ export const productContent: ProductContent[] = [
     cardImage: "/images/shop/art-range-one-12/art-range-one-12-white.webp",
     photos: [
       "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
-      "/images/shop/art-range-one-12/art-range-one-12-table.webp",
       "/images/shop/art-range-one-12/art-range-one-12-box-open.webp",
       "/images/shop/art-range-one-12/art-range-one-12-close-up.webp",
     ],
