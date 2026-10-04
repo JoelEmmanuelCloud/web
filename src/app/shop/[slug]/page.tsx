@@ -199,6 +199,13 @@ export default async function ProductPage({
             </div>
           </div>
         </div>
+
+        <Link
+          href="/shop"
+          className="tracked-label mt-16 inline-block text-xs text-paper-dim transition-colors hover:text-paper"
+        >
+          &larr; Back To Shop
+        </Link>
       </div>
     </div>
   );
