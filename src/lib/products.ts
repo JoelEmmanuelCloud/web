@@ -308,7 +308,7 @@ export const productContent: ProductContent[] = [
       },
     ],
     ingredients:
-      "Passion Fruit Purée, Coconut Purée, Blue Mountain Coffee, Dark Rum, Sorrel, Mixed Fruit (Sultanas, Raisins, Currants, Prunes, Mixed Peel), Mixed Spice (Ginger, Vanilla, Nutmeg, Cinnamon, Clove, Pimenta), Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Lemon, FLOUR, Sea Salt, Dark Chocolate, Milk Chocolate, White Chocolate, Cocoa Butter. Dark: min 65 & 70% cocoa solids · White: min 28%.",
+      "Passion Fruit Purée, Coconut Purée, Blue Mountain Coffee, Dark Rum, Sorrel, Mixed Fruit (Sultanas, Raisins, Currants, Prunes, Mixed Peel), Mixed Spice (Ginger, Vanilla, Nutmeg, Cinnamon, Clove, Pimenta), Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Lemon, FLOUR, Sea Salt, Dark Chocolate, Milk Chocolate, White Chocolate, Cocoa Butter. Dark: min 65 & 70% cocoa solids · Milk: min 36% · White: min 28%.",
     allergens:
       "Contains SOYA, MILK & WHEAT (GLUTEN). May contain traces of NUTS.",
     dietary: ["Suitable for vegetarians"],
