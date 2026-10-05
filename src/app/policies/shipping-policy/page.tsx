@@ -13,7 +13,7 @@ export default function ShippingPolicyPage() {
   return (
     <LegalPage
       title="Shipping Policy"
-      lastUpdated="27 August 2026"
+      lastUpdated="5 October 2026"
       intro="This page covers where we deliver, who carries your order, and how our production and dispatch timelines work."
       sections={[
         {
@@ -25,7 +25,7 @@ export default function ShippingPolicyPage() {
         {
           heading: "Courier",
           paragraphs: [
-            "Orders are delivered via UPS. We arrange shipping for each order individually, with the cost calculated by weight at checkout.",
+            "UK orders are delivered by Royal Mail or DPD. Choose Standard 48 or Next Day 24 delivery at checkout, where the cost of each is shown.",
           ],
         },
         {
