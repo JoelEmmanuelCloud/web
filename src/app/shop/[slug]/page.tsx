@@ -105,9 +105,9 @@ export default async function ProductPage({
                 <span className="text-lg text-paper">
                   {formatPrice(product.price)}
                 </span>
-                {product.serving && (
+                {product.weight && (
                   <span className="text-sm text-paper-dim">
-                    Serving {product.serving}
+                    Weight {product.weight}
                   </span>
                 )}
               </div>
