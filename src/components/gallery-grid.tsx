@@ -4,26 +4,29 @@ import Image from "next/image";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/reveal";
 
-export function GalleryGrid({ images }: { images: string[] }) {
+type GalleryImage = { src: string; width: number; height: number };
+
+export function GalleryGrid({ images }: { images: GalleryImage[] }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-        {images.map((src, i) => (
-          <Reveal key={src}>
+      <div className="columns-2 gap-4 sm:columns-3 lg:columns-4">
+        {images.map((image, i) => (
+          <Reveal key={image.src} className="mb-4 break-inside-avoid">
             <button
               type="button"
               onClick={() => setActiveIndex(i)}
-              className="relative block aspect-square w-full overflow-hidden rounded-3xl bg-paper/5"
+              className="block w-full overflow-hidden rounded-3xl bg-paper/5"
               aria-label={`Open gallery image ${i + 1}`}
             >
               <Image
-                src={src}
+                src={image.src}
                 alt={`Paul Wayne Gregory Chocolates — showpiece ${i + 1}`}
-                fill
+                width={image.width}
+                height={image.height}
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover transition-transform duration-500 hover:scale-105"
+                className="h-auto w-full transition-transform duration-500 hover:scale-105"
               />
             </button>
           </Reveal>
@@ -32,7 +35,7 @@ export function GalleryGrid({ images }: { images: string[] }) {
 
       {activeIndex !== null && (
         <Lightbox
-          images={images}
+          images={images.map((image) => image.src)}
           startIndex={activeIndex}
           onClose={() => setActiveIndex(null)}
         />
