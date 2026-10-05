@@ -25,7 +25,7 @@ export default function ShippingPolicyPage() {
         {
           heading: "Courier",
           paragraphs: [
-            "UK orders are delivered by Royal Mail or DPD. We arrange shipping for each order individually, with the cost calculated by weight at checkout.",
+            "UK orders are delivered by Royal Mail or DPD. Choose Standard 48 or Next Day 24 delivery at checkout, where the cost of each is shown.",
           ],
         },
         {
