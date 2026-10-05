@@ -261,7 +261,7 @@ export const productContent: ProductContent[] = [
     photos: [
       "/images/shop/salted-caramel/salted-caramel-lifestyle-drawing-room.webp",
       "/images/shop/salted-caramel/salted-caramel-lifestyle-mirror.webp",
-      "/images/shop/salted-caramel/salted-caramel-lifestyle-dining.webp",
+      "/images/shop/salted-caramel/salted-caramel-lifestyle-marble.webp",
     ],
   },
   {
