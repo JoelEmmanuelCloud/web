@@ -317,7 +317,7 @@ export const productContent: ProductContent[] = [
     cardImage: "/images/windrush/shop/windrush-box-white.webp",
     photos: [
       "/images/windrush/shop/windrush-table-setting.webp",
-      "/images/windrush/shop/windrush-lifestyle-02.webp",
+      "/images/windrush/shop/windrush-lifestyle-counter.webp",
       "/images/windrush/shop/windrush-collection-hero.webp",
       "/images/windrush/shop/windrush-flavours-box.webp",
       "/images/windrush/shop/windrush-truffles-white.webp",
