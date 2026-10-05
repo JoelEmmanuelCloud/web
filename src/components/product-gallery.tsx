@@ -6,9 +6,11 @@ import { useRef, useState } from "react";
 export function ProductGallery({
   images,
   name,
+  fit = "cover",
 }: {
   images: string[];
   name: string;
+  fit?: "cover" | "contain";
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [current, setCurrent] = useState(0);
@@ -49,7 +51,7 @@ export function ProductGallery({
                 fill
                 priority={i === 0}
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className={fit === "contain" ? "object-contain" : "object-cover"}
               />
             </div>
           ))}

@@ -91,6 +91,7 @@ export default async function ProductPage({
           <ProductGallery
             images={product.gallery.length > 0 ? product.gallery : [product.image]}
             name={product.name}
+            fit={product.photosFit}
           />
 
           <div className="flex flex-col gap-8">
@@ -105,9 +106,9 @@ export default async function ProductPage({
                 <span className="text-lg text-paper">
                   {formatPrice(product.price)}
                 </span>
-                {product.serving && (
+                {product.weight && (
                   <span className="text-sm text-paper-dim">
-                    Serving {product.serving}
+                    Weight {product.weight}
                   </span>
                 )}
               </div>
@@ -200,6 +201,15 @@ export default async function ProductPage({
                   </span>
                 ))}
               </div>
+            </div>
+
+            <div className="flex flex-col gap-3 border-t border-line pt-8">
+              <p className="tracked-label text-xs text-paper-dim">
+                Storage Instructions
+              </p>
+              <p className="text-sm leading-7 text-paper-dim">
+                Store in a cool dry place away from strong odours.
+              </p>
             </div>
           </div>
         </div>

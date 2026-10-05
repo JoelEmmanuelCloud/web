@@ -7,7 +7,7 @@ export type ProductContent = {
   name: string;
   price: number;
   hook: string;
-  serving?: string;
+  weight?: string;
   description: string[];
   flavours?: { name: string; description: string }[];
   ingredients: string;
@@ -16,8 +16,8 @@ export type ProductContent = {
   image: string;
   gallery: string[];
   cardImage?: string;
-  cardImageFull?: boolean;
   photos?: string[];
+  photosFit?: "contain";
   storyLink?: { label: string; href: string };
   status?: "coming-soon" | "hidden";
 };
@@ -34,6 +34,7 @@ export const productContent: ProductContent[] = [
     name: "Art Range One — Box of 12",
     price: 22.95,
     hook: "Four exceptional flavours. One unforgettable chocolate experience.",
+    weight: "120g",
     description: [
       "Discover the award-winning Art Selection, a celebration of fine ingredients, craftsmanship and flavour.",
       "Each chocolate is handcrafted in small batches, using carefully selected ingredients and real fruit, spices and natural flavours. Nothing is added simply for effect. Every element is chosen to create balance, depth and a memorable taste.",
@@ -69,10 +70,10 @@ export const productContent: ProductContent[] = [
     dietary: ["Suitable for vegetarians"],
     image: "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
     gallery: [],
-    cardImage: "/images/shop/art-range-one-12/art-range-one-12-white.webp",
-    cardImageFull: true,
+    cardImage: "/images/shop/art-range-one-12/art-range-one-12-box-lid.webp",
     photos: [
       "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
+      "/images/shop/art-range-one-12/art-range-one-12-box-lid.webp",
       "/images/shop/art-range-one-12/art-range-one-12-box-open.webp",
       "/images/shop/art-range-one-12/art-range-one-12-close-up.webp",
     ],
@@ -169,7 +170,7 @@ export const productContent: ProductContent[] = [
     name: "Real Champagne Truffles",
     price: 14.95,
     hook: "A celebration in chocolate.",
-    serving: "110g",
+    weight: "120g",
     description: [
       "Indulge in the elegance of our Real Champagne Cocktail Truffles — created for moments worth celebrating and crafted for those who appreciate something elegant and a little different.",
       "At the heart of this recipe is Real Champagne, carefully blended with fresh lemon, a touch of rum and warming mixed spices. Each ingredient has been thoughtfully balanced with fine chocolate to create a smooth, sophisticated ganache that allows the Champagne Cocktail notes to unfold with every bite.",
@@ -200,7 +201,7 @@ export const productContent: ProductContent[] = [
     name: "Real Dark Rum Truffles",
     price: 13.95,
     hook: "Limited stock.",
-    serving: "110g",
+    weight: "110g",
     description: [
       "Crafted using authentic, high-quality Matugga Spiced Rum, with no artificial flavourings — the distinct essence of the rum interwoven with a carefully selected chocolate medley, plus a subtle infusion of spices.",
     ],
@@ -222,7 +223,7 @@ export const productContent: ProductContent[] = [
     name: "Passion Fruit Truffles",
     price: 12.95,
     hook: "One of our delightfully fruity indulgences.",
-    serving: "110g",
+    weight: "110g",
     description: [
       "Our Passion Fruit Bonbon was the first chocolate in the collection to win an award — reworked here as a truffle. Real passion fruit purée only, no flavourings or compounds.",
       "A smooth, decadent texture with an intense, tangy taste, delicately coated in a unique blend of cocoa and chocolate.",
@@ -241,7 +242,7 @@ export const productContent: ProductContent[] = [
     name: "Salted Caramel Truffles",
     price: 13.95,
     hook: "A contemporary, Award-Winning take on a beloved classic.",
-    serving: "110g",
+    weight: "120g",
     description: [
       "Our Salted Caramel Truffle begins with a luscious, velvety caramel, carefully crafted to bring out its deep, natural flavour. We balance the caramel with a blend of milk and dark chocolate, adding richness and depth while allowing the caramel to remain the star.",
       "A delicate touch of Sea Salt follows as a back note, bringing out the sweetness of the caramel rather than overpowering it. The result is a beautifully balanced combination of sweet, savoury and rich chocolate flavours that develops with every bite.",
@@ -260,7 +261,7 @@ export const productContent: ProductContent[] = [
     photos: [
       "/images/shop/salted-caramel/salted-caramel-lifestyle-drawing-room.webp",
       "/images/shop/salted-caramel/salted-caramel-lifestyle-mirror.webp",
-      "/images/shop/salted-caramel/salted-caramel-lifestyle-dining.webp",
+      "/images/shop/salted-caramel/salted-caramel-lifestyle-marble.webp",
     ],
   },
   {
@@ -269,6 +270,7 @@ export const productContent: ProductContent[] = [
     name: "Windrush Truffle Box",
     price: 10.95,
     hook: "A flavour collection for memories.",
+    weight: "90g",
     description: [
       "Some stories deserve to be remembered. The Windrush Collection has been created to honour one of the most significant journeys in modern British history, celebrating the courage, resilience and determination of the men and women who travelled from the Caribbean to Britain, bringing with them their skills, ambition and a rich culture that has helped shape modern Britain.",
       "Six handcrafted truffles, six distinctive flavours.",
@@ -306,20 +308,21 @@ export const productContent: ProductContent[] = [
       },
     ],
     ingredients:
-      "Passion Fruit Purée, Coconut Purée, Blue Mountain Coffee, Dark Rum, Sorrel, Mixed Fruit (Sultanas, Raisins, Currants, Prunes, Mixed Peel), Mixed Spice (Ginger, Vanilla, Nutmeg, Cinnamon, Clove, Pimenta), Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Lemon, FLOUR, Sea Salt, Dark Chocolate, Milk Chocolate, White Chocolate, Cocoa Butter. Dark: min 65 & 70% cocoa solids · White: min 28%.",
+      "Passion Fruit Purée, Coconut Purée, Blue Mountain Coffee, Dark Rum, Sorrel, Mixed Fruit (Sultanas, Raisins, Currants, Prunes, Mixed Peel), Mixed Spice (Ginger, Vanilla, Nutmeg, Cinnamon, Clove, Pimenta), Caramelised Sugar, UHT Cream, Butter, Glucose, Inverted Sugar, Lemon, FLOUR, Sea Salt, Dark Chocolate, Milk Chocolate, White Chocolate, Cocoa Butter. Dark: min 65 & 70% cocoa solids · Milk: min 36% · White: min 28%.",
     allergens:
-      "Allergen information for this box is being confirmed. If you have an allergy or dietary requirement, please contact us before ordering.",
+      "Contains SOYA, MILK & WHEAT (GLUTEN). May contain traces of NUTS.",
     dietary: ["Suitable for vegetarians"],
     image: "/images/windrush/shop/windrush-table-setting.webp",
     gallery: [],
     cardImage: "/images/windrush/shop/windrush-box-white.webp",
     photos: [
       "/images/windrush/shop/windrush-table-setting.webp",
-      "/images/windrush/shop/windrush-lifestyle-02.webp",
+      "/images/windrush/shop/windrush-lifestyle-counter.webp",
       "/images/windrush/shop/windrush-collection-hero.webp",
       "/images/windrush/shop/windrush-flavours-box.webp",
       "/images/windrush/shop/windrush-truffles-white.webp",
     ],
+    photosFit: "contain",
     storyLink: { label: "Full Story", href: "/windrush" },
   },
 ];
