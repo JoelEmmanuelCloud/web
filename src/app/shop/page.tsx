@@ -77,7 +77,7 @@ function ProductCardBody({ product }: { product: Product }) {
         <div className="relative aspect-square overflow-hidden rounded-3xl bg-studio">
           <div
             className={`absolute transition-transform duration-700 group-hover:scale-105 ${
-              product.cardImageFull ? "inset-0" : "inset-6 sm:inset-8"
+              product.cardImageFull ? "-inset-[10%]" : "inset-6 sm:inset-8"
             }`}
           >
             <Image
