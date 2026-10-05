@@ -18,6 +18,7 @@ export type ProductContent = {
   cardImage?: string;
   cardImageFull?: boolean;
   photos?: string[];
+  photosFit?: "contain";
   storyLink?: { label: string; href: string };
   status?: "coming-soon" | "hidden";
 };
@@ -322,6 +323,7 @@ export const productContent: ProductContent[] = [
       "/images/windrush/shop/windrush-flavours-box.webp",
       "/images/windrush/shop/windrush-truffles-white.webp",
     ],
+    photosFit: "contain",
     storyLink: { label: "Full Story", href: "/windrush" },
   },
 ];

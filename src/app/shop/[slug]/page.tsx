@@ -91,6 +91,7 @@ export default async function ProductPage({
           <ProductGallery
             images={product.gallery.length > 0 ? product.gallery : [product.image]}
             name={product.name}
+            fit={product.photosFit}
           />
 
           <div className="flex flex-col gap-8">
