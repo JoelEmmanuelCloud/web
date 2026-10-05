@@ -16,7 +16,6 @@ export type ProductContent = {
   image: string;
   gallery: string[];
   cardImage?: string;
-  cardImageFull?: boolean;
   photos?: string[];
   photosFit?: "contain";
   storyLink?: { label: string; href: string };
@@ -71,8 +70,7 @@ export const productContent: ProductContent[] = [
     dietary: ["Suitable for vegetarians"],
     image: "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
     gallery: [],
-    cardImage: "/images/shop/art-range-one-12/art-range-one-12-white.webp",
-    cardImageFull: true,
+    cardImage: "/images/shop/art-range-one-12/art-range-one-12-box-lid.webp",
     photos: [
       "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
       "/images/shop/art-range-one-12/art-range-one-12-box-open.webp",
