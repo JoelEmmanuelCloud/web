@@ -85,13 +85,13 @@ function ProductCardBody({ product }: { product: Product }) {
         </div>
       ) : product.cardImage ? (
         <div className="relative aspect-square overflow-hidden rounded-3xl bg-studio">
-          <div className="absolute inset-6 transition-transform duration-700 group-hover:scale-105 sm:inset-8">
+          <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
             <Image
               src={product.cardImage}
               alt={product.name}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-contain [mask-composite:intersect] [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent),linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
+              className="object-contain [mask-composite:intersect] [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent),linear-gradient(to_bottom,transparent,black_8%,black_92%,transparent)]"
             />
           </div>
         </div>
