@@ -94,6 +94,7 @@ export const productContent: ProductContent[] = [
       "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
     dietary: ["Suitable for vegetarians", "Nut free"],
     image: "/images/shopify-cdn/pwgartrangeone246.jpg",
+    cardImage: "/images/shop/art-range-one-24/art-range-one-24-white.webp",
     gallery: [
       "/images/shopify-cdn/12chocos_B.jpg",
       "/images/shopify-cdn/ArtRangeOne24.02.jpg",
