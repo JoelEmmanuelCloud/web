@@ -156,7 +156,9 @@ function Lightbox({
             >
               <button
                 type="button"
-                onClick={() => setZoomed(true)}
+                onClick={(event) => {
+                  if (event.detail <= 1) setZoomed(true);
+                }}
                 aria-label={`Zoom into image ${i + 1}`}
                 className="relative block h-full w-full cursor-zoom-in"
               >
