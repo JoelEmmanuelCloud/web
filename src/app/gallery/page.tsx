@@ -11,19 +11,19 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = [
-  { src: "/images/gallery/gallery-01.webp", width: 960, height: 1117 },
-  { src: "/images/gallery/gallery-02.webp", width: 1949, height: 2000 },
-  { src: "/images/gallery/gallery-03.webp", width: 1264, height: 842 },
-  { src: "/images/gallery/gallery-04.webp", width: 912, height: 1182 },
-  { src: "/images/gallery/gallery-05.webp", width: 880, height: 1198 },
-  { src: "/images/gallery/gallery-06.webp", width: 1264, height: 842 },
-  { src: "/images/gallery/gallery-07.webp", width: 1022, height: 1538 },
-  { src: "/images/gallery/gallery-08.webp", width: 1577, height: 2000 },
-  { src: "/images/gallery/gallery-09.webp", width: 1366, height: 768 },
-  { src: "/images/gallery/gallery-10.webp", width: 736, height: 1449 },
-  { src: "/images/gallery/gallery-11.webp", width: 1333, height: 2000 },
-  { src: "/images/gallery/gallery-12.webp", width: 1264, height: 842 },
-  { src: "/images/gallery/gallery-13.webp", width: 832, height: 1254 },
+  "/images/gallery/gallery-01.webp",
+  "/images/gallery/gallery-02.webp",
+  "/images/gallery/gallery-03.webp",
+  "/images/gallery/gallery-04.webp",
+  "/images/gallery/gallery-05.webp",
+  "/images/gallery/gallery-06.webp",
+  "/images/gallery/gallery-07.webp",
+  "/images/gallery/gallery-08.webp",
+  "/images/gallery/gallery-09.webp",
+  "/images/gallery/gallery-10.webp",
+  "/images/gallery/gallery-11.webp",
+  "/images/gallery/gallery-12.webp",
+  "/images/gallery/gallery-13.webp",
 ];
 
 export default function GalleryPage() {
