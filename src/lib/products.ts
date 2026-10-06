@@ -187,7 +187,7 @@ export const productContent: ProductContent[] = [
     dietary: ["Suitable for vegetarians"],
     image: "/images/shop/champagne/champagne-lifestyle-marble.webp",
     gallery: [],
-    cardImage: "/images/shop/champagne/champagne-white.webp",
+    cardImage: "/images/shop/champagne/champagne-card.webp",
     photos: [
       "/images/shop/champagne/champagne-lifestyle-marble.webp",
       "/images/shop/champagne/champagne-french-table.webp",
@@ -259,7 +259,7 @@ export const productContent: ProductContent[] = [
     dietary: ["Suitable for vegetarians"],
     image: "/images/shop/salted-caramel/salted-caramel-lifestyle-drawing-room.webp",
     gallery: [],
-    cardImage: "/images/shop/salted-caramel/salted-caramel-white.webp",
+    cardImage: "/images/shop/salted-caramel/salted-caramel-card.webp",
     photos: [
       "/images/shop/salted-caramel/salted-caramel-lifestyle-drawing-room.webp",
       "/images/shop/salted-caramel/salted-caramel-lifestyle-mirror.webp",
@@ -316,7 +316,7 @@ export const productContent: ProductContent[] = [
     dietary: ["Suitable for vegetarians"],
     image: "/images/windrush/shop/windrush-table-setting.webp",
     gallery: [],
-    cardImage: "/images/windrush/shop/windrush-box-white.webp",
+    cardImage: "/images/windrush/shop/windrush-box-card.webp",
     photos: [
       "/images/windrush/shop/windrush-table-setting.webp",
       "/images/windrush/shop/windrush-lifestyle-counter.webp",
