@@ -77,6 +77,7 @@ export const productContent: ProductContent[] = [
       "/images/shop/art-range-one-12/art-range-one-12-box-open.webp",
       "/images/shop/art-range-one-12/art-range-one-12-close-up.webp",
     ],
+    photosFit: "contain",
   },
   {
     slug: "art-range-one-box-of-24",
