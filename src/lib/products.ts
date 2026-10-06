@@ -70,13 +70,14 @@ export const productContent: ProductContent[] = [
     dietary: ["Suitable for vegetarians"],
     image: "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
     gallery: [],
-    cardImage: "/images/shop/art-range-one-12/art-range-one-12-box-lid.webp",
+    cardImage: "/images/shop/art-range-one-12/art-range-one-12-white.webp",
     photos: [
       "/images/shop/art-range-one-12/art-range-one-12-lifestyle.webp",
       "/images/shop/art-range-one-12/art-range-one-12-box-lid.webp",
       "/images/shop/art-range-one-12/art-range-one-12-box-open.webp",
       "/images/shop/art-range-one-12/art-range-one-12-close-up.webp",
     ],
+    photosFit: "contain",
   },
   {
     slug: "art-range-one-box-of-24",
@@ -94,6 +95,7 @@ export const productContent: ProductContent[] = [
       "Contains SOYA & MILK. May contain traces of GLUTEN & NUT. Produced on premises handling WHEAT.",
     dietary: ["Suitable for vegetarians", "Nut free"],
     image: "/images/shopify-cdn/pwgartrangeone246.jpg",
+    cardImage: "/images/shop/art-range-one-24/art-range-one-24-white.webp",
     gallery: [
       "/images/shopify-cdn/12chocos_B.jpg",
       "/images/shopify-cdn/ArtRangeOne24.02.jpg",
@@ -185,7 +187,7 @@ export const productContent: ProductContent[] = [
     dietary: ["Suitable for vegetarians"],
     image: "/images/shop/champagne/champagne-lifestyle-marble.webp",
     gallery: [],
-    cardImage: "/images/shop/champagne/champagne-white.webp",
+    cardImage: "/images/shop/champagne/champagne-card.webp",
     photos: [
       "/images/shop/champagne/champagne-lifestyle-marble.webp",
       "/images/shop/champagne/champagne-french-table.webp",
@@ -257,7 +259,7 @@ export const productContent: ProductContent[] = [
     dietary: ["Suitable for vegetarians"],
     image: "/images/shop/salted-caramel/salted-caramel-lifestyle-drawing-room.webp",
     gallery: [],
-    cardImage: "/images/shop/salted-caramel/salted-caramel-white.webp",
+    cardImage: "/images/shop/salted-caramel/salted-caramel-card.webp",
     photos: [
       "/images/shop/salted-caramel/salted-caramel-lifestyle-drawing-room.webp",
       "/images/shop/salted-caramel/salted-caramel-lifestyle-mirror.webp",
@@ -314,7 +316,7 @@ export const productContent: ProductContent[] = [
     dietary: ["Suitable for vegetarians"],
     image: "/images/windrush/shop/windrush-table-setting.webp",
     gallery: [],
-    cardImage: "/images/windrush/shop/windrush-box-white.webp",
+    cardImage: "/images/windrush/shop/windrush-box-card.webp",
     photos: [
       "/images/windrush/shop/windrush-table-setting.webp",
       "/images/windrush/shop/windrush-lifestyle-counter.webp",

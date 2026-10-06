@@ -4,29 +4,26 @@ import Image from "next/image";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/reveal";
 
-type GalleryImage = { src: string; width: number; height: number };
-
-export function GalleryGrid({ images }: { images: GalleryImage[] }) {
+export function GalleryGrid({ images }: { images: string[] }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
     <>
-      <div className="columns-2 gap-4 sm:columns-3 lg:columns-4">
-        {images.map((image, i) => (
-          <Reveal key={image.src} className="mb-4 break-inside-avoid">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        {images.map((src, i) => (
+          <Reveal key={src}>
             <button
               type="button"
               onClick={() => setActiveIndex(i)}
-              className="block w-full overflow-hidden rounded-3xl bg-paper/5"
+              className="relative block aspect-square w-full overflow-hidden rounded-3xl bg-paper/5"
               aria-label={`Open gallery image ${i + 1}`}
             >
               <Image
-                src={image.src}
+                src={src}
                 alt={`Paul Wayne Gregory Chocolates — showpiece ${i + 1}`}
-                width={image.width}
-                height={image.height}
+                fill
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="h-auto w-full transition-transform duration-500 hover:scale-105"
+                className="object-contain transition-transform duration-500 hover:scale-105"
               />
             </button>
           </Reveal>
@@ -35,7 +32,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
 
       {activeIndex !== null && (
         <Lightbox
-          images={images.map((image) => image.src)}
+          images={images}
           startIndex={activeIndex}
           onClose={() => setActiveIndex(null)}
         />
@@ -159,7 +156,9 @@ function Lightbox({
             >
               <button
                 type="button"
-                onClick={() => setZoomed(true)}
+                onClick={(event) => {
+                  if (event.detail <= 1) setZoomed(true);
+                }}
                 aria-label={`Zoom into image ${i + 1}`}
                 className="relative block h-full w-full cursor-zoom-in"
               >
