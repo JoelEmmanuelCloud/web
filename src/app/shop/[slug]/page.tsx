@@ -96,7 +96,7 @@ export default async function ProductPage({
 
           <div className="flex flex-col gap-8">
             <div>
-              <h1 className="tracked-display text-xl text-paper sm:text-2xl">
+              <h1 className="tracked-display text-xl text-accent sm:text-2xl">
                 {product.name}
               </h1>
               <p className="tracked-label mt-3 text-xs text-accent">
@@ -131,14 +131,6 @@ export default async function ProductPage({
                   className="tracked-label flex h-[46px] w-full max-w-xs items-center justify-center rounded-full bg-paper px-8 text-xs text-ink transition-colors hover:bg-accent hover:text-accent-ink"
                 >
                   Enquire To Order
-                </Link>
-              )}
-              {product.variantId && (
-                <Link
-                  href={enquireHref}
-                  className="tracked-label text-xs text-paper-dim transition-colors hover:text-paper"
-                >
-                  Or enquire about this product
                 </Link>
               )}
             </div>
