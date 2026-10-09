@@ -96,7 +96,7 @@ export default async function ProductPage({
 
           <div className="flex flex-col gap-8">
             <div>
-              <h1 className="tracked-display text-xl text-paper sm:text-2xl">
+              <h1 className="tracked-display text-xl text-accent sm:text-2xl">
                 {product.name}
               </h1>
               <p className="tracked-label mt-3 text-xs text-accent">
