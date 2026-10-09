@@ -133,14 +133,6 @@ export default async function ProductPage({
                   Enquire To Order
                 </Link>
               )}
-              {product.variantId && (
-                <Link
-                  href={enquireHref}
-                  className="tracked-label text-xs text-paper-dim transition-colors hover:text-paper"
-                >
-                  Or enquire about this product
-                </Link>
-              )}
             </div>
 
             <div className="flex flex-col gap-4 border-t border-line pt-8">
