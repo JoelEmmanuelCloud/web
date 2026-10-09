@@ -107,7 +107,7 @@ function ProductCardBody({ product }: { product: Product }) {
         </div>
       )}
       <div className="mt-5 flex items-baseline justify-between gap-4">
-        <h3 className="tracked-label text-xs text-paper">
+        <h3 className="tracked-label text-xs text-accent">
           {product.name}
         </h3>
         {product.status !== "coming-soon" && (
