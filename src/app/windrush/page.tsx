@@ -191,7 +191,7 @@ export default function WindrushPage() {
                     <p className="tracked-label text-xs text-paper-dim">
                       {flavour.theme}
                     </p>
-                    <h3 className="tracked-label mt-2 text-xs text-paper">
+                    <h3 className="tracked-label mt-2 text-xs text-accent">
                       {flavour.name}
                     </h3>
                     <p className="mt-3 text-sm text-paper">
