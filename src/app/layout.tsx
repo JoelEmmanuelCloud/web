@@ -1,12 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { Raleway, Fraunces } from "next/font/google";
 import { headers } from "next/headers";
+import { Suspense } from "react";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { CookieConsent } from "@/components/cookie-consent-loader";
 import { siteUrl } from "@/lib/site-config";
-import { getCartCount } from "@/lib/cart";
+import { CartBadge } from "@/components/cart-badge";
+import { NavigationProgress } from "@/components/navigation-progress";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -66,7 +68,6 @@ const organizationJsonLd = {
 export default async function RootLayout({ children }: LayoutProps<"/">) {
   const headersList = await headers();
   const isGated = headersList.get("x-pwg-gate") === "coming-soon";
-  const cartCount = isGated ? 0 : await getCartCount();
 
   return (
     <html
@@ -80,7 +81,20 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
           }}
         />
-        {!isGated && <SiteHeader cartCount={cartCount} />}
+        {!isGated && (
+          <Suspense fallback={null}>
+            <NavigationProgress />
+          </Suspense>
+        )}
+        {!isGated && (
+          <SiteHeader
+            cartBadge={
+              <Suspense fallback={null}>
+                <CartBadge />
+              </Suspense>
+            }
+          />
+        )}
         <main className="flex-1">{children}</main>
         {!isGated && <SiteFooter />}
         {!isGated && <CookieConsent />}
