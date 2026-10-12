@@ -46,6 +46,7 @@ const flavours = [
       "Exceptional Blue Mountain coffee brings its deep roasted notes and subtle richness to this velvety textured chocolate truffle. Creates an elegant balance of intensity, creaminess and chocolate finish.",
     signoff: "Smooth. Sophisticated. Unforgettable.",
     image: "/images/windrush/flavours/blue-mountain-coffee.webp",
+    imagePosition: "object-right",
   },
   {
     name: "Dark Caribbean Rum",
@@ -182,7 +183,7 @@ export default function WindrushPage() {
                         alt={`${flavour.name} truffle — ${flavour.theme}`}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover"
+                        className={`object-cover ${flavour.imagePosition ?? ""}`}
                       />
                     </div>
                   ) : null}
@@ -190,7 +191,7 @@ export default function WindrushPage() {
                     <p className="tracked-label text-xs text-paper-dim">
                       {flavour.theme}
                     </p>
-                    <h3 className="tracked-label mt-2 text-xs text-paper">
+                    <h3 className="tracked-label mt-2 text-xs text-accent">
                       {flavour.name}
                     </h3>
                     <p className="mt-3 text-sm text-paper">
