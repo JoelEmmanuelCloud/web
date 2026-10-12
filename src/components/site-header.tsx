@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { primaryNav } from "@/lib/site-config";
 
 function isActive(pathname: string, href: string) {
@@ -32,7 +32,7 @@ function preloadHeroVideo(href: string) {
   video.src = src;
 }
 
-export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
+export function SiteHeader({ cartBadge }: { cartBadge?: ReactNode }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -132,7 +132,7 @@ export function SiteHeader({ cartCount = 0 }: { cartCount?: number }) {
           aria-label="Cart"
           className="tracked-label flex items-center gap-2 text-xs text-paper-dim transition-colors hover:text-paper"
         >
-          <CartIcon count={cartCount} />
+          <CartIcon badge={cartBadge} />
           <span className="hidden lg:inline">Cart</span>
         </Link>
       </div>
@@ -195,7 +195,7 @@ function MenuIcon({ open }: { open: boolean }) {
   );
 }
 
-function CartIcon({ count }: { count: number }) {
+function CartIcon({ badge }: { badge?: ReactNode }) {
   return (
     <span className="relative inline-flex">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
@@ -209,11 +209,7 @@ function CartIcon({ count }: { count: number }) {
         <circle cx="8" cy="17" r="1.15" fill="currentColor" />
         <circle cx="15.5" cy="17" r="1.15" fill="currentColor" />
       </svg>
-      {count > 0 && (
-        <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[9px] text-accent-ink">
-          {count}
-        </span>
-      )}
+      {badge}
     </span>
   );
 }
