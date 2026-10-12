@@ -92,3 +92,32 @@ body {
     background-position: -50% 0;
   }
 }
+
+.nav-progress {
+  width: 100%;
+  opacity: 0;
+  transition: opacity 300ms ease 150ms;
+}
+
+.nav-progress.is-loading {
+  width: 0;
+  opacity: 0;
+  transition: none;
+  animation: nav-progress-trickle 10s cubic-bezier(0.1, 0.7, 0.2, 1) 120ms
+    forwards;
+}
+
+@keyframes nav-progress-trickle {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  10% {
+    width: 35%;
+    opacity: 1;
+  }
+  100% {
+    width: 92%;
+    opacity: 1;
+  }
+}

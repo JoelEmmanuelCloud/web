@@ -8,6 +8,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { CookieConsent } from "@/components/cookie-consent-loader";
 import { siteUrl } from "@/lib/site-config";
 import { CartBadge } from "@/components/cart-badge";
+import { NavigationProgress } from "@/components/navigation-progress";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -80,6 +81,11 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
           }}
         />
+        {!isGated && (
+          <Suspense fallback={null}>
+            <NavigationProgress />
+          </Suspense>
+        )}
         {!isGated && (
           <SiteHeader
             cartBadge={
