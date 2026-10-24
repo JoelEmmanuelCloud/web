@@ -4,12 +4,15 @@ import { notFound } from "next/navigation";
 import { Reveal } from "@/components/reveal";
 import { AddToCartButton } from "@/components/add-to-cart-button";
 import { ProductGallery } from "@/components/product-gallery";
+import { ProductReviews, averageRating } from "@/components/product-reviews";
+import { Stars } from "@/components/stars";
 import {
   formatPrice,
   getProductBySlug,
   getPurchasableProducts,
 } from "@/lib/products";
 import { siteEmails, siteUrl } from "@/lib/site-config";
+import { fetchApprovedReviews, isAdminConfigured } from "@/lib/shopify-admin";
 
 export async function generateStaticParams() {
   const products = await getPurchasableProducts();
@@ -52,6 +55,12 @@ export default async function ProductPage({
   const product = await getProductBySlug(slug);
   if (!product) notFound();
 
+  const reviewsEnabled = isAdminConfigured();
+  const reviews = reviewsEnabled
+    ? await fetchApprovedReviews(product.shopifyHandle ?? product.slug)
+    : [];
+  const average = averageRating(reviews);
+
   const enquireHref = `mailto:${siteEmails.webSales}?subject=${encodeURIComponent(
     `Enquiry: ${product.name}`,
   )}`;
@@ -69,6 +78,28 @@ export default async function ProductPage({
       price: product.price,
       availability: "https://schema.org/InStock",
     },
+    ...(reviews.length > 0 && {
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: average.toFixed(1),
+        reviewCount: reviews.length,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      review: reviews.slice(0, 10).map((review) => ({
+        "@type": "Review",
+        author: { "@type": "Person", name: review.authorName },
+        datePublished: review.submittedAt.slice(0, 10),
+        name: review.title || undefined,
+        reviewBody: review.body,
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: review.rating,
+          bestRating: 5,
+          worstRating: 1,
+        },
+      })),
+    }),
   };
 
   return (
@@ -112,6 +143,17 @@ export default async function ProductPage({
                   </span>
                 )}
               </div>
+              {reviews.length > 0 && (
+                <a
+                  href="#reviews"
+                  className="mt-4 inline-flex items-center gap-3 text-sm text-paper-dim transition-colors hover:text-paper"
+                >
+                  <Stars rating={average} />
+                  <span>
+                    {reviews.length} {reviews.length === 1 ? "review" : "reviews"}
+                  </span>
+                </a>
+              )}
             </div>
 
             <div className="flex flex-col gap-3">
@@ -205,6 +247,10 @@ export default async function ProductPage({
             </div>
           </div>
         </div>
+
+        {reviewsEnabled && (
+          <ProductReviews productSlug={product.slug} reviews={reviews} />
+        )}
 
         <Link
           href="/shop"
