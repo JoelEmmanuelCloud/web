@@ -6,7 +6,7 @@ import { Reveal } from "@/components/reveal";
 export const metadata: Metadata = {
   title: "Windrush | Paul Wayne Gregory Chocolates",
   description:
-    "The Windrush Collection — a celebration of legacy, courage, and new beginnings, told through chocolate.",
+    "The Windrush Collection: a celebration of legacy, courage, and new beginnings, told through chocolate.",
   alternates: { canonical: "/windrush" },
 };
 
@@ -137,25 +137,24 @@ export default function WindrushPage() {
               <p className="text-base leading-8 text-paper-dim">
                 Some stories deserve to be remembered. The Windrush
                 Collection has been created to honour one of the most
-                significant journeys in British history — celebrating the
-                courage, resilience and determination of the men and women
+                significant journeys in Caribbean history, celebrating the
+                courage, resilience, and determination of the men and women
                 who travelled from the Caribbean to Britain, bringing with
-                them their skills, ambition and a rich culture that has
+                them their skills, ambition, and a rich culture that has
                 helped shape modern Britain.
               </p>
               <p className="text-base leading-8 text-paper-dim">
                 As a Master Chocolatier, I wanted to tell this remarkable
-                story in a different way — not through words alone, but
+                story in a different way; not through words alone, but
                 through flavour. Each handcrafted chocolate has been
-                carefully created to capture the tastes, aromas and memories
-                carried across the Atlantic: familiar flavours of home,
-                moments of celebration, family traditions, and ingredients
-                that evoke comfort, belonging and hope.
+                carefully created to capture the tastes, aromas, and
+                memories carried across the Atlantic to bring familiar
+                flavours of home, moments of celebration, family traditions,
+                and ingredients that evoke comfort, belonging, and hope.
               </p>
               <p className="text-base leading-8 text-paper-dim">
-                Together, they create more than a box of chocolates. They
-                create a journey — through heritage, through culture,
-                through memory.
+                Together, they create more than a box of chocolates; they
+                create a journey through heritage, culture, and memory.
               </p>
             </div>
           </Reveal>
@@ -244,7 +243,16 @@ export default function WindrushPage() {
             Displayed With Permission
           </p>
           <p className="text-sm text-paper-dim">
-            Used with the permission of the Windrush National Organisation.
+            Used with the permission of the{" "}
+            <a
+              href="https://windrushnationalorganisation.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-paper underline underline-offset-4 transition-colors hover:text-accent"
+            >
+              Windrush National Organisation
+            </a>
+            .
           </p>
         </div>
       </section>
@@ -255,14 +263,21 @@ export default function WindrushPage() {
             A Personal Dedication
           </p>
           <p className="text-base leading-8 text-paper-dim">
-            &ldquo;I dedicate this creation to all the brave people who came
-            to this unknown land to make a new life for themselves, and by
-            doing so, you have helped shape my life. So I thank you
-            all.&rdquo;
+            &ldquo;I dedicate this collection to all those brave souls who
+            journeyed to these unknown shores, in search of a better life for
+            themselves and their families. Through their courage, sacrifices
+            and determination, they helped to shape a new Britain, laying the
+            foundations for generations to come and becoming an enduring part
+            of our shared history. This collection stands as a tribute to
+            their legacy, their strength and the lives they helped make
+            possible.
           </p>
-          <p className="tracked-label text-xs text-accent">One Love!</p>
+          <p className="text-base leading-8 text-paper-dim">
+            Thank you!&rdquo;
+          </p>
+          <p className="tracked-label text-xs text-accent">One Love.</p>
           <p className="tracked-label text-xs text-paper-dim">
-            — Paul Wayne Gregory
+            Paul Wayne Gregory
           </p>
         </div>
       </section>
