@@ -88,7 +88,7 @@ export default function WindrushPage() {
     <>
       <section className="bg-ink pt-24">
         <h1 className="sr-only">
-          The Windrush Collection — A Celebration Of Legacy, Courage &amp; New
+          The Windrush Collection: A Celebration Of Legacy, Courage &amp; New
           Beginnings
         </h1>
         <div className="mx-auto max-w-[1080px] sm:px-10 sm:pt-10">
