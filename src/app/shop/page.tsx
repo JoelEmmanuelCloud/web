@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
+import { AddToCartButton } from "@/components/add-to-cart-button";
 import { getShopProducts, formatPrice, type Product } from "@/lib/products";
 
 export const metadata: Metadata = {
@@ -52,7 +53,7 @@ function ProductSection({
         </h2>
         <div className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
-            <Reveal key={product.slug}>
+            <Reveal key={product.slug} className="flex flex-col">
               {product.status === "coming-soon" ? (
                 <div>
                   <ProductCardBody product={product} />
@@ -62,6 +63,13 @@ function ProductSection({
                   <ProductCardBody product={product} />
                 </Link>
               )}
+              {product.status !== "coming-soon" &&
+                product.variantId &&
+                product.availableForSale && (
+                  <div className="mt-auto pt-5">
+                    <AddToCartButton variantId={product.variantId} />
+                  </div>
+                )}
             </Reveal>
           ))}
         </div>
