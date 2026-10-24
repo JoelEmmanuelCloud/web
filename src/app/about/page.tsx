@@ -27,14 +27,14 @@ export default function AboutPage() {
             A Master Of This Craft
           </h2>
           <p className="text-base leading-8 text-paper-dim">
-            Paul Wayne Gregory is a multi-award winning chocolatier. Every
-            recipe carries his own philosophy — indulgence&nbsp;is&nbsp;everything —
-            a standard he developed himself and holds every creation to
-            before it earns a place in the collection.
+            Paul Wayne Gregory is a multi-award-winning chocolatier. Every
+            recipe carries his own philosophy: indulgence&nbsp;is&nbsp;everything.
+            This is a standard he developed himself and holds every creation
+            to before it earns a place in the collection.
           </p>
           <p className="text-base leading-8 text-paper-dim">
-            Read more about that philosophy, and the taste framework behind
-            it, below.
+            Read more about that philosophy and the taste framework behind it
+            below.
           </p>
           <Link
             href="/philosophy"
@@ -54,17 +54,18 @@ export default function AboutPage() {
             From The Kitchen To The Craft
           </h2>
           <p className="text-base leading-8 text-paper-dim">
-            Paul started out as a baker, then moved into a main kitchen as a
-            chef. It didn&rsquo;t feel right, so he trained as a pastry chef —
-            and it was there that he found chocolate, and his true love of
-            working with it.
+            Paul started out as a baker before moving into the main kitchen
+            as a chef. Something felt missing, so he retrained as a pastry
+            chef and that&rsquo;s where he discovered chocolate and fell
+            completely in love with working with it.
           </p>
           <p className="text-base leading-8 text-paper-dim">
-            The turning point came while training in France with Jean
-            Valtintine, who told him he had a natural flair for chocolate and
-            should go all in. He went on to work under master chocolatier
-            Orial Balalgure, where he was able to express himself fully and,
-            in his own words, &ldquo;fell deep into the rabbit hole.&rdquo;
+            The true turning point came while training in France with Jean
+            Valentine. He pointed out Paul&rsquo;s natural flair for
+            chocolate and urged him to go all in. Paul later worked under
+            master chocolatier Oriol Balaguer, where he could fully express
+            his creativity without limits and, as they like to say, fell
+            deep into the rabbit hole.
           </p>
         </div>
       </section>
@@ -79,15 +80,17 @@ export default function AboutPage() {
           </h2>
           <p className="text-base leading-8 text-paper-dim">
             &ldquo;It&rsquo;s the one ingredient that lends itself to
-            everything,&rdquo; Paul says. &ldquo;You can eat it raw, cook with
-            it, build displays, paint, create truffles, bars — but most of
-            all, it&rsquo;s simple but so complex.&rdquo;
+            everything. You can eat it raw, cook with it, build displays,
+            paint, create truffles, bars, but most of all, it&rsquo;s simple
+            but so complex.&rdquo;
+          </p>
+          <p className="tracked-label text-xs text-paper-dim">
+            Paul Wayne Gregory
           </p>
           <p className="text-base leading-8 text-paper-dim">
-            Every recipe starts from a philosophy first — flavour, look and
-            feel, and the experience they create together — before it ever
-            becomes a chocolate. Read more about that philosophy on its own
-            page.
+            Every recipe starts from a philosophy first: flavour, look and
+            feel, and the experience they create together, before it ever
+            becomes a chocolate.
           </p>
           <Link
             href="/philosophy"
@@ -107,8 +110,8 @@ export default function AboutPage() {
             The Chocolate That Started It All
           </h2>
           <p className="text-base leading-8 text-paper-dim">
-            Of everything Paul has created — displays, sculptures, paintings
-            in chocolate — one moment stands above the rest: his first
+            Of everything Paul has created, from displays and sculptures to
+            paintings in chocolate, one moment stands above the rest: his first
             award-winning chocolate, the Passion Fruit Bonbon. It was the
             first piece to tell the full indulgence story, exactly as he
             imagined it, and it set the philosophy the whole company is still
@@ -126,13 +129,13 @@ export default function AboutPage() {
             Awards &amp; Achievements
           </h2>
           <p className="text-base leading-8 text-paper-dim">
-            Paul set himself one goal with the Pure Indulgence range: that
-            every single chocolate in it would win an award. He achieved it —
-            three Awards of Excellence, and around twenty further medals
-            across gold, silver and bronze, including one bronze he later
-            reworked until it won gold. He achieved all of it within five
-            years, and was called up for Chocolate Ambassadorship along the
-            way.
+            Paul set himself one goal with the Pure Indulgence range: every
+            single chocolate in it had to win an award. He achieved it,
+            earning three Awards of Excellence alongside roughly twenty
+            additional medals spanning gold, silver, and bronze, including
+            one bronze he later reworked until it won gold. He accomplished
+            all of this within five years and was appointed a Chocolate
+            Ambassador along the way.
           </p>
         </div>
       </section>
@@ -147,7 +150,7 @@ export default function AboutPage() {
           </h2>
           <p className="text-base leading-8 text-paper-dim">
             Craftsmanship of this kind is a fading skill, and passing it on
-            matters to Paul — teaching is part of where he wants to take the
+            matters to Paul; teaching is part of where he wants to take the
             brand next. Before that, one more collection is coming: the
             &ldquo;More Indulgence&rdquo; range, the next chapter after Pure
             Indulgence.
@@ -162,11 +165,11 @@ export default function AboutPage() {
           </p>
           <p className="text-base italic leading-8 text-paper-dim">
             &ldquo;If someone remembers only one thing about the brand, I
-            want it to be that I was able to give them a special moment —
-            that moment of self indulgence.&rdquo;
+            want it to be that I was able to give them a special moment:
+            that moment of self-indulgence.&rdquo;
           </p>
           <p className="tracked-label text-xs text-paper-dim">
-            — Paul Wayne Gregory
+            Paul Wayne Gregory
           </p>
         </div>
       </section>

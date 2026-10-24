@@ -7,7 +7,7 @@ import { Reveal } from "@/components/reveal";
 export const metadata: Metadata = {
   title: "Philosophy | Paul Wayne Gregory Chocolates",
   description:
-    "Indulgence is everything — the philosophy behind Paul Wayne Gregory Chocolates, not a strapline but the standard every recipe is built to.",
+    "Indulgence is everything: the philosophy behind Paul Wayne Gregory Chocolates, not a strapline but the standard every recipe is built to.",
   alternates: { canonical: "/philosophy" },
 };
 
@@ -30,16 +30,16 @@ export default function PhilosophyPage() {
           </h2>
           <p className="text-base leading-8 text-paper-dim">
             Most chocolate companies have a strapline. We have a philosophy.
-            &ldquo;Indulgence&nbsp;is&nbsp;everything&rdquo; isn&rsquo;t a line on a box
-            — it&rsquo;s the guideline every recipe gets held to before it
-            earns a place in the collection.
+            &ldquo;Indulgence&nbsp;is&nbsp;everything&rdquo; isn&rsquo;t a line on a box;
+            it is the guideline every recipe gets held to before it earns a
+            place in the collection.
           </p>
           <p className="text-base leading-8 text-paper-dim">
             The world of chocolatiers can look the same from one maker to the
-            next — same look, same colours, same basic feel. We&rsquo;d
-            rather be different: playful where it counts, uncompromising
-            where it matters, and always chasing the same question — what
-            does true indulgence actually taste like?
+            next, offering the same look, the same colours, and the same
+            basic feel. We&rsquo;d rather be different: playful where it
+            counts, uncompromising where it matters, and always chasing the
+            same question: What does true indulgence taste like?
           </p>
         </div>
       </section>
@@ -66,19 +66,18 @@ export default function PhilosophyPage() {
                 Can Indulgence Be Measured?
               </h2>
               <p className="text-base leading-8 text-paper-dim">
-                Behind every recipe is a framework Paul developed himself —
-                taste profile, and what he calls &ldquo;width of
-                flavour.&rdquo; It&rsquo;s not marketing language. It&rsquo;s
-                the actual method used to decide whether a new flavour is
-                ready, or needs another six months in development.
+                Behind every recipe is a framework Paul developed himself,
+                based on taste profile and what he calls &ldquo;width of
+                flavour.&rdquo; It is not marketing language; it is the
+                actual method used to decide whether a new flavour is ready
+                or needs another six months in development.
               </p>
               <p className="text-base leading-8 text-paper-dim">
-                We&rsquo;re building this out into proper masterclass
-                content — starting with Lesson One: can indulgence be
-                measured? It&rsquo;s the first time we&rsquo;ve taught this
-                openly, and the first time we&rsquo;ve shown the creative
-                journey behind a new range as it happens, rather than after
-                the fact.
+                We are building this out into proper masterclass content,
+                starting with Lesson One: Can indulgence be measured? It is
+                the first time we have taught this openly, and the first
+                time we have shown the creative journey behind a new range as
+                it happens, rather than after the fact.
               </p>
             </div>
           </Reveal>
@@ -103,44 +102,41 @@ export default function PhilosophyPage() {
             </p>
             <p className="text-base leading-8 text-paper-dim">
               The concept of our style starts with the look of the chocolate
-              and ends in that rich after taste of smooth silky chocolate in
+              and ends in that rich aftertaste of smooth, silky chocolate in
               the back of the mouth, with the main flavour taking centre
-              stage. This is to create an experience of indulgence, which
-              created the company&rsquo;s mission of
+              stage. This creates an experience of indulgence, which
+              inspired the company&rsquo;s mission:
               &lsquo;Indulgence&nbsp;is&nbsp;everything.&rsquo;
             </p>
             <p className="text-base leading-8 text-paper-dim">
               A touch of salt or a minimal percentage of sugars may be added
-              to selected chocolate fillings, to simply enhance the natural
-              flavour of the main ingredient or simply to bring out a hidden
-              taste note of flavour, to enhance a savoury ingredient, or
-              simply to balance the flavours within the mouth. This
-              understanding has been discovered through careful research and
-              testing with our chocolate range and concept — creating what I
-              call the flavour width to build from.
+              to selected chocolate fillings to enhance the natural flavour
+              of the main ingredient, bring out a hidden taste note,
+              accentuate a savoury element, or balance the flavours in the
+              mouth. This understanding has been discovered through careful
+              research and testing across our chocolate range: creating what
+              I call the flavour width to build from.
             </p>
             <p className="text-base leading-8 text-paper-dim">
-              Let me explain: you do not come to us to get a meal which will
-              fill you, or even a stop gap between meals. People come to us
-              for one reason and one reason only — a moment of pleasure, a
-              moment of self indulgence, for yourself or someone special.
+              Let me explain: you do not come to us to get a meal that will
+              fill you, or even a stopgap between meals. People come to us
+              for one reason and one reason only: a moment of pleasure, or a
+              moment of self-indulgence for yourself or someone special.
             </p>
             <p className="text-base leading-8 text-paper-dim">
               It&rsquo;s that fine blend of selected chocolate, perfectly
-              tempered to give that crisp crunch in the mouth. With full
-              flavoured centres, light and well balanced with the right
-              percentage cocoa from the chocolate selected to create that
-              rich smooth finish, and then, that after taste of rich smooth
-              silky chocolate to savour.
+              tempered to give a crisp crunch in the mouth, paired with
+              full-flavoured centres that are light and well balanced with
+              the right cocoa percentage. It creates that rich, smooth finish
+              and an aftertaste of rich, silky chocolate to savour.
             </p>
             <p className="text-base leading-8 text-paper-dim">
-              To most people, this is just an experience one must undertake
-              at least once in their life time. For me, this is my
-              life.&rdquo;
+              To most people, this is an experience one must undertake at
+              least once in a lifetime. For me, this is my life.&rdquo;
             </p>
           </blockquote>
           <p className="tracked-label text-xs text-paper-dim">
-            — P.W. Gregory
+            P.W. Gregory
           </p>
         </div>
       </section>
