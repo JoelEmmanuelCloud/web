@@ -1,5 +1,5 @@
 const ADMIN_API_VERSION = "2026-07";
-const REVIEW_TYPE = "product_review";
+const REVIEW_TYPE = "pwg_product_review";
 
 type AdminGraphQLResponse<T> = {
   data?: T;
