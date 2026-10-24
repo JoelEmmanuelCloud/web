@@ -33,7 +33,7 @@ export function AddToCartButton({ variantId }: { variantId: string }) {
       </button>
       {error && (
         <p className="text-xs text-accent">
-          Something went wrong adding this to your cart — please try again.
+          Something went wrong adding this to your cart. Please try again.
         </p>
       )}
     </div>
