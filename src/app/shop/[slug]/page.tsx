@@ -26,13 +26,14 @@ export async function generateMetadata({
   const product = await getProductBySlug(slug);
   if (!product) return {};
   const title = `${product.name} | Paul Wayne Gregory Chocolates`;
+  const description = product.hook || product.description[0];
   return {
     title,
-    description: product.hook,
+    description,
     alternates: { canonical: `/shop/${product.slug}` },
     openGraph: {
       title,
-      description: product.hook,
+      description,
       url: `${siteUrl}/shop/${product.slug}`,
       siteName: "Paul Wayne Gregory Chocolates",
       images: [{ url: product.image }],
@@ -42,7 +43,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title,
-      description: product.hook,
+      description,
       images: [product.image],
     },
   };
@@ -57,7 +58,7 @@ export default async function ProductPage({
 
   const reviewsEnabled = isAdminConfigured();
   const reviews = reviewsEnabled
-    ? await fetchApprovedReviews(product.shopifyHandle ?? product.slug)
+    ? await fetchApprovedReviews(product.slug)
     : [];
   const average = averageRating(reviews);
 
@@ -69,8 +70,8 @@ export default async function ProductPage({
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
-    description: product.hook,
-    image: `${siteUrl}${product.image}`,
+    description: product.hook || product.description[0],
+    image: product.image,
     offers: {
       "@type": "Offer",
       url: `${siteUrl}/shop/${product.slug}`,

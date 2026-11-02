@@ -28,8 +28,27 @@ export default async function ShopPage() {
         video={{ src: "/video/flavour-reveal.mp4" }}
       />
 
-      <ProductSection title="Chocolate Art Collection" products={artCollection} />
-      <ProductSection title="Truffles Collection" products={truffles} tone="raised" />
+      {products.length === 0 ? (
+        <p className="bg-ink px-6 py-24 text-center text-sm text-paper-dim">
+          The shop is taking a short break. Please try again in a moment.
+        </p>
+      ) : (
+        <>
+          {artCollection.length > 0 && (
+            <ProductSection
+              title="Chocolate Art Collection"
+              products={artCollection}
+            />
+          )}
+          {truffles.length > 0 && (
+            <ProductSection
+              title="Truffles Collection"
+              products={truffles}
+              tone="raised"
+            />
+          )}
+        </>
+      )}
     </>
   );
 }

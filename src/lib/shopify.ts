@@ -55,18 +55,24 @@ async function shopifyFetch<T>(
 }
 
 const PRODUCTS_QUERY = `
-  query StorefrontProducts($first: Int!) {
+  query StorefrontProducts($first: Int!, $metafields: [HasMetafieldsIdentifier!]!) {
     products(first: $first) {
       nodes {
         handle
+        title
+        descriptionHtml
         availableForSale
+        metafields(identifiers: $metafields) {
+          key
+          value
+        }
         priceRange {
           minVariantPrice {
             amount
             currencyCode
           }
         }
-        images(first: 10) {
+        images(first: 20) {
           nodes {
             url
             altText
@@ -86,7 +92,10 @@ type ProductsQueryResult = {
   products: {
     nodes: {
       handle: string;
+      title: string;
+      descriptionHtml: string;
       availableForSale: boolean;
+      metafields: ({ key: string; value: string } | null)[];
       priceRange: {
         minVariantPrice: { amount: string; currencyCode: string };
       };
@@ -96,8 +105,26 @@ type ProductsQueryResult = {
   };
 };
 
+const PRODUCT_FIELD_KEYS = [
+  "website_name",
+  "tagline",
+  "weight",
+  "ingredients",
+  "allergens",
+  "dietary_notes",
+  "flavours",
+  "shop_section",
+  "website_status",
+  "photo_display",
+] as const;
+
+export type ProductFieldKey = (typeof PRODUCT_FIELD_KEYS)[number];
+
 export type ShopifyProductSummary = {
   handle: string;
+  title: string;
+  descriptionHtml: string;
+  fields: Partial<Record<ProductFieldKey, string>>;
   availableForSale: boolean;
   price: number;
   currencyCode: string;
@@ -110,6 +137,7 @@ export async function fetchShopifyProducts(): Promise<
 > {
   const data = await shopifyFetch<ProductsQueryResult>(PRODUCTS_QUERY, {
     first: 100,
+    metafields: PRODUCT_FIELD_KEYS.map((key) => ({ namespace: "pwg", key })),
   });
 
   const byHandle = new Map<string, ShopifyProductSummary>();
@@ -118,6 +146,13 @@ export async function fetchShopifyProducts(): Promise<
   for (const node of data.products.nodes) {
     byHandle.set(node.handle, {
       handle: node.handle,
+      title: node.title,
+      descriptionHtml: node.descriptionHtml,
+      fields: Object.fromEntries(
+        node.metafields.flatMap((field) =>
+          field ? [[field.key, field.value]] : [],
+        ),
+      ),
       availableForSale: node.availableForSale,
       price: Number(node.priceRange.minVariantPrice.amount),
       currencyCode: node.priceRange.minVariantPrice.currencyCode,
