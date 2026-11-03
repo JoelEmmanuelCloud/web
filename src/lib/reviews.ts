@@ -85,7 +85,7 @@ export async function submitReview(
   }
 
   const saved = await createDraftReview({
-    productHandle: product.shopifyHandle ?? product.slug,
+    productHandle: product.slug,
     rating,
     title,
     body,
