@@ -6,18 +6,9 @@ import { AddToCartButton } from "@/components/add-to-cart-button";
 import { ProductGallery } from "@/components/product-gallery";
 import { ProductReviews, averageRating } from "@/components/product-reviews";
 import { Stars } from "@/components/stars";
-import {
-  formatPrice,
-  getProductBySlug,
-  getPurchasableProducts,
-} from "@/lib/products";
+import { formatPrice, getProductBySlug } from "@/lib/products";
 import { siteEmails, siteUrl } from "@/lib/site-config";
 import { fetchApprovedReviews, isAdminConfigured } from "@/lib/shopify-admin";
-
-export async function generateStaticParams() {
-  const products = await getPurchasableProducts();
-  return products.map((product) => ({ slug: product.slug }));
-}
 
 export async function generateMetadata({
   params,
