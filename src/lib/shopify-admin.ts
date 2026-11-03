@@ -38,7 +38,7 @@ async function getAdminToken(config: {
         client_id: config.clientId,
         client_secret: config.clientSecret,
       }),
-      cache: "no-store",
+      next: { revalidate: 3600 },
     });
 
     if (!res.ok) {
